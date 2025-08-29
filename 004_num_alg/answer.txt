@@ -1,2 +1,2 @@
-From 0 to 2N + 1 as i
+From 0 to 2N + 1 (inclusive) as i
      Output 3N + 2i
