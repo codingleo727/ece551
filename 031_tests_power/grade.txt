@@ -1,0 +1,77 @@
+Grading at 09/15/2025:00:53:46.302527
+For commit ID 31de188cbf8059776fcd1b4e200af1626f3f0748
+Grading at Sun Sep 14 08:53:45 PM EDT 2025
+**Testing broken implementation 10 **
+-------------------------------------
+
+Broken: 2, Correct: 4
+x: 2, y: 2
+
+**Testing broken implementation 11 **
+-------------------------------------
+
+Broken: 4, Correct: 100
+x: 100, y: 1
+
+**Testing broken implementation 1 **
+-------------------------------------
+
+Broken: 1, Correct: 2
+x: 2, y: 1
+
+**Testing broken implementation 2 **
+-------------------------------------
+
+Broken: 0, Correct: 1
+x: 2, y: 0
+
+**Testing broken implementation 3 **
+-------------------------------------
+
+Broken: 0, Correct: 1
+x: 0, y: 0
+
+**Testing broken implementation 4 **
+-------------------------------------
+
+Broken: 16960, Correct: 1000000
+x: 100, y: 3
+
+**Testing broken implementation 5 **
+-------------------------------------
+
+Broken: 2, Correct: 4
+x: 2, y: 2
+
+**Testing broken implementation 6 **
+-------------------------------------
+
+Broken: 2, Correct: 0
+x: 0, y: 1
+
+**Testing broken implementation 7 **
+-------------------------------------
+
+Broken: 3, Correct: 2
+x: 2, y: 1
+
+**Testing broken implementation 8 **
+-------------------------------------
+
+Broken: 2, Correct: 1
+x: 1, y: 2
+
+**Testing broken implementation 9 **
+-------------------------------------
+
+Broken: 0, Correct: 2
+x: 2, y: 1
+
+**Testing correct implementation **
+-------------------------------------
+
+
+All tests were ok.
+
+
+Overall Grade: PASSED
