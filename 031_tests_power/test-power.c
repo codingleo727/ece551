@@ -32,6 +32,6 @@ int main() {
     run_check(1, i);
     run_check(100, i);
   }
-
+  printf("Success!\n");
   return EXIT_SUCCESS;
 }
