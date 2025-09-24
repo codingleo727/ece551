@@ -1,4 +1,3 @@
-Examine the provided "broken.c" file, which has some errors in it.  
 (Hint: you might execute it by hand)
 Find, and list these errors in a file called "answer.txt".
 The format of your answer file should be one line per error with
