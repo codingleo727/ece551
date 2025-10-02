@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <string.h>
 
-void rotate(const char matrix[10][10], char rotated[10][10]) {
+void rotate(char matrix[10][10], char rotated[10][10]) {
   int k = 0;
   for (int i = 9; i >= 0; i--) {
     for (int j = 0; j < 10; j++) {
