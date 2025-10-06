@@ -1,2 +1,3 @@
 launches-step1 sol.txt
 launches-step1 missingfile
+launches-step1 step1testcases.txt
