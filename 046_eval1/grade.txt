@@ -1,0 +1,44 @@
+Grading at 10/06/2025:20:28:11.658855
+For commit ID c2f0197c028249be3396794f379978858b485ce0
+Grading at Mon Oct  6 04:28:09 PM EDT 2025
+Running your test cases
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ sol.txt 
+-------------------------
+I need to compile your code for launches-step1 (make launches-step1)
+
+Compiling launches-step1
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ missingfile 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step1 
+ With arguments 
+ step1testcases.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
+
+Overall Grade: NO GRADE YET
