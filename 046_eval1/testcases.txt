@@ -1,3 +1,5 @@
 launches-step1 sol.txt
-launches-step1 missingfile
+launches-step1 missingFile
 launches-step1 step1testcases.txt
+launches-step2 sol.txt
+launches-step2 missingFile
