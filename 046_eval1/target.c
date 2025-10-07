@@ -19,6 +19,7 @@ launch_result_t compute_launch_by_info(const launch_input_t * this_launch,
   if (dx < 0) {
     launch_angle += M_PI;
   }
+  launch_angle = fmod(launch_angle, 2 * M_PI);
   if (launch_angle < 0) {
     launch_angle += 2 * M_PI;
   }
