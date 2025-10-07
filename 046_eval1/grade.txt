@@ -1,6 +1,6 @@
-Grading at 10/07/2025:19:46:02.719210
-For commit ID b82d60aef8dcd1a92ed5ec5ba3e4cf67af3ac168
-Grading at Tue Oct  7 03:46:00 PM EDT 2025
+Grading at 10/07/2025:19:47:36.996729
+For commit ID 73a38ffda8beaffdc9c30bfd1532db0988bf3963
+Grading at Tue Oct  7 03:47:32 PM EDT 2025
 Running your test cases
 -------------------------
  This test case will run 
@@ -22,7 +22,7 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  launches-step1 
  With arguments 
- missingfile 
+ missingFile 
 -------------------------
 Running our code...
 Running your code
@@ -33,6 +33,33 @@ And valgrind reported no errors
  launches-step1 
  With arguments 
  step1testcases.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step2 
+ With arguments 
+ sol.txt 
+-------------------------
+I need to compile your code for launches-step2 (make launches-step2)
+
+Compiling launches-step2
+rm -f myinput.o step1.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
+gcc -o launches-step2 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step2.o myinput.o provided.o planet_util.o dummy-s3.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step2 
+ With arguments 
+ missingFile 
 -------------------------
 Running our code...
 Running your code
