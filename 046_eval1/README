@@ -250,7 +250,7 @@ double when_does_planet_return_to(const planet_t * planet,
 
 This function asks when the specific planet  will return
 to the (x,y) coordiantes specified (pos) at the earliest
-time not later than start_time.
+time not earlier than start_time.
 
 Put another way, if a spaceship flies to pos, and
 arrives at start_time, at what time (in hours
