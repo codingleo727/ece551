@@ -14,8 +14,44 @@ void sortData(char ** data, size_t count) {
   qsort(data, count, sizeof(char *), stringOrder);
 }
 
+void sort_lines(void * file) {
+  char ** lines = NULL;
+  char * curr = NULL;
+  size_t len;
+  size_t i = 0;
+  while (getline(&curr, &len, file) >= 0) {
+    lines = realloc(lines, (i + 1) * sizeof(*lines));
+    lines[i] = curr;
+    curr = NULL;
+    i++;
+  }
+  free(curr);
+  sortData(lines, i);
+  for (size_t j = 0; j < i; j++) {
+    printf("%s", lines[j]);
+    free(lines[j]);
+  }
+  free(lines);
+}
+
 int main(int argc, char ** argv) {
   //WRITE YOUR CODE HERE!
-
+  if (argc == 1) {
+    sort_lines(stdin);
+  }
+  if (argc > 1) {
+    for (int i = 0; i < argc - 1; i++) {
+      FILE * input = fopen(argv[i + 1], "r");
+      if (input == NULL) {
+        perror("Empty file");
+	exit(EXIT_FAILURE);
+      }
+      sort_lines(input);
+      if (fclose(input) != 0) {
+      	perror("Failed to close file");
+	exit(EXIT_FAILURE);
+      }
+    }
+  }
   return EXIT_SUCCESS;
 }
