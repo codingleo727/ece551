@@ -1,6 +1,6 @@
-Grading at 10/07/2025:21:31:42.748579
-For commit ID 303a34f84fd68d0c53662c66594f52a0c26edd8a
-Grading at Tue Oct  7 05:31:37 PM EDT 2025
+Grading at 10/08/2025:03:25:25.714799
+For commit ID 9742cdf4e617583f48a5fc3fd855362ca8bebc2c
+Grading at Tue Oct  7 11:25:19 PM EDT 2025
 Running your test cases
 -------------------------
  This test case will run 
@@ -11,7 +11,7 @@ Running your test cases
 I need to compile your code for launches-step1 (make launches-step1)
 
 Compiling launches-step1
-rm -f myinput.o planet_util.o step1.o step2.o step3.o target.o *~ launches-step? launches-step4-debug
+rm -f iter_target-debug.o iter_target.o myinput.o planet_util.o step1.o step2.o step3.o step4.o target.o *~ launches-step? launches-step4-debug
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.c
 gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
 gcc -o launches-step1 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step1.o myinput.o provided.o dummy-s2.o dummy-s3.o -lm
@@ -76,6 +76,35 @@ We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  launches-step3 
+ With arguments 
+ missingFile 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ launches-step4 
+ With arguments 
+ simple.txt launches_simple.txt 
+-------------------------
+I need to compile your code for launches-step4 (make launches-step4)
+
+Compiling launches-step4
+rm -f myinput.o planet_util.o step3.o target.o *~ launches-step? launches-step4-debug
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 myinput.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 planet_util.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 target.c
+gcc -c -Wall -Werror --std=gnu99 -pedantic -ggdb3 iter_target.c
+gcc -o launches-step4 -Wall -Werror --std=gnu99 -pedantic -ggdb3 step4.o myinput.o provided.o planet_util.o target.o iter_target.o -lm
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ launches-step4 
  With arguments 
  missingFile 
 -------------------------
