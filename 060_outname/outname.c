@@ -12,7 +12,7 @@ char * computeOutputFileName(const char * inputName) {
   
   char input[strlen(inputName) + 1];
   strncpy(input, inputName, strlen(inputName) + 1);
-  char * suffix = ".count";
+  char * suffix = ".counts";
   int suffix_len = strlen(suffix);
   char * output = malloc(suffix_len + strlen(inputName) + 1);
   char * p = input;
