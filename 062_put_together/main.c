@@ -60,6 +60,7 @@ int main(int argc, char ** argv) {
       perror("Error opening file\n");
       free(outName);
       freeCounts(count);
+      freeKVs(kv);
       return EXIT_FAILURE;
     }
     printCounts(count, f);
