@@ -18,48 +18,34 @@ kvarray_t * readKVs(const char * fname) {
     perror("Malloc");
     exit(EXIT_FAILURE);
   }
-  int capacity = 1;
-  kvset->kvpair_array = malloc(capacity * sizeof(*kvset->kvpair_array));
-  if (!kvset->kvpair_array) {
-    perror("Malloc");
-    exit(EXIT_FAILURE);
-  }
+  kvset->kvpair_array = NULL;
+  kvset->length = 0;
   char line[256];
-  int len = 0;
   while (fgets(line, sizeof(line), input)) {
     line[strcspn(line, "\n")] = '\0';
-   
-    if (len == capacity) {
-      capacity *= 2;
-      kvpair_t * temp = realloc(kvset->kvpair_array, capacity * sizeof(*kvset->kvpair_array));
-      if (!temp) {
-        perror("Realloc");
-	exit(EXIT_FAILURE);
-      }
-      kvset->kvpair_array = temp;
-    }
+ 
+    kvset->kvpair_array = realloc(kvset->kvpair_array, (kvset->length + 1) * sizeof(*kvset->kvpair_array));  
 
     char * p = line;
     int key_len = 0;
     int value_len = 0; 
     
     while (*p != '=' && *p != '\0') {
-      kvset->kvpair_array[len].key[key_len] = *p;
+      kvset->kvpair_array[kvset->length].key[key_len] = *p;
       key_len++;
       p++;
     }
-    kvset->kvpair_array[len].key[key_len] = '\0';
+    kvset->kvpair_array[kvset->length].key[key_len] = '\0';
     p++;
     
     while (*p != '\0') {
-      kvset->kvpair_array[len].value[value_len] = *p;
+      kvset->kvpair_array[kvset->length].value[value_len] = *p;
       value_len++;
       p++;
     }
-    kvset->kvpair_array[len].value[value_len] = '\0';
-    len++;
+    kvset->kvpair_array[kvset->length].value[value_len] = '\0';
+    kvset->length++;
   }
-  kvset->length = len;
   
   if (fclose(input) != 0) {
     perror("Failed to close file");
