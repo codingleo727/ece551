@@ -7,12 +7,31 @@
 
 counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   //WRITE ME
-  return NULL;
+  FILE * input = fopen(filename, "r");
+  if (input == NULL) {
+    perror("Error opening file\n");
+    exit(EXIT_FAILURE);
+  }  
+  char line[256];
+  counts_t * counts = createCounts();
+  while (fgets(line, sizeof(line), input)) {
+    line[strcspn(line, "\n")] = '\0';
+    char * value = lookupValue(kvPairs, line);
+    addCount(counts, value);
+  }
+  
+  if (fclose(input) != 0) {
+    perror("Failed to close file\n");
+    exit(EXIT_FAILURE);
+  } 
+
+  return counts;
 }
 
 int main(int argc, char ** argv) {
   //WRITE ME (plus add appropriate error checking!)
  //read the key/value pairs from the file named by argv[1] (call the result kv)
+  kvarray_t * kv = readKVs(argv[1]); 
 
  //count from 2 to argc (call the number you count i)
 
@@ -29,10 +48,25 @@ int main(int argc, char ** argv) {
     //close f
 
     //free the memory for outName and c
-
-
+  for (int i = 2; i < argc; i++) {
+    counts_t * count = countFile(argv[i], kv);
+    char * outName = computeOutputFileName(argv[i]);
+    FILE * f = fopen(outName, "w");
+    if (f == NULL) {
+      perror("Error opening file\n");
+      return EXIT_FAILURE;
+    }
+    printCounts(count, f);
+    if (fclose(f) != 0) {
+      perror("Failed to close file\n");
+      return EXIT_FAILURE;
+    }
+    free(outName);
+    freeCounts(count);
+  }
 
  //free the memory for kv
+  freeKVs(kv);
 
   return EXIT_SUCCESS;
 }
