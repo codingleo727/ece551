@@ -67,6 +67,9 @@ int main(int argc, char ** argv) {
     printCounts(count, f);
     if (fclose(f) != 0) {
       perror("Failed to close file\n");
+      free(outName);
+      freeCounts(count);
+      freeKVs(kv);
       return EXIT_FAILURE;
     }
     free(outName);
