@@ -9,7 +9,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   //WRITE ME
   FILE * input = fopen(filename, "r");
   if (input == NULL) {
-    perror("Error opening file\n");
+    perror("Error opening file");
     exit(EXIT_FAILURE);
   }  
   char line[256];
@@ -21,7 +21,7 @@ counts_t * countFile(const char * filename, kvarray_t * kvPairs) {
   }
   
   if (fclose(input) != 0) {
-    perror("Failed to close file\n");
+    perror("Failed to close file");
     exit(EXIT_FAILURE);
   } 
 
@@ -33,7 +33,7 @@ int main(int argc, char ** argv) {
  //read the key/value pairs from the file named by argv[1] (call the result kv)
   if (argc < 3) {
     fprintf(stderr, "Input size must be at least 3\n");
-    return EXIT_FAILURE;
+    exit(EXIT_FAILURE);
   }
   kvarray_t * kv = readKVs(argv[1]); 
 
@@ -53,20 +53,20 @@ int main(int argc, char ** argv) {
 
     //free the memory for outName and c
   for (int i = 2; i < argc; i++) {
-    counts_t * count = countFile(argv[i], kv);
+    counts_t * c = countFile(argv[i], kv);
     char * outName = computeOutputFileName(argv[i]);
     FILE * f = fopen(outName, "w");
     if (f == NULL) {
-      perror("Error opening file\n");
+      perror("Error opening file");
       exit(EXIT_FAILURE);
     }
-    printCounts(count, f);
+    printCounts(c, f);
     if (fclose(f) != 0) {
-      perror("Failed to close file\n");
+      perror("Failed to close file");
       exit(EXIT_FAILURE);
     }
     free(outName);
-    freeCounts(count);
+    freeCounts(c);
   }
 
  //free the memory for kv
