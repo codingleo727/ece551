@@ -9,19 +9,19 @@ kvarray_t * readKVs(const char * fname) {
   //WRITE ME
   FILE * input = fopen(fname, "r");
   if (input == NULL) {
-    perror("Error opening file\n");
+    perror("Error opening file");
     exit(EXIT_FAILURE);
   }
   
   kvarray_t * kvset = malloc(sizeof(*kvset));
   if (!kvset) {
-    perror("Malloc\n");
+    perror("Malloc");
     exit(EXIT_FAILURE);
   }
   int capacity = 1;
   kvset->kvpair_array = malloc(capacity * sizeof(*kvset->kvpair_array));
   if (!kvset->kvpair_array) {
-    perror("Malloc\n");
+    perror("Malloc");
     exit(EXIT_FAILURE);
   }
   char line[256];
@@ -33,7 +33,7 @@ kvarray_t * readKVs(const char * fname) {
       capacity *= 2;
       kvpair_t * temp = realloc(kvset->kvpair_array, capacity * sizeof(*kvset->kvpair_array));
       if (!temp) {
-        perror("Realloc\n");
+        perror("Realloc");
 	exit(EXIT_FAILURE);
       }
       kvset->kvpair_array = temp;
@@ -62,7 +62,7 @@ kvarray_t * readKVs(const char * fname) {
   kvset->length = len;
   
   if (fclose(input) != 0) {
-    perror("Failed to close file\n");
+    perror("Failed to close file");
     exit(EXIT_FAILURE);
   }  
 
