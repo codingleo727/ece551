@@ -58,6 +58,8 @@ int main(int argc, char ** argv) {
     FILE * f = fopen(outName, "w");
     if (f == NULL) {
       perror("Error opening file\n");
+      free(outName);
+      freeCounts(count);
       return EXIT_FAILURE;
     }
     printCounts(count, f);
