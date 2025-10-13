@@ -2,8 +2,8 @@
 #define __KV_H__
 
 struct _kvpair_t {
-  char key[100];
-  char value[100];
+  char key[500];
+  char value[500];
 };
 typedef struct _kvpair_t kvpair_t;
 
