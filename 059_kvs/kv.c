@@ -1,9 +1,8 @@
+#include "kv.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include "kv.h"
-
-
 
 kvarray_t * readKVs(const char * fname) {
   //WRITE ME
@@ -12,7 +11,7 @@ kvarray_t * readKVs(const char * fname) {
     perror("Error opening file");
     exit(EXIT_FAILURE);
   }
-  
+
   kvarray_t * kvset = malloc(sizeof(*kvset));
   if (!kvset) {
     perror("Malloc");
@@ -20,16 +19,18 @@ kvarray_t * readKVs(const char * fname) {
   }
   kvset->kvpair_array = NULL;
   kvset->length = 0;
-  char line[256];
-  while (fgets(line, sizeof(line), input)) {
+  char * line = NULL;
+  size_t len = 0;
+  while (getline(&line, &len, input) != -1) {
     line[strcspn(line, "\n")] = '\0';
- 
-    kvset->kvpair_array = realloc(kvset->kvpair_array, (kvset->length + 1) * sizeof(*kvset->kvpair_array));  
+
+    kvset->kvpair_array =
+        realloc(kvset->kvpair_array, (kvset->length + 1) * sizeof(*kvset->kvpair_array));
 
     char * p = line;
     int key_len = 0;
-    int value_len = 0; 
-    
+    int value_len = 0;
+
     while (*p != '=' && *p != '\0') {
       kvset->kvpair_array[kvset->length].key[key_len] = *p;
       key_len++;
@@ -37,7 +38,7 @@ kvarray_t * readKVs(const char * fname) {
     }
     kvset->kvpair_array[kvset->length].key[key_len] = '\0';
     p++;
-    
+
     while (*p != '\0') {
       kvset->kvpair_array[kvset->length].value[value_len] = *p;
       value_len++;
@@ -46,11 +47,12 @@ kvarray_t * readKVs(const char * fname) {
     kvset->kvpair_array[kvset->length].value[value_len] = '\0';
     kvset->length++;
   }
-  
+
+  free(line);
   if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);
-  }  
+  }
 
   return kvset;
 }
@@ -64,7 +66,9 @@ void freeKVs(kvarray_t * pairs) {
 void printKVs(kvarray_t * pairs) {
   //WRITE ME
   for (int i = 0; i < pairs->length; i++) {
-    printf("key = '%s' value = '%s'\n", pairs->kvpair_array[i].key, pairs->kvpair_array[i].value); 
+    printf("key = '%s' value = '%s'\n",
+           pairs->kvpair_array[i].key,
+           pairs->kvpair_array[i].value);
   }
 }
 
