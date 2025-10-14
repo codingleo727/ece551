@@ -1,6 +1,6 @@
-Grading at 10/14/2025:04:13:46.271263
-For commit ID eef3eacc78e936fd40353754e8109cb2ee8f4bb1
-Grading at Tue Oct 14 12:13:41 AM EDT 2025
+Grading at 10/14/2025:15:12:54.852719
+For commit ID edeaef093b45fbd00ad88a334537d0993d22d261
+Grading at Tue Oct 14 11:12:49 AM EDT 2025
 Attempting to compile:
 rm -f  counts.o  kv.o  main.o  outname.o count_values *~
 gcc -c -Wall -Werror -std=gnu99 -pedantic -ggdb3 counts.c
@@ -35,6 +35,9 @@ Your output is correct
 valgrind was clean
 #################################################
 testcase4:
-valgrind reported memory errors
+Comparing file list3a.txt.counts with answer
+Your file matched the expected output
+Your output is correct
+valgrind was clean
 
-Overall Grade: C
+Overall Grade: A
