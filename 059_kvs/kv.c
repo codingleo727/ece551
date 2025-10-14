@@ -28,23 +28,26 @@ kvarray_t * readKVs(const char * fname) {
         realloc(kvset->kvpair_array, (kvset->length + 1) * sizeof(*kvset->kvpair_array));
 
     char * p = line;
-    int key_len = 0;
-    int value_len = 0;
 
-    while (*p != '=' && *p != '\0') {
-      kvset->kvpair_array[kvset->length].key[key_len] = *p;
-      key_len++;
+    while (*p != '\0' && *p != '=') {
       p++;
     }
-    kvset->kvpair_array[kvset->length].key[key_len] = '\0';
-    p++;
 
-    while (*p != '\0') {
-      kvset->kvpair_array[kvset->length].value[value_len] = *p;
-      value_len++;
-      p++;
+    size_t key_len = 0;
+    char * val;
+
+    if (*p == '=') {
+      key_len = (size_t)(p - line);
+      val = p + 1;
     }
-    kvset->kvpair_array[kvset->length].value[value_len] = '\0';
+    else {
+      key_len = strlen(line);
+      val = "";
+    }
+
+    kvset->kvpair_array[kvset->length].key = strndup(line, key_len);
+    kvset->kvpair_array[kvset->length].value = strdup(val);
+
     kvset->length++;
   }
 
@@ -59,6 +62,10 @@ kvarray_t * readKVs(const char * fname) {
 
 void freeKVs(kvarray_t * pairs) {
   //WRITE ME
+  for (int i = 0; i < pairs->length; i++) {
+    free(pairs->kvpair_array[i].key);
+    free(pairs->kvpair_array[i].value);
+  }
   free(pairs->kvpair_array);
   free(pairs);
 }
