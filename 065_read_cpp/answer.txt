@@ -1,0 +1,6 @@
+a has 145
+b has 104
+b has 21
+c has 28
+c has 100
+a has 145
