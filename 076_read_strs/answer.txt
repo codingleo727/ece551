@@ -3,9 +3,9 @@ first = p and rest = ple
 first = p and rest = le
 first = l and rest = e
 first = e and rest =
-ans = 
-ans = e
+ans = e 
 ans = el
 ans = elp
+ans = elpp
 ans = elppA
 f(Apple) = elppA
