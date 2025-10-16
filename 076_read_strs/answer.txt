@@ -1,0 +1,11 @@
+first = A and rest = pple
+first = p and rest = ple
+first = p and rest = le
+first = l and rest = e
+first = e and rest =
+ans = A
+ans = eA
+ans = leA
+ans = pleA
+ans = ppleA
+f(Apple) = ppleA
