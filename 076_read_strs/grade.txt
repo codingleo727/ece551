@@ -1,12 +1,7 @@
-Grading at 10/16/2025:20:53:22.358998
-For commit ID fc41b9c99d7d361e88885c26807712c1d30bab10
-Grading at Thu Oct 16 04:53:22 PM EDT 2025
+Grading at 10/16/2025:20:55:12.611295
+For commit ID e382230ac6608c0f0ae26ff2576142db5ea837c1
+Grading at Thu Oct 16 04:55:12 PM EDT 2025
 Line_6_did_not_match
-Line_7_did_not_match
-Line_8_did_not_match
-Line_9_did_not_match
-Line_10_did_not_match
-Line_11_did_not_match
 Your file did not match the expected output
 
 Overall Grade: FAILED
