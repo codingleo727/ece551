@@ -1,0 +1,123 @@
+Grading at 10/22/2025:23:11:42.119501
+For commit ID eba57c68f25d6063f92a3dd3f208abe48e26dfee
+Grading at Wed Oct 22 07:11:35 PM EDT 2025
+Attempting to compile:
+rm -f *.o  *~ intArrayTest
+#################################################
+testcase1:
+Your output is correct
+valgrind was not clean
+==237349== Memcheck, a memory error detector
+==237349== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==237349== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==237349== 
+==237349== Parent PID: 237348
+==237349== 
+==237349== 
+==237349== HEAP SUMMARY:
+==237349==     in use at exit: 0 bytes in 1 blocks
+==237349==   total heap usage: 6 allocs, 5 frees, 76,800 bytes allocated
+==237349== 
+==237349== 0 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==237349==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==237349==    by 0x109880: IntArray::IntArray(IntArray const&) (in intArrayTest)
+==237349==    by 0x10954F: main (in intArrayTest)
+==237349== 
+==237349== LEAK SUMMARY:
+==237349==    definitely lost: 0 bytes in 1 blocks
+==237349==    indirectly lost: 0 bytes in 0 blocks
+==237349==      possibly lost: 0 bytes in 0 blocks
+==237349==    still reachable: 0 bytes in 0 blocks
+==237349==         suppressed: 0 bytes in 0 blocks
+==237349== 
+==237349== For lists of detected and suppressed errors, rerun with: -s
+==237349== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase2:
+Your output is correct
+valgrind was not clean
+==237436== Memcheck, a memory error detector
+==237436== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==237436== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==237436== 
+==237436== Parent PID: 237433
+==237436== 
+==237436== 
+==237436== HEAP SUMMARY:
+==237436==     in use at exit: 4 bytes in 1 blocks
+==237436==   total heap usage: 6 allocs, 5 frees, 76,816 bytes allocated
+==237436== 
+==237436== 4 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==237436==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==237436==    by 0x109880: IntArray::IntArray(IntArray const&) (in intArrayTest)
+==237436==    by 0x10954F: main (in intArrayTest)
+==237436== 
+==237436== LEAK SUMMARY:
+==237436==    definitely lost: 4 bytes in 1 blocks
+==237436==    indirectly lost: 0 bytes in 0 blocks
+==237436==      possibly lost: 0 bytes in 0 blocks
+==237436==    still reachable: 0 bytes in 0 blocks
+==237436==         suppressed: 0 bytes in 0 blocks
+==237436== 
+==237436== For lists of detected and suppressed errors, rerun with: -s
+==237436== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase3:
+Your output is correct
+valgrind was not clean
+==237526== Memcheck, a memory error detector
+==237526== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==237526== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==237526== 
+==237526== Parent PID: 237525
+==237526== 
+==237526== 
+==237526== HEAP SUMMARY:
+==237526==     in use at exit: 40 bytes in 1 blocks
+==237526==   total heap usage: 6 allocs, 5 frees, 76,960 bytes allocated
+==237526== 
+==237526== 40 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==237526==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==237526==    by 0x109880: IntArray::IntArray(IntArray const&) (in intArrayTest)
+==237526==    by 0x10954F: main (in intArrayTest)
+==237526== 
+==237526== LEAK SUMMARY:
+==237526==    definitely lost: 40 bytes in 1 blocks
+==237526==    indirectly lost: 0 bytes in 0 blocks
+==237526==      possibly lost: 0 bytes in 0 blocks
+==237526==    still reachable: 0 bytes in 0 blocks
+==237526==         suppressed: 0 bytes in 0 blocks
+==237526== 
+==237526== For lists of detected and suppressed errors, rerun with: -s
+==237526== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+#################################################
+testcase4:
+Your output is correct
+valgrind was not clean
+==237637== Memcheck, a memory error detector
+==237637== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==237637== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==237637== 
+==237637== Parent PID: 237634
+==237637== 
+==237637== 
+==237637== HEAP SUMMARY:
+==237637==     in use at exit: 400 bytes in 1 blocks
+==237637==   total heap usage: 6 allocs, 5 frees, 78,400 bytes allocated
+==237637== 
+==237637== 400 bytes in 1 blocks are definitely lost in loss record 1 of 1
+==237637==    at 0x484A2F3: operator new[](unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==237637==    by 0x109880: IntArray::IntArray(IntArray const&) (in intArrayTest)
+==237637==    by 0x10954F: main (in intArrayTest)
+==237637== 
+==237637== LEAK SUMMARY:
+==237637==    definitely lost: 400 bytes in 1 blocks
+==237637==    indirectly lost: 0 bytes in 0 blocks
+==237637==      possibly lost: 0 bytes in 0 blocks
+==237637==    still reachable: 0 bytes in 0 blocks
+==237637==         suppressed: 0 bytes in 0 blocks
+==237637== 
+==237637== For lists of detected and suppressed errors, rerun with: -s
+==237637== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
+
+Overall Grade: C
