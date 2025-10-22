@@ -9,7 +9,6 @@ IntArray::IntArray(int n): data(new int[n]), numElements(n) {
 }
 
 IntArray::IntArray(const IntArray & rhs): data(new int[rhs.numElements]), numElements(rhs.numElements)  {
-  data = new int[rhs.numElements];
   for (int i = 0; i < rhs.numElements; i++) {
     data[i] = rhs.data[i];
   }
