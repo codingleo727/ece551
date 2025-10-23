@@ -13,6 +13,7 @@ int main(int argc, char * argv[]) {
     exit(EXIT_FAILURE);
   }
 
+  /*
   char * line = NULL;
   size_t len = 0;
 
@@ -39,6 +40,8 @@ int main(int argc, char * argv[]) {
   }
 
   free(line);
+  */
+  parse_story_file(input);
   if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);

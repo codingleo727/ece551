@@ -1,5 +1,35 @@
 #include "rand_story.h"
 
+/* If file is a story file, prints out the story */
+void parse_story_file(FILE * s_file) {
+  char * line = NULL;
+  size_t len = 0;
+
+  while (getline(&line, &len, s_file) != -1) {
+    line[strcspn(line, "\n")] = '\0';
+
+    char * p = line;
+
+    // Prints out the character if not a blank encounter
+    // If it's a blank encounter, grab the category word at print out "cat"
+    while (*p != '\0') {
+      if (*p != '_') {
+        printf("%c", *p);
+        p++;
+      }
+      else {
+        char * cat = parse_blank_line(&p);
+        const char * word = chooseWord(cat, NULL);
+        printf("%s", word);
+        free(cat);
+      }
+    }
+    printf("\n");
+  }
+
+  free(line);
+}
+
 /* Parses the blank line in the story file to get the category */
 char * parse_blank_line(char ** p) {
   (**p)++;  // Skip first underscore
@@ -14,6 +44,45 @@ char * parse_blank_line(char ** p) {
   size_t len = *p - start;
   (*p)++;  // Move past second underscore
   return strndup(start, len);
+}
+
+catarray_t * parse_word_file(FILE * w_file) {
+  // Initialize cat_arr
+  catarray_t * cat_arr = malloc(sizeof(*cat_arr));
+  cat_arr->arr = NULL;
+  cat_arr->n = 0;
+
+  char * line = NULL;
+  size_t len = 0;
+  char * cat = NULL;
+  char * word = NULL;
+
+  while (getline(&line, &len, w_file) != -1) {
+    line[strcspn(line, "\n")] = '\0';
+
+    // cat and word is parsed within parse_category_line
+    if (parse_category_line(line, &cat, &word) == 0) {
+      fprintf(stderr, "No colon detected\n");
+      exit(EXIT_FAILURE);
+    }
+
+    int cat_index = check_category_exists(cat_arr, &cat);
+    if (cat_index != -1) {
+      add_word(&cat_arr->arr[cat_index], word);
+    }
+    else {
+      create_new_category(cat_arr, &cat, &word);
+    }
+
+    free(cat);
+    free(word);
+  }
+
+  printWords(cat_arr);
+
+  free(line);
+
+  return cat_arr;
 }
 
 /* Adds the word into the word list */

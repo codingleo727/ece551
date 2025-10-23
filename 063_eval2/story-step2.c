@@ -13,6 +13,7 @@ int main(int argc, char * argv[]) {
     exit(EXIT_FAILURE);
   }
 
+  /*
   // Initialize cat_arr
   catarray_t * cat_arr = malloc(sizeof(*cat_arr));
   cat_arr->arr = NULL;
@@ -26,6 +27,7 @@ int main(int argc, char * argv[]) {
   while (getline(&line, &len, input) != -1) {
     line[strcspn(line, "\n")] = '\0';
 
+    // cat and word is parsed within parse_category_line
     if (parse_category_line(line, &cat, &word) == 0) {
       fprintf(stderr, "No colon detected\n");
       exit(EXIT_FAILURE);
@@ -38,14 +40,18 @@ int main(int argc, char * argv[]) {
     else {
       create_new_category(cat_arr, &cat, &word);
     }
+
     free(cat);
     free(word);
   }
 
   printWords(cat_arr);
 
-  free_catarr(cat_arr);
   free(line);
+  free_catarr(cat_arr);
+  */
+  catarray_t * cat_arr = parse_word_file(input);
+  free_catarr(cat_arr);
   if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);
