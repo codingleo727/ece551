@@ -1,0 +1,29 @@
+Grading at 10/23/2025:17:03:34.930630
+For commit ID af98a1a80a71e0f98ce6085fa801772a2318004f
+Grading at Thu Oct 23 01:03:33 PM EDT 2025
+Doing some basic checking for your submission
+
+Step 1
+Checking that story-step1 compiles
+rm -f *~ story-step1  story-step1.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
+gcc -o story-step1 story-step1.o rand_story.o provided.o
+rm story-step1.o
+The code compiled (good)
+Executable story-step1 exists (good)
+Checking with provided test case story.txt
+Your file matched the expected output
+Now running YOUR tests for step 1
+
+1.1: Current test is story-step1 story.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+Step 2
+Checking that story-step2 compiles
+rm -f *~ story-step1  story-step1.o rand_story.o
+The code did not compile!
+
+Overall Grade: NO GRADE YET
