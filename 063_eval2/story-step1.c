@@ -6,9 +6,9 @@ int main(int argc, char * argv[]) {
     exit(EXIT_FAILURE);
   }
 
-  FILE * f = fopen(argv[1], "r");
+  FILE * input = fopen(argv[1], "r");
 
-  if (f == NULL) {
+  if (input == NULL) {
     perror("Error opening file");
     exit(EXIT_FAILURE);
   }
@@ -16,7 +16,7 @@ int main(int argc, char * argv[]) {
   char * line = NULL;
   size_t len = 0;
 
-  while (getline(&line, &len, f) != -1) {
+  while (getline(&line, &len, input) != -1) {
     line[strcspn(line, "\n")] = '\0';
 
     char * p = line;
@@ -29,19 +29,6 @@ int main(int argc, char * argv[]) {
         p++;
       }
       else {
-        /*
-	char * first = p + 1;
-        char * last = first;
-        while (*last != '_') {
-          if (*last == '\0') {
-            printf("\n");
-            fprintf(stderr, "No matching underscore for this blank encounter!\n");
-            exit(EXIT_FAILURE);
-          }
-          last++;
-        }
-	*/
-        // char * cat = strndup(first, last - first);
         char * cat = parse_blank_line(&p);
         const char * word = chooseWord(cat, NULL);
         printf("%s", word);
@@ -50,8 +37,9 @@ int main(int argc, char * argv[]) {
     }
     printf("\n");
   }
+
   free(line);
-  if (fclose(f) != 0) {
+  if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);
   }

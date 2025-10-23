@@ -43,9 +43,9 @@ int main(int argc, char * argv[]) {
   }
 
   printWords(cat_arr);
+
   free_catarr(cat_arr);
   free(line);
-
   if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);

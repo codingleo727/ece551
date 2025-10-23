@@ -1,5 +1,6 @@
 #include "rand_story.h"
 
+/* Parses the blank line in the story file to get the category */
 char * parse_blank_line(char ** p) {
   (**p)++;  // Skip first underscore
   char * start = *p;
@@ -16,14 +17,15 @@ char * parse_blank_line(char ** p) {
 }
 
 /* Adds the word into the word list */
-void add_word(category_t * arr, const char * word) {
-  arr->words = realloc(arr->words, (arr->n_words + 1) * sizeof(*arr->words));
-  arr->words[arr->n_words] = strdup(word);
-  arr->n_words++;
+void add_word(category_t * category, const char * word) {
+  category->words =
+      realloc(category->words, (category->n_words + 1) * sizeof(*category->words));
+  category->words[category->n_words] = strdup(word);
+  category->n_words++;
 }
 
-/* Parses the line to grab the category and the word */
-int parse_category_line(char * line, char ** category, char ** word) {
+/* Parses the line to grab the category name and the word */
+int parse_category_line(char * line, char ** cat_name, char ** word) {
   char * p = line;
   char * last = p;
   // Grabs category first
@@ -34,7 +36,7 @@ int parse_category_line(char * line, char ** category, char ** word) {
   if (*last == '\0') {
     return 0;
   }
-  *category = strndup(p, last - p);
+  *cat_name = strndup(p, last - p);
   p = last + 1;
 
   char * word_last = p;
@@ -47,9 +49,9 @@ int parse_category_line(char * line, char ** category, char ** word) {
 }
 
 /* Checks if category exists */
-int check_category_exists(catarray_t * cat_arr, char ** category) {
+int check_category_exists(catarray_t * cat_arr, char ** cat_name) {
   for (size_t i = 0; i < cat_arr->n; i++) {
-    if (strcmp(cat_arr->arr[i].name, *category) == 0) {
+    if (strcmp(cat_arr->arr[i].name, *cat_name) == 0) {
       return i;  // Returns the index of the category if found
     }
   }
@@ -57,11 +59,11 @@ int check_category_exists(catarray_t * cat_arr, char ** category) {
 }
 
 /* Creates a new category and adds the word into the category */
-void create_new_category(catarray_t * cat_arr, char ** category, char ** word) {
+void create_new_category(catarray_t * cat_arr, char ** cat_name, char ** word) {
   cat_arr->arr = realloc(cat_arr->arr, (cat_arr->n + 1) * sizeof(*cat_arr->arr));
 
   // Initialize newly created category_t
-  cat_arr->arr[cat_arr->n].name = strdup(*category);
+  cat_arr->arr[cat_arr->n].name = strdup(*cat_name);
   cat_arr->arr[cat_arr->n].words = NULL;
   cat_arr->arr[cat_arr->n].n_words = 0;
 
