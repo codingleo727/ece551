@@ -1,7 +1,4 @@
-#include <stdio.h>
-
-#include "provided.h"
-#include "string.h"
+#include "rand_story.h"
 
 int main(int argc, char * argv[]) {
   if (argc != 2) {
@@ -32,7 +29,8 @@ int main(int argc, char * argv[]) {
         p++;
       }
       else {
-        char * first = p + 1;
+        /*
+	char * first = p + 1;
         char * last = first;
         while (*last != '_') {
           if (*last == '\0') {
@@ -42,11 +40,12 @@ int main(int argc, char * argv[]) {
           }
           last++;
         }
-        char * cat = strndup(first, last - first);
+	*/
+        // char * cat = strndup(first, last - first);
+        char * cat = parse_blank_line(&p);
         const char * word = chooseWord(cat, NULL);
         printf("%s", word);
         free(cat);
-        p = last + 1;
       }
     }
     printf("\n");

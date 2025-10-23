@@ -38,41 +38,12 @@ int main(int argc, char * argv[]) {
     else {
       create_new_category(cat_arr, &cat, &word);
     }
-    /*int exists = 0;
-    for (size_t i = 0; i < cat_arr->n; i++) {
-      if (strcmp(cat_arr->arr[i].name, cat) == 0) {
-        add_word(&cat_arr->arr[i], word);
-        exists = 1;
-      }
-    }
-    */
-    // Create a new category if it doesn't exist
-    /* if (exists != 1) {
-      cat_arr->arr = realloc(cat_arr->arr, (cat_arr->n + 1) * sizeof(*cat_arr->arr));
-
-      // Initialize newly created category_t
-      cat_arr->arr[cat_arr->n].name = strdup(cat);
-      cat_arr->arr[cat_arr->n].words = NULL;
-      cat_arr->arr[cat_arr->n].n_words = 0;
-
-      add_word(&cat_arr->arr[cat_arr->n], word);
-      cat_arr->n++;
-    }
-    */
     free(cat);
     free(word);
   }
 
   printWords(cat_arr);
-  for (size_t j = 0; j < cat_arr->n; j++) {
-    for (size_t k = 0; k < cat_arr->arr[j].n_words; k++) {
-      free(cat_arr->arr[j].words[k]);
-    }
-    free(cat_arr->arr[j].words);
-    free(cat_arr->arr[j].name);
-  }
-  free(cat_arr->arr);
-  free(cat_arr);
+  free_catarr(cat_arr);
   free(line);
 
   if (fclose(input) != 0) {

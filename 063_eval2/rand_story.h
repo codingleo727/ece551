@@ -8,9 +8,11 @@
 
 //any functions you want your main to use
 
+char * parse_blank_line(char ** p);
 void add_word(category_t * arr, const char * word);
 int parse_category_line(char * line, char ** category, char ** word);
 int check_category_exists(catarray_t * cat_arr, char ** category);
 void create_new_category(catarray_t * cat_arr, char ** category, char ** word);
+void free_catarr(catarray_t * cat_arr);
 
 #endif

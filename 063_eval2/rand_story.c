@@ -1,5 +1,20 @@
 #include "rand_story.h"
 
+char * parse_blank_line(char ** p) {
+  (**p)++;  // Skip first underscore
+  char * start = *p;
+  while (**p != '_' && **p != '\0') {
+    (*p)++;
+  }
+  if (**p == '\0') {
+    fprintf(stderr, "\nNo matching underscore for this blank encounter!\n");
+    exit(EXIT_FAILURE);
+  }
+  size_t len = *p - start;
+  (*p)++;  // Move past second underscore
+  return strndup(start, len);
+}
+
 /* Adds the word into the word list */
 void add_word(category_t * arr, const char * word) {
   arr->words = realloc(arr->words, (arr->n_words + 1) * sizeof(*arr->words));
@@ -52,4 +67,17 @@ void create_new_category(catarray_t * cat_arr, char ** category, char ** word) {
 
   add_word(&cat_arr->arr[cat_arr->n], *word);
   cat_arr->n++;
+}
+
+/* Free the catarray */
+void free_catarr(catarray_t * cat_arr) {
+  for (size_t j = 0; j < cat_arr->n; j++) {
+    for (size_t k = 0; k < cat_arr->arr[j].n_words; k++) {
+      free(cat_arr->arr[j].words[k]);
+    }
+    free(cat_arr->arr[j].words);
+    free(cat_arr->arr[j].name);
+  }
+  free(cat_arr->arr);
+  free(cat_arr);
 }
