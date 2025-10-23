@@ -1,6 +1,6 @@
-Grading at 10/23/2025:17:03:34.930630
-For commit ID af98a1a80a71e0f98ce6085fa801772a2318004f
-Grading at Thu Oct 23 01:03:33 PM EDT 2025
+Grading at 10/23/2025:17:04:46.663010
+For commit ID 5181931a1e48766d2a7ac1aeff1124b1c43af94c
+Grading at Thu Oct 23 01:04:45 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -19,6 +19,18 @@ Now running YOUR tests for step 1
 1.1: Current test is story-step1 story.txt
 -----------------------------
 Your output looks good. Lets check valgrind
+Valgrind was clean
+
+1.2: Current test is story-step1 mystory1.txt
+-----------------------------
+You considered this a failure case:
+No category written at this blank encounter!
+But we did not.
+
+1.3: Current test is story-step1 mystory2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
 Valgrind was clean
 
 Step 2
