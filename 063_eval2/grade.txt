@@ -1,11 +1,11 @@
-Grading at 10/23/2025:21:41:38.297599
-For commit ID 3d4618ac6ea4a946ade2e3d1f737e72b0670536f
-Grading at Thu Oct 23 05:41:33 PM EDT 2025
+Grading at 10/23/2025:23:02:43.697865
+For commit ID b573b3198e8e6eda3287035d852d577a4ebcfc70
+Grading at Thu Oct 23 07:02:38 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step1.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -34,7 +34,7 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step1.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
 gcc -o story-step2 story-step2.o rand_story.o provided.o
@@ -66,7 +66,7 @@ Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
-rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+rm -f *~ story-step1  story-step1.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
