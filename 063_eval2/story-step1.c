@@ -41,11 +41,6 @@ int main(int argc, char * argv[]) {
           last++;
         }
         char * cat = strndup(first, last - first);
-        if (strlen(cat) == 0) {
-          printf("\n");
-          fprintf(stderr, "No category written at this blank encounter!\n");
-          exit(EXIT_FAILURE);
-        }
         const char * word = chooseWord(cat, NULL);
         printf("%s", word);
         free(cat);
