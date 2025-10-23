@@ -5,7 +5,7 @@
 
 int main(int argc, char * argv[]) {
   if (argc != 2) {
-    fprintf(stderr, "Please input a file\n");
+    fprintf(stderr, "Please input one file only\n");
     exit(EXIT_FAILURE);
   }
 
@@ -24,6 +24,8 @@ int main(int argc, char * argv[]) {
 
     char * p = line;
 
+    // Prints out the character if not a blank encounter
+    // If it's a blank encounter, grab the category word at print out "cat"
     while (*p != '\0') {
       if (*p != '_') {
         printf("%c", *p);

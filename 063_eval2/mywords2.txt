@@ -1,0 +1,4 @@
+animal
+animal:python
+verb:eat
+adjective:yucky

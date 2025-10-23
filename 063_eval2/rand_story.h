@@ -8,6 +8,6 @@
 
 //any functions you want your main to use
 
-void printStory(char * line);
+void add_word(category_t * arr, const char * word);
 
 #endif

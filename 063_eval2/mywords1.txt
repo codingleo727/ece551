@@ -1,0 +1,5 @@
+:what
+animal:python
+animal:cat
+verb:eat
+adjective:beautiful
