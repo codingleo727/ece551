@@ -26,45 +26,28 @@ int main(int argc, char * argv[]) {
   while (getline(&line, &len, input) != -1) {
     line[strcspn(line, "\n")] = '\0';
 
-    /* char * p = line;
-    char * cat = NULL;
-    char * last = p;
-    while (*last != ':' && *last != '\0') {
-      last++;
-    }
-    if (*last == '\0') {
-      fprintf(stderr, "No colon detected\n");
-      fclose(input);
-      free(cat_arr->arr);
-      free(cat_arr);
-      free(line);
-      exit(EXIT_FAILURE);
-    }
-    cat = strndup(p, last - p);  // Get category word first
-    p = last + 1;
-
-    char * word = NULL;
-    char * word_last = p;
-    while (*word_last != '\0') {
-      word_last++;
-    }
-    word = strndup(p, word_last - p);  // Grab word
-    */
     if (parse_category_line(line, &cat, &word) == 0) {
       fprintf(stderr, "No colon detected\n");
       exit(EXIT_FAILURE);
     }
 
-    int exists = 0;
+    int cat_index = check_category_exists(cat_arr, &cat);
+    if (cat_index != -1) {
+      add_word(&cat_arr->arr[cat_index], word);
+    }
+    else {
+      create_new_category(cat_arr, &cat, &word);
+    }
+    /*int exists = 0;
     for (size_t i = 0; i < cat_arr->n; i++) {
       if (strcmp(cat_arr->arr[i].name, cat) == 0) {
         add_word(&cat_arr->arr[i], word);
         exists = 1;
       }
     }
-
+    */
     // Create a new category if it doesn't exist
-    if (exists != 1) {
+    /* if (exists != 1) {
       cat_arr->arr = realloc(cat_arr->arr, (cat_arr->n + 1) * sizeof(*cat_arr->arr));
 
       // Initialize newly created category_t
@@ -75,6 +58,7 @@ int main(int argc, char * argv[]) {
       add_word(&cat_arr->arr[cat_arr->n], word);
       cat_arr->n++;
     }
+    */
     free(cat);
     free(word);
   }

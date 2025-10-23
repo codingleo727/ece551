@@ -10,5 +10,7 @@
 
 void add_word(category_t * arr, const char * word);
 int parse_category_line(char * line, char ** category, char ** word);
+int check_category_exists(catarray_t * cat_arr, char ** category);
+void create_new_category(catarray_t * cat_arr, char ** category, char ** word);
 
 #endif
