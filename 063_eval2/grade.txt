@@ -1,6 +1,6 @@
-Grading at 10/23/2025:20:46:42.989140
-For commit ID cf03a0c14c5a018a6016eae8623d1fad06fe8782
-Grading at Thu Oct 23 04:46:39 PM EDT 2025
+Grading at 10/23/2025:20:48:17.701986
+For commit ID b1562dd6e1fd244dc02c40129cf148bc61ad907c
+Grading at Thu Oct 23 04:48:13 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -57,6 +57,11 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
+Valgrind was clean
+
+2.4: Current test is story-step2 mywords3.txt
+-----------------------------
+Your output looks good. Lets check valgrind
 Valgrind was clean
 
 Step 3
