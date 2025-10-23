@@ -1,11 +1,11 @@
-Grading at 10/23/2025:17:06:18.932196
-For commit ID 1b3fd008a96b2e08c5e0dd6abd71197de167b8ee
-Grading at Thu Oct 23 01:06:16 PM EDT 2025
+Grading at 10/23/2025:20:46:42.989140
+For commit ID cf03a0c14c5a018a6016eae8623d1fad06fe8782
+Grading at Thu Oct 23 04:46:39 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
 Checking that story-step1 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
 gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step1.c
 gcc -o story-step1 story-step1.o rand_story.o provided.o
@@ -34,7 +34,34 @@ Valgrind was clean
 
 Step 2
 Checking that story-step2 compiles
-rm -f *~ story-step1  story-step1.o rand_story.o
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c rand_story.c
+gcc -std=gnu99 -pedantic -Wall -Werror -ggdb3 -c story-step2.c
+gcc -o story-step2 story-step2.o rand_story.o provided.o
+rm story-step2.o
+The code compiled (good)
+Executable story-step2 exists (good)
+Now running YOUR tests for step 2
+
+2.1: Current test is story-step2 words.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.2: Current test is story-step2 mywords1.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.3: Current test is story-step2 mywords2.txt
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+Step 3
+Checking that story-step3 compiles
+rm -f *~ story-step1 story-step2  story-step1.o story-step2.o rand_story.o
 The code did not compile!
 
 Overall Grade: NO GRADE YET
