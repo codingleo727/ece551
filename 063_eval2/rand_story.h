@@ -9,5 +9,6 @@
 //any functions you want your main to use
 
 void add_word(category_t * arr, const char * word);
+int parse_category_line(char * line, char ** category, char ** word);
 
 #endif

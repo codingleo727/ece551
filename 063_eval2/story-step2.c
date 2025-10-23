@@ -20,11 +20,13 @@ int main(int argc, char * argv[]) {
 
   char * line = NULL;
   size_t len = 0;
+  char * cat = NULL;
+  char * word = NULL;
 
   while (getline(&line, &len, input) != -1) {
     line[strcspn(line, "\n")] = '\0';
 
-    char * p = line;
+    /* char * p = line;
     char * cat = NULL;
     char * last = p;
     while (*last != ':' && *last != '\0') {
@@ -47,6 +49,11 @@ int main(int argc, char * argv[]) {
       word_last++;
     }
     word = strndup(p, word_last - p);  // Grab word
+    */
+    if (parse_category_line(line, &cat, &word) == 0) {
+      fprintf(stderr, "No colon detected\n");
+      exit(EXIT_FAILURE);
+    }
 
     int exists = 0;
     for (size_t i = 0; i < cat_arr->n; i++) {
