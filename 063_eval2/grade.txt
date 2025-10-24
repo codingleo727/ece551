@@ -1,6 +1,6 @@
-Grading at 10/23/2025:23:59:04.107842
-For commit ID 01e7c9c1d70699b60147b1399a0966f1f2991925
-Grading at Thu Oct 23 07:58:59 PM EDT 2025
+Grading at 10/24/2025:00:09:49.387775
+For commit ID 24cce142cc58c3e15847fedec214cdade69eedf7
+Grading at Thu Oct 23 08:09:44 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -77,13 +77,9 @@ Now running YOUR tests for step 3
 
 3.1: Current test is story-step3 words.txt story2.txt
 -----------------------------
-It looks like you got different output from us on that case.
-Here is the diff (yours on left, ours on right):
-
-							      >	Once upon a time, there was a walrus. This walrus lived in a 
-							      >	peculiar cave. One day, it left its peculiar cave and met a w
-Your file did not match the expected output
-
+You considered this a failure case:
+Category `animal not found
+But we did not.
 
 Step 4
 Checking that story-step4 compiles
