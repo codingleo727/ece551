@@ -1,7 +1,7 @@
 #include "rand_story.h"
 
-/* If file is a story file, prints out the story */
-void parse_story_file(FILE * s_file) {
+/* Prints out the story if the file is a story file */
+void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
   char * line = NULL;
   size_t len = 0;
 
@@ -19,7 +19,7 @@ void parse_story_file(FILE * s_file) {
       }
       else {
         char * cat = parse_blank_line(&p);
-        const char * word = chooseWord(cat, NULL);
+        const char * word = chooseWord(cat, cat_arr);
         printf("%s", word);
         free(cat);
       }
@@ -46,6 +46,7 @@ char * parse_blank_line(char ** p) {
   return strndup(start, len);
 }
 
+/* Parses the word file into a catarray_t structure */
 catarray_t * parse_word_file(FILE * w_file) {
   // Initialize cat_arr
   catarray_t * cat_arr = malloc(sizeof(*cat_arr));

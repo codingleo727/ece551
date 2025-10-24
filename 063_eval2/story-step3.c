@@ -17,4 +17,11 @@ int main(int argc, char * argv[]) {
     perror("Failed to open story file");
     exit(EXIT_FAILURE);
   }
+
+  catarray_t * cat_arr = parse_word_file(w_file);
+  parse_story_file(s_file, cat_arr);
+
+  free(cat_arr);
+
+  return EXIT_SUCCESS;
 }
