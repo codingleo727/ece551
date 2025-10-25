@@ -5,6 +5,11 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
   char * line = NULL;
   size_t len = 0;
 
+  category_t * used_arr = malloc(sizeof(*used_arr));
+  used_arr->name = strdup("Used");
+  used_arr->words = NULL;
+  used_arr->n_words = 0;
+
   while (getline(&line, &len, s_file) != -1) {
     line[strcspn(line, "\n")] = '\0';
 
@@ -19,8 +24,17 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
       }
       else {
         char * cat = parse_blank_line(&p);
-        const char * word = chooseWord(cat, cat_arr);
-        printf("%s", word);
+        size_t prev_w = atoi(cat);
+        if (prev_w > 0) {
+          char * used_word = select_used_word(used_arr, prev_w);
+          printf("%s", used_word);
+        }
+        else {
+          const char * word = chooseWord(cat, cat_arr);
+          store_used_word(used_arr, word);
+          printf("%s", word);
+        }
+
         free(cat);
       }
     }
@@ -28,11 +42,12 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
   }
 
   free(line);
+  free_used_arr(used_arr);
 }
 
 /* Parses the blank line in the story file to get the category */
 char * parse_blank_line(char ** p) {
-  (**p)++;  // Skip first underscore
+  (*p)++;  // Skip first underscore
   char * start = *p;
   while (**p != '_' && **p != '\0') {
     (*p)++;
@@ -44,6 +59,24 @@ char * parse_blank_line(char ** p) {
   size_t len = *p - start;
   (*p)++;  // Move past second underscore
   return strndup(start, len);
+}
+
+/* Stores a history of used words */
+void store_used_word(category_t * used_arr, const char * word) {
+  used_arr->words =
+      realloc(used_arr->words, (used_arr->n_words + 1) * sizeof(*used_arr->words));
+  used_arr->words[used_arr->n_words] = strdup(word);
+  used_arr->n_words++;
+}
+
+char * select_used_word(category_t * used_arr, size_t prev_w) {
+  if (prev_w > used_arr->n_words) {
+    fprintf(stderr, "There are not that many previously used words!\n");
+    exit(EXIT_FAILURE);
+  }
+  char * used_word = used_arr->words[used_arr->n_words - prev_w];
+  store_used_word(used_arr, used_word);
+  return used_word;
 }
 
 /* Parses the word file into a catarray_t structure */
@@ -67,19 +100,17 @@ catarray_t * parse_word_file(FILE * w_file) {
       exit(EXIT_FAILURE);
     }
 
-    int cat_index = check_category_exists(cat_arr, &cat);
+    int cat_index = check_category_exists(cat_arr, cat);
     if (cat_index != -1) {
       add_word(&cat_arr->arr[cat_index], word);
     }
     else {
-      create_new_category(cat_arr, &cat, &word);
+      create_new_category(cat_arr, cat, word);
     }
 
     free(cat);
     free(word);
   }
-
-  printWords(cat_arr);
 
   free(line);
 
@@ -119,9 +150,9 @@ int parse_category_line(char * line, char ** cat_name, char ** word) {
 }
 
 /* Checks if category exists */
-int check_category_exists(catarray_t * cat_arr, char ** cat_name) {
+int check_category_exists(catarray_t * cat_arr, const char * category) {
   for (size_t i = 0; i < cat_arr->n; i++) {
-    if (strcmp(cat_arr->arr[i].name, *cat_name) == 0) {
+    if (strcmp(cat_arr->arr[i].name, category) == 0) {
       return i;  // Returns the index of the category if found
     }
   }
@@ -129,16 +160,25 @@ int check_category_exists(catarray_t * cat_arr, char ** cat_name) {
 }
 
 /* Creates a new category and adds the word into the category */
-void create_new_category(catarray_t * cat_arr, char ** cat_name, char ** word) {
+void create_new_category(catarray_t * cat_arr, const char * category, const char * word) {
   cat_arr->arr = realloc(cat_arr->arr, (cat_arr->n + 1) * sizeof(*cat_arr->arr));
 
   // Initialize newly created category_t
-  cat_arr->arr[cat_arr->n].name = strdup(*cat_name);
+  cat_arr->arr[cat_arr->n].name = strdup(category);
   cat_arr->arr[cat_arr->n].words = NULL;
   cat_arr->arr[cat_arr->n].n_words = 0;
 
-  add_word(&cat_arr->arr[cat_arr->n], *word);
+  add_word(&cat_arr->arr[cat_arr->n], word);
   cat_arr->n++;
+}
+
+/* Free used words */
+void free_used_arr(category_t * used_arr) {
+  for (size_t l = 0; l < used_arr->n_words; l++) {
+    free(used_arr->words[l]);
+  }
+  free(used_arr->name);
+  free(used_arr);
 }
 
 /* Free the catarray */

@@ -13,7 +13,6 @@ int main(int argc, char * argv[]) {
     exit(EXIT_FAILURE);
   }
 
-  /*
   // Initialize cat_arr
   catarray_t * cat_arr = malloc(sizeof(*cat_arr));
   cat_arr->arr = NULL;
@@ -33,12 +32,12 @@ int main(int argc, char * argv[]) {
       exit(EXIT_FAILURE);
     }
 
-    int cat_index = check_category_exists(cat_arr, &cat);
+    int cat_index = check_category_exists(cat_arr, cat);
     if (cat_index != -1) {
       add_word(&cat_arr->arr[cat_index], word);
     }
     else {
-      create_new_category(cat_arr, &cat, &word);
+      create_new_category(cat_arr, cat, word);
     }
 
     free(cat);
@@ -49,9 +48,12 @@ int main(int argc, char * argv[]) {
 
   free(line);
   free_catarr(cat_arr);
-  */
+
+  /*
   catarray_t * cat_arr = parse_word_file(input);
   free_catarr(cat_arr);
+  // Above used for testing abstraction
+  */
   if (fclose(input) != 0) {
     perror("Failed to close file");
     exit(EXIT_FAILURE);

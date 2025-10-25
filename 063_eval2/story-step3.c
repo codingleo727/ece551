@@ -21,7 +21,7 @@ int main(int argc, char * argv[]) {
   catarray_t * cat_arr = parse_word_file(w_file);
   parse_story_file(s_file, cat_arr);
 
-  free(cat_arr);
+  free_catarr(cat_arr);
 
   return EXIT_SUCCESS;
 }
