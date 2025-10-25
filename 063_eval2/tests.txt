@@ -8,6 +8,7 @@ story-step2 words.txt
 story-step2 mywords1.txt
 story-step2 mywords2.txt
 story-step2 mywords3.txt
+story-step2 duplicateword.txt
 story-step2
 story-step2 nofile
 story-step3 words.txt story2.txt
