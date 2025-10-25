@@ -1,0 +1,17 @@
+animal:fox
+animal:squirrel
+animal:cat
+animal:dog
+animal:whale
+place:mountain
+place:desert
+place:bathroom
+adjective:brave
+adjective:tiny
+adjective:preposterous
+verb:sing
+verb:eat
+verb:annoy
+object:map
+object:treasure
+object:key

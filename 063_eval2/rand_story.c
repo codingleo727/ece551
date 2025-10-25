@@ -56,7 +56,8 @@ char * parse_blank_line(char ** p) {
     (*p)++;
   }
   if (**p == '\0') {
-    fprintf(stderr, "\nNo matching underscore for this blank encounter!\n");
+    fprintf(stderr, "Error: No matching underscore for this blank encounter!\n");
+    printf("\n");
     exit(EXIT_FAILURE);
   }
   size_t len = *p - start;
@@ -74,7 +75,8 @@ void store_used_word(category_t * used_arr, const char * word) {
 
 char * select_used_word(category_t * used_arr, size_t prev_w) {
   if (prev_w > used_arr->n_words) {
-    fprintf(stderr, "There are not that many previously used words!\n");
+    fprintf(stderr, "Error: There are not that many previously used words!\n");
+    printf("\n");
     exit(EXIT_FAILURE);
   }
   char * used_word = used_arr->words[used_arr->n_words - prev_w];

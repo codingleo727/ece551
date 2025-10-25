@@ -1,17 +1,33 @@
 story-step1 story.txt
 story-step1 mystory1.txt
-story-step1 mystory2.txt
+story-step1 wrongstory0.txt
+story-step1 wrongstory1.txt
 story-step1
+story-step1 nofile
 story-step2 words.txt
 story-step2 mywords1.txt
 story-step2 mywords2.txt
 story-step2 mywords3.txt
 story-step2
+story-step2 nofile
 story-step3 words.txt story2.txt
 story-step3 words.txt story3.txt
+story-step3 mywords1.txt story2.txt
+story-step3 mywords2.txt story2.txt
+story-step3 mywords3.txt story2.txt
+story-step3 mywords0.txt wrongstory0.txt
+story-step3 mywords0.txt wrongstory1.txt
 story-step3
+story-step3 nofile nofile
 story-step4 words.txt story2.txt
 story-step4 -n words.txt story2.txt
+story-step4 mywords1.txt story2.txt
+story-step4 mywords2.txt story2.txt
+story-step4 mywords3.txt story2.txt
+story-step4 mywords0.txt wrongstory0.txt
+story-step4 mywords0.txt wrongstory1.txt
 story-step4
 story-step4 -n
 story-step4 -n -n
+story-step4 nofile nofile
+story-step4 -n nofile nofile
