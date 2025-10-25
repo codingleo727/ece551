@@ -1,7 +1,7 @@
 #include "rand_story.h"
 
 /* Prints out the story if the file is a story file */
-void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
+void parse_story_file(FILE * s_file, catarray_t * cat_arr, int option) {
   char * line = NULL;
   size_t len = 0;
 
@@ -33,6 +33,9 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr) {
           const char * word = chooseWord(cat, cat_arr);
           store_used_word(used_arr, word);
           printf("%s", word);
+          if (option != 0) {
+            remove_used_word(cat_arr, cat, word);
+          }
         }
 
         free(cat);
@@ -77,6 +80,29 @@ char * select_used_word(category_t * used_arr, size_t prev_w) {
   char * used_word = used_arr->words[used_arr->n_words - prev_w];
   store_used_word(used_arr, used_word);
   return used_word;
+}
+
+/* Removes the word that was used from the category */
+void remove_used_word(catarray_t * cat_arr, const char * category, const char * word) {
+  for (size_t i = 0; i < cat_arr->n; i++) {
+    if (strcmp(cat_arr->arr[i].name, category) == 0) {
+      for (size_t j = 0; j < cat_arr->arr[i].n_words; j++) {
+        if (strcmp(cat_arr->arr[i].words[j], word) == 0) {
+          free(cat_arr->arr[i].words[j]);
+          resize_arr(&cat_arr->arr[i], j);
+          return;  // Exit immediately after removal since our goal is done
+        }
+      }
+    }
+  }
+}
+
+/* Sorts the array after removal */
+void resize_arr(category_t * word_category, size_t index) {
+  for (size_t i = index; i < word_category->n_words - 1; i++) {
+    word_category->words[i] = word_category->words[i + 1];
+  }
+  word_category->n_words--;
 }
 
 /* Parses the word file into a catarray_t structure */
