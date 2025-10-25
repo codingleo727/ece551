@@ -1,6 +1,6 @@
-Grading at 10/25/2025:03:56:33.513215
-For commit ID a246c4dde544eac510cc3c6de46700c6ab629775
-Grading at Fri Oct 24 11:56:11 PM EDT 2025
+Grading at 10/25/2025:04:00:07.867195
+For commit ID c0908111b5ead8bdd40abe48a1990874e4556e48
+Grading at Fri Oct 24 11:59:43 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -81,13 +81,18 @@ Valgrind was clean
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
-2.5: Current test is story-step2
+2.5: Current test is story-step2 duplicateword.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+2.6: Current test is story-step2
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-2.6: Current test is story-step2 nofile
+2.7: Current test is story-step2 nofile
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
