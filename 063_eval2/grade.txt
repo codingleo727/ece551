@@ -1,6 +1,6 @@
-Grading at 10/25/2025:04:00:07.867195
-For commit ID c0908111b5ead8bdd40abe48a1990874e4556e48
-Grading at Fri Oct 24 11:59:43 PM EDT 2025
+Grading at 10/25/2025:04:15:00.608484
+For commit ID 92cc0ba4581fda43fc46948e0f8377e314aa427a
+Grading at Sat Oct 25 12:14:38 AM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -70,7 +70,7 @@ Valgrind was clean
 Your output looks good. Lets check valgrind
 Valgrind was clean
 
-2.3: Current test is story-step2 mywords2.txt
+2.3: Current test is story-step2 wrongwords0.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
@@ -126,7 +126,7 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-3.4: Current test is story-step3 mywords2.txt story2.txt
+3.4: Current test is story-step3 wrongwords0.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
@@ -189,7 +189,7 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.4: Current test is story-step4 mywords2.txt story2.txt
+4.4: Current test is story-step4 wrongwords0.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
@@ -213,31 +213,36 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.8: Current test is story-step4
+4.8: Current test is story-step4 mywords4.txt story2.txt
+-----------------------------
+Your output looks good. Lets check valgrind
+Valgrind was clean
+
+4.9: Current test is story-step4
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.9: Current test is story-step4 -n
+4.10: Current test is story-step4 -n
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.10: Current test is story-step4 -n -n
+4.11: Current test is story-step4 -n -n
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.11: Current test is story-step4 nofile nofile
+4.12: Current test is story-step4 nofile nofile
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-4.12: Current test is story-step4 -n nofile nofile
+4.13: Current test is story-step4 -n nofile nofile
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
