@@ -177,6 +177,7 @@ void free_used_arr(category_t * used_arr) {
   for (size_t l = 0; l < used_arr->n_words; l++) {
     free(used_arr->words[l]);
   }
+  free(used_arr->words);
   free(used_arr->name);
   free(used_arr);
 }

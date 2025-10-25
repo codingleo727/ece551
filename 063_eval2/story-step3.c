@@ -23,5 +23,15 @@ int main(int argc, char * argv[]) {
 
   free_catarr(cat_arr);
 
+  if (fclose(w_file) != 0) {
+    perror("Failed to close word file");
+    exit(EXIT_FAILURE);
+  }
+
+  if (fclose(s_file) != 0) {
+    perror("Failed to close story file");
+    exit(EXIT_FAILURE);
+  }
+
   return EXIT_SUCCESS;
 }
