@@ -5,6 +5,7 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr, int option) {
   char * line = NULL;
   size_t len = 0;
 
+  // Initialize a category for used words
   category_t * used_arr = malloc(sizeof(*used_arr));
   used_arr->name = strdup("Used");
   used_arr->words = NULL;
@@ -16,7 +17,9 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr, int option) {
     char * p = line;
 
     // Prints out the character if not a blank encounter
-    // If it's a blank encounter, grab the category word at print out "cat"
+    // If a underscore is encountered, do the one of the following:
+    // - If it is an integer, print a previously used word
+    // - If it is a category, choose a word from said category
     while (*p != '\0') {
       if (*p != '_') {
         printf("%c", *p);
@@ -34,7 +37,7 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr, int option) {
           store_used_word(used_arr, word);
           printf("%s", word);
           if (option != 0) {
-            remove_used_word(cat_arr, cat, word);
+            remove_used_word(cat_arr, cat, word);  // When -n is enabled
           }
         }
 
@@ -48,7 +51,7 @@ void parse_story_file(FILE * s_file, catarray_t * cat_arr, int option) {
   free_used_arr(used_arr);
 }
 
-/* Parses the blank line in the story file to get the category */
+/* Parses the blank line in the story file to get the category name */
 char * parse_blank_line(char ** p) {
   (*p)++;  // Skip first underscore
   char * start = *p;
@@ -57,7 +60,8 @@ char * parse_blank_line(char ** p) {
   }
   if (**p == '\0') {
     fprintf(stderr, "Error: No matching underscore for this blank encounter!\n");
-    printf("\n");
+    printf(
+        "\n");  // Printed to stdout before error thrown, so makes stdout after error neater
     exit(EXIT_FAILURE);
   }
   size_t len = *p - start;
@@ -73,10 +77,12 @@ void store_used_word(category_t * used_arr, const char * word) {
   used_arr->n_words++;
 }
 
+/* Locates the targeted used word and returns it. Prints an error if not enough previous used words */
 char * select_used_word(category_t * used_arr, size_t prev_w) {
   if (prev_w > used_arr->n_words) {
     fprintf(stderr, "Error: There are not that many previously used words!\n");
-    printf("\n");
+    printf(
+        "\n");  // Printed to stdout before error thrown, so makes stdout after error neater
     exit(EXIT_FAILURE);
   }
   char * used_word = used_arr->words[used_arr->n_words - prev_w];
@@ -92,14 +98,14 @@ void remove_used_word(catarray_t * cat_arr, const char * category, const char * 
         if (strcmp(cat_arr->arr[i].words[j], word) == 0) {
           free(cat_arr->arr[i].words[j]);
           resize_arr(&cat_arr->arr[i], j);
-          return;  // Exit immediately after removal since our goal is done
+          return;  // Return immediately after removal since our goal is complete
         }
       }
     }
   }
 }
 
-/* Sorts the array after removal */
+/* Resizes the array after removal */
 void resize_arr(category_t * word_category, size_t index) {
   for (size_t i = index; i < word_category->n_words - 1; i++) {
     word_category->words[i] = word_category->words[i + 1];
@@ -210,7 +216,7 @@ void free_used_arr(category_t * used_arr) {
   free(used_arr);
 }
 
-/* Free the catarray */
+/* Free categories */
 void free_catarr(catarray_t * cat_arr) {
   for (size_t j = 0; j < cat_arr->n; j++) {
     for (size_t k = 0; k < cat_arr->arr[j].n_words; k++) {
