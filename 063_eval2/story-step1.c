@@ -2,7 +2,7 @@
 
 int main(int argc, char * argv[]) {
   if (argc != 2) {
-    fprintf(stderr, "Please input one file only\n");
+    fprintf(stderr, "Please input one file\n");
     exit(EXIT_FAILURE);
   }
 

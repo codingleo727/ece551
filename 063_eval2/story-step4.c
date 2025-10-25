@@ -34,8 +34,8 @@ int main(int argc, char * argv[]) {
   }
   else {
     fprintf(stderr,
-            "Invalid number of inputs. Please input in the format (-n (optional), "
-            "word_file, story_file\n");
+            "Invalid number of inputs. Please input in the format \"-n (optional), "
+            "word_file, story_file\"\n");
     exit(EXIT_FAILURE);
   }
 
