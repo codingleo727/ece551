@@ -34,10 +34,10 @@ int main(int argc, char * argv[]) {
 
     int cat_index = check_category_exists(cat_arr, cat);
     if (cat_index != -1) {
-      add_word(&cat_arr->arr[cat_index], word);
+      add_word(&cat_arr->arr[cat_index], word);  // Add word if category exist
     }
     else {
-      create_new_category(cat_arr, cat, word);
+      create_new_category(cat_arr, cat, word);  // Create a new category if doesn't exit
     }
 
     free(cat);
