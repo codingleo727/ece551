@@ -19,7 +19,7 @@ int main(int argc, char * argv[]) {
   }
 
   catarray_t * cat_arr = parse_word_file(w_file);
-  parse_story_file(s_file, cat_arr, 0);
+  parse_story_file(s_file, cat_arr, 0); // Hard code 0 to simulate without "-n"
 
   free_catarr(cat_arr);
 
