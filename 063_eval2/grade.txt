@@ -1,6 +1,6 @@
-Grading at 10/26/2025:22:36:43.214121
-For commit ID 115e93651b837e689bda47c8f03aaba4e243620e
-Grading at Sun Oct 26 06:36:17 PM EDT 2025
+Grading at 10/29/2025:17:38:09.105569
+For commit ID 7708c9244c7b5429af6dbde111839e25e87d5219
+Grading at Wed Oct 29 01:36:21 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -216,7 +216,13 @@ Valgrind was clean
 4.8: Current test is story-step4 mywords4.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind was clean
+Valgrind reported errors or memory leaks:
+==404530== Memcheck, a memory error detector
+==404530== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==404530== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==404530== Command: ./story-step4 mywords4.txt story2.txt
+==404530== Parent PID: 404529
+==404530== 
 
 4.9: Current test is story-step4
 -----------------------------
@@ -246,10 +252,16 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind was clean
+Valgrind reported errors:
+==405007== Memcheck, a memory error detector
+==405007== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==405007== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==405007== Command: ./story-step4 -n nofile nofile
+==405007== Parent PID: 405005
+==405007== 
 
-You have passed the test cases YOU provided
-If your tests are good, this is great. 
-If your tests are insufficient, you should do much more testing
+You have NOT passed your test cases!
+You should go and figure out/understand where thing went wrong
+And fix the problem(s) before the deadline
 
 Overall Grade: NO GRADE YET
