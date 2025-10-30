@@ -1,6 +1,6 @@
-Grading at 10/29/2025:18:08:21.460217
-For commit ID 17aa2c5838a3eed8cdc9bfeaba25d048e02694d4
-Grading at Wed Oct 29 02:05:20 PM EDT 2025
+Grading at 10/30/2025:01:15:28.605274
+For commit ID 721d26f1f2fb12a874b1b07523e2e7fa5e12af55
+Grading at Wed Oct 29 09:13:10 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -63,47 +63,23 @@ Now running YOUR tests for step 2
 2.1: Current test is story-step2 words.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==433727== Memcheck, a memory error detector
-==433727== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==433727== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==433727== Command: ./story-step2 words.txt
-==433727== Parent PID: 433726
-==433727== 
+Valgrind was clean
 
 2.2: Current test is story-step2 mywords1.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==433917== Memcheck, a memory error detector
-==433917== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==433917== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==433917== Command: ./story-step2 mywords1.txt
-==433917== Parent PID: 433914
-==433917== 
+Valgrind was clean
 
 2.3: Current test is story-step2 wrongwords0.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==434070== Memcheck, a memory error detector
-==434070== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434070== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434070== Command: ./story-step2 wrongwords0.txt
-==434070== Parent PID: 434069
-==434070== 
+Valgrind was clean
 
 2.4: Current test is story-step2 mywords3.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==434215== Memcheck, a memory error detector
-==434215== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434215== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434215== Command: ./story-step2 mywords3.txt
-==434215== Parent PID: 434214
-==434215== 
+Valgrind was clean
 
 2.5: Current test is story-step2 duplicateword.txt
 -----------------------------
@@ -120,13 +96,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==434434== Memcheck, a memory error detector
-==434434== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434434== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434434== Command: ./story-step2 nofile
-==434434== Parent PID: 434431
-==434434== 
+Valgrind was clean
 
 Step 3
 Checking that story-step3 compiles
@@ -148,49 +118,25 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==434715== Memcheck, a memory error detector
-==434715== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434715== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434715== Command: ./story-step3 words.txt story3.txt
-==434715== Parent PID: 434714
-==434715== 
+Valgrind was clean
 
 3.3: Current test is story-step3 mywords1.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==434827== Memcheck, a memory error detector
-==434827== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434827== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434827== Command: ./story-step3 mywords1.txt story2.txt
-==434827== Parent PID: 434826
-==434827== 
+Valgrind was clean
 
 3.4: Current test is story-step3 wrongwords0.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==434916== Memcheck, a memory error detector
-==434916== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==434916== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==434916== Command: ./story-step3 wrongwords0.txt story2.txt
-==434916== Parent PID: 434913
-==434916== 
+Valgrind was clean
 
 3.5: Current test is story-step3 mywords3.txt story2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==435010== Memcheck, a memory error detector
-==435010== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==435010== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==435010== Command: ./story-step3 mywords3.txt story2.txt
-==435010== Parent PID: 435009
-==435010== 
+Valgrind was clean
 
 3.6: Current test is story-step3 mywords0.txt wrongstory0.txt
 -----------------------------
@@ -214,13 +160,7 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==435403== Memcheck, a memory error detector
-==435403== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==435403== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==435403== Command: ./story-step3 nofile nofile
-==435403== Parent PID: 435402
-==435403== 
+Valgrind was clean
 
 Step 4
 Checking that story-step4 compiles
@@ -236,24 +176,12 @@ Now running YOUR tests for step 4
 4.1: Current test is story-step4 words.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==435616== Memcheck, a memory error detector
-==435616== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==435616== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==435616== Command: ./story-step4 words.txt story2.txt
-==435616== Parent PID: 435615
-==435616== 
+Valgrind was clean
 
 4.2: Current test is story-step4 -n words.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==435744== Memcheck, a memory error detector
-==435744== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==435744== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==435744== Command: ./story-step4 -n words.txt story2.txt
-==435744== Parent PID: 435743
-==435744== 
+Valgrind was clean
 
 4.3: Current test is story-step4 mywords1.txt story2.txt
 -----------------------------
@@ -283,24 +211,12 @@ Valgrind was clean
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
-Valgrind reported errors:
-==436281== Memcheck, a memory error detector
-==436281== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==436281== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==436281== Command: ./story-step4 mywords0.txt wrongstory1.txt
-==436281== Parent PID: 436280
-==436281== 
+Valgrind was clean
 
 4.8: Current test is story-step4 mywords4.txt story2.txt
 -----------------------------
 Your output looks good. Lets check valgrind
-Valgrind reported errors or memory leaks:
-==436446== Memcheck, a memory error detector
-==436446== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==436446== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==436446== Command: ./story-step4 mywords4.txt story2.txt
-==436446== Parent PID: 436441
-==436446== 
+Valgrind was clean
 
 4.9: Current test is story-step4
 -----------------------------
@@ -319,8 +235,21 @@ Valgrind was clean
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
-Start time 1761761120 seconds after epoch
-Current time 1761761301 seconds after epoch
-You have used more than 2 minutes of compute time. Exiting.
+
+4.12: Current test is story-step4 nofile nofile
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+4.13: Current test is story-step4 -n nofile nofile
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+You have passed the test cases YOU provided
+If your tests are good, this is great. 
+If your tests are insufficient, you should do much more testing
 
 Overall Grade: NO GRADE YET
