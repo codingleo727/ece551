@@ -1,6 +1,6 @@
-Grading at 10/30/2025:01:15:28.605274
-For commit ID 721d26f1f2fb12a874b1b07523e2e7fa5e12af55
-Grading at Wed Oct 29 09:13:10 PM EDT 2025
+Grading at 10/30/2025:02:46:18.948300
+For commit ID 03a4490d26d80d4827ca37430cc5280d9c3eec89
+Grading at Wed Oct 29 10:44:47 PM EDT 2025
 Doing some basic checking for your submission
 
 Step 1
@@ -37,13 +37,19 @@ Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-1.5: Current test is story-step1
+1.5: Current test is story-step1 wrongstory2.txt
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
 Valgrind was clean
 
-1.6: Current test is story-step1 nofile
+1.6: Current test is story-step1
+-----------------------------
+Great: we both considered this an error
+Lets check if it valgrinds:
+Valgrind was clean
+
+1.7: Current test is story-step1 nofile
 -----------------------------
 Great: we both considered this an error
 Lets check if it valgrinds:
