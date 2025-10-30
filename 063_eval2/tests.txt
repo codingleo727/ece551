@@ -2,6 +2,7 @@ story-step1 story.txt
 story-step1 mystory1.txt
 story-step1 wrongstory0.txt
 story-step1 wrongstory1.txt
+story-step1 wrongstory2.txt
 story-step1
 story-step1 nofile
 story-step2 words.txt
