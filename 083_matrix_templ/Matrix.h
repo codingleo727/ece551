@@ -65,12 +65,12 @@ class Matrix {
     }
 
     const std::vector<T> & operator[](int index) const {
-      assert(index < numRows);
+      assert(index >= 0 && index < numRows);
       return *rows[index];
     }
 
     std::vector<T> & operator[] (int index) {
-      assert(index < numRows);
+      assert(index >= 0 && index < numRows);
       return *rows[index];
     }
 
