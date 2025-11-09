@@ -192,12 +192,16 @@ class Polynomial {
   NumT findZero(NumT x, unsigned maxSteps, const ToleranceT & tolerance, const ToleranceT & deriv_tolerance) {
     Polynomial derived = derivative();
     NumT xnew = x;
-    for (unsigned i = 0; i <= maxSteps; i++) {
+    for (unsigned i = maxSteps + 1; i-- > 0;) {
       NumT fx = eval(xnew);
       if (std::abs(fx) <= tolerance) {
         return xnew;
       }
       
+      if (i == 0) {
+        throw convergence_failure<NumT>(xnew);
+      }
+
       NumT dfx = derived.eval(xnew);
       if (std::abs(dfx) < deriv_tolerance) {
         throw convergence_failure<NumT>(xnew);
