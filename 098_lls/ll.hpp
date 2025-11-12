@@ -156,8 +156,6 @@ public:
   int getSize() const {
     return size;
   }
-
-  friend Testing;
 };
 
 #endif
