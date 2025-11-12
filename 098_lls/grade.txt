@@ -1,20 +1,23 @@
-Grading at 11/12/2025:22:29:24.398188
-For commit ID c5b8c42809e79537ff19dc3bd4bd4d9f7c38411c
-Grading at Wed Nov 12 05:29:08 PM EST 2025
+Grading at 11/12/2025:22:47:20.379784
+For commit ID c69487f2bf20a7a8b4355bc5dffece753dc0d771
+Grading at Wed Nov 12 05:47:17 PM EST 2025
 -----------------------------------------------
 testcase 1 : Testing with LinkedList<int>
 ...compiling...
 The code compiled.
-Valgrind reported errors (test failed).
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 2 : Testing with LinkedList<std::string>
 ...compiling...
 The code compiled.
-Valgrind reported errors (test failed).
+Your file matched the expected output
+Testcase passed 
 -----------------------------------------------
 testcase 3 : Testing with LinkedList<(a custom class we wrote)>
 ...compiling...
 The code compiled.
-Valgrind reported errors (test failed).
+Your file matched the expected output
+Testcase passed 
 
-Overall Grade: F
+Overall Grade: A
