@@ -1,29 +1,20 @@
-Grading at 11/12/2025:22:27:08.302849
-For commit ID 94b4200d8a942b641399979582eeb782d186bf96
-Grading at Wed Nov 12 05:27:07 PM EST 2025
+Grading at 11/12/2025:22:29:24.398188
+For commit ID c5b8c42809e79537ff19dc3bd4bd4d9f7c38411c
+Grading at Wed Nov 12 05:29:08 PM EST 2025
 -----------------------------------------------
 testcase 1 : Testing with LinkedList<int>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp:160:10: error: ‘Testing’ does not name a type
-  160 |   friend Testing;
-      |          ^~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 2 : Testing with LinkedList<std::string>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp:160:10: error: ‘Testing’ does not name a type
-  160 |   friend Testing;
-      |          ^~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Valgrind reported errors (test failed).
 -----------------------------------------------
 testcase 3 : Testing with LinkedList<(a custom class we wrote)>
 ...compiling...
-In file included from tester.cpp:1:
-ll.hpp:160:10: error: ‘Testing’ does not name a type
-  160 |   friend Testing;
-      |          ^~~~~~~
-The code did not compile.  This test failed.
+The code compiled.
+Valgrind reported errors (test failed).
 
 Overall Grade: F
