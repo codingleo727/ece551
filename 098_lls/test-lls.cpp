@@ -3,7 +3,9 @@
 #include <cstdlib>
 #include <iostream>
 
-#include "il.hpp"
+#include "ll.hpp"
+
+typedef LinkedList<int> IntList;
 
 class Tester {
  public:

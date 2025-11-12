@@ -53,6 +53,7 @@ public:
     Node * copy_curr = li.head;
     while (copy_curr != NULL) {
       addBack(copy_curr->data);
+      copy_curr = copy_curr->next;
     }
   }
 
@@ -156,6 +157,8 @@ public:
   int getSize() const {
     return size;
   }
+
+  friend class Tester;
 };
 
 #endif
