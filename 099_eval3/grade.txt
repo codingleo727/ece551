@@ -1,6 +1,6 @@
-Grading at 11/17/2025:03:48:28.567948
-For commit ID f998e03174631fe7721e8bf167ae0120217159c7
-Grading at Sun Nov 16 10:48:18 PM EST 2025
+Grading at 11/17/2025:05:04:49.859703
+For commit ID 17a4885144b660aeddd94066ec78c388660d709d
+Grading at Mon Nov 17 12:04:40 AM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 
 Running your test cases
@@ -79,9 +79,8 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We said this was an error.  Our error message was
-Could not convert test to a number
-However, you exited with EXIT_SUCCESS
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 -------------------------
  This test case will run 
  ships-step1 
@@ -92,8 +91,9 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1763351308** : 819dc323e3b7b641a36627aae3c52e64c144e9f8  -
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
