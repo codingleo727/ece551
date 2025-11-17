@@ -33,6 +33,16 @@ unsigned to_unsigned(const std::string & num) {
   std::stringstream ss(num);
   unsigned value;
   ss >> value;
+
+  if (ss.fail()) {
+    throw parsing_failure();
+  }
+
+  char leftover;
+  if (ss >> leftover) {
+    throw parsing_failure();
+  }
+
   return value;
 }
 
