@@ -37,4 +37,6 @@ int main(int argc, char * argv[]) {
   }
 
   print_route(routes);
+
+  return EXIT_SUCCESS;
 }
