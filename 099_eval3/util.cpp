@@ -64,7 +64,7 @@ void parse_line(const std::string & line,
   std::vector<std::string> info;
   std::string source;
   std::string dest;
-  unsigned capacity;
+  unsigned capacity = 0;
 
   std::vector<std::string> ship_info;
   parse_info(line, ship_info, name, info, source, dest, capacity);
