@@ -6,7 +6,7 @@
 #include <vector>
 
 #include "route.hpp"
-#include "ship.hpp"
+#include "ships.hpp"
 
 class parsing_failure : public std::exception {
  public:

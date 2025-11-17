@@ -1,6 +1,6 @@
-#include "ship.hpp"
-
 #include <iostream>
+
+#include "ships.hpp"
 
 Ship::Ship() : name(), info(), source(), dest(), capacity() {
 }

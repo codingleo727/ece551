@@ -3,12 +3,13 @@
 #include <iostream>
 
 #include "route.hpp"
-#include "ship.hpp"
+#include "ships.hpp"
 #include "util.hpp"
 
 int main(int argc, char * argv[]) {
   if (argc != 2) {
-    std::cerr << "Please input 1 file only" << std::endl;
+    std::cerr << "Please input in the format: ./ships-step1 \"input filename\""
+              << std::endl;
     exit(EXIT_FAILURE);
   }
 
