@@ -4,6 +4,7 @@
 #include <iostream>
 #include <sstream>
 
+/* Splits a string according to the delim */
 std::vector<std::string> split(const std::string & line, const char delim) {
   std::vector<std::string> str_vector;
   std::string word;
@@ -11,7 +12,7 @@ std::vector<std::string> split(const std::string & line, const char delim) {
     char c = *it;
     if (c == delim) {
       if (word.empty()) {
-        throw parsing_failure();
+        throw parsing_failure();  // In case of invalid format
       }
       str_vector.push_back(word);
       word.clear();
@@ -22,30 +23,32 @@ std::vector<std::string> split(const std::string & line, const char delim) {
   }
 
   if (word.empty()) {
-    throw parsing_failure();
+    throw parsing_failure();  // In case of invalid format
   }
   str_vector.push_back(word);
 
   return str_vector;
 }
 
+/* Converts a string to an unsigned integer */
 unsigned to_unsigned(const std::string & num) {
   std::stringstream ss(num);
   unsigned value;
   ss >> value;
 
   if (ss.fail()) {
-    throw parsing_failure();
+    throw parsing_failure();  // In case if string is not a valid integer
   }
 
   char leftover;
   if (ss >> leftover) {
-    throw parsing_failure();
+    throw parsing_failure();  // In case if string is not a valid integer
   }
 
   return value;
 }
 
+/* Prints the route in the required format */
 void print_route(std::vector<Route> & routes) {
   std::sort(routes.begin(), routes.end());
   for (std::vector<Route>::const_iterator it = routes.begin(); it != routes.end(); ++it) {
@@ -53,6 +56,7 @@ void print_route(std::vector<Route> & routes) {
   }
 }
 
+/* Parses the line containing each ship's information into ships and routes */
 void parse_line(const std::string & line,
                 std::vector<Ship> & fleet,
                 std::vector<Route> & routes) {
@@ -60,7 +64,7 @@ void parse_line(const std::string & line,
   std::vector<std::string> info;
   std::string source;
   std::string dest;
-  unsigned capacity = 0;
+  unsigned capacity;
 
   std::vector<std::string> ship_info;
   parse_info(line, ship_info, name, info, source, dest, capacity);
@@ -69,6 +73,7 @@ void parse_line(const std::string & line,
   parse_route(routes, source, dest, capacity);
 }
 
+/* Parses the line for the ship's info (name, type info, source, destination, and capacity) */
 void parse_info(const std::string & line,
                 std::vector<std::string> & ship_info,
                 std::string & name,
@@ -87,6 +92,7 @@ void parse_info(const std::string & line,
   capacity = to_unsigned(ship_info[4]);
 }
 
+/* Adds a ship to the fleet */
 void parse_ship(std::vector<Ship> & fleet,
                 std::string & name,
                 std::vector<std::string> & info,
@@ -96,12 +102,13 @@ void parse_ship(std::vector<Ship> & fleet,
   Ship member(name, info, source, dest, capacity);
   for (std::vector<Ship>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
     if (it->get_name() == name) {
-      throw duplicate_name();
+      throw duplicate_name();  // In case of duplicate ship names
     }
   }
   fleet.push_back(member);
 }
 
+/* Adds a route */
 void parse_route(std::vector<Route> & routes,
                  std::string & source,
                  std::string & dest,
@@ -110,7 +117,8 @@ void parse_route(std::vector<Route> & routes,
   std::vector<Route>::iterator found_route =
       std::find(routes.begin(), routes.end(), route);
   if (found_route != routes.end()) {
-    found_route->update_capacity(capacity);
+    found_route->update_capacity(
+        capacity);  // If same route, updates the capacity of said route
   }
   else {
     routes.push_back(route);
