@@ -57,9 +57,9 @@ void print_route(std::vector<Route> & routes) {
 }
 
 /* Parses the line containing each ship's information into ships and routes */
-void parse_line(const std::string & line,
-                std::vector<Ship> & fleet,
-                std::vector<Route> & routes) {
+void parse_fleet(const std::string & line,
+                 std::vector<Ship *> & fleet,
+                 std::vector<Route> & routes) {
   std::string name;
   std::vector<std::string> info;
   std::string source;
@@ -67,20 +67,20 @@ void parse_line(const std::string & line,
   unsigned capacity = 0;
 
   std::vector<std::string> ship_info;
-  parse_info(line, ship_info, name, info, source, dest, capacity);
+  parse_fleet_info(line, ship_info, name, info, source, dest, capacity);
 
   parse_ship(fleet, name, info, source, dest, capacity);
   parse_route(routes, source, dest, capacity);
 }
 
 /* Parses the line for the ship's info (name, type info, source, destination, and capacity) */
-void parse_info(const std::string & line,
-                std::vector<std::string> & ship_info,
-                std::string & name,
-                std::vector<std::string> & info,
-                std::string & source,
-                std::string & dest,
-                unsigned & capacity) {
+void parse_fleet_info(const std::string & line,
+                      std::vector<std::string> & ship_info,
+                      std::string & name,
+                      std::vector<std::string> & info,
+                      std::string & source,
+                      std::string & dest,
+                      unsigned & capacity) {
   ship_info = split(line, ':');
   if (ship_info.size() != 5) {
     throw parsing_failure();
@@ -93,15 +93,28 @@ void parse_info(const std::string & line,
 }
 
 /* Adds a ship to the fleet */
-void parse_ship(std::vector<Ship> & fleet,
+void parse_ship(std::vector<Ship *> & fleet,
                 std::string & name,
                 std::vector<std::string> & info,
                 std::string & source,
                 std::string & dest,
                 unsigned capacity) {
-  Ship member(name, info, source, dest, capacity);
-  for (std::vector<Ship>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
-    if (it->get_name() == name) {
+  Ship * member;
+  if (info[0] == "Container") {
+    unsigned num_slots = to_unsigned(info[1]);
+    std::vector<std::string> cap_vector;
+    for (size_t i = 2; i < info.size(); i++) {
+      cap_vector.push_back(info[i]);
+    }
+    member = new Container(name, info, source, dest, capacity, num_slots, cap_vector);
+  }
+  /* else if (info[0] == "Tanker") {
+  }
+  else if (info[0] == "Animal") {
+  }*/
+
+  for (std::vector<Ship *>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
+    if ((*it)->get_name() == name) {
       throw duplicate_name();  // In case of duplicate ship names
     }
   }
@@ -123,4 +136,12 @@ void parse_route(std::vector<Route> & routes,
   else {
     routes.push_back(route);
   }
+}
+
+/* Frees the memory within fleet */
+void clear_fleet(std::vector<Ship *> fleet) {
+  for (size_t i = 0; i < fleet.size(); i++) {
+    delete fleet[i];
+  }
+  fleet.clear();
 }

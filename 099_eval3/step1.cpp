@@ -15,7 +15,7 @@ int main(int argc, char * argv[]) {
 
   std::ifstream input(argv[1]);
   std::string line;
-  std::vector<Ship> fleet;
+  std::vector<Ship *> fleet;
   std::vector<Route> routes;
 
   while (std::getline(input, line)) {
@@ -37,6 +37,7 @@ int main(int argc, char * argv[]) {
   }
 
   print_route(routes);
+  clear_fleet(fleet);
 
   return EXIT_SUCCESS;
 }
