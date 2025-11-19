@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 
+#include "cargo.hpp"
 #include "route.hpp"
 #include "ships.hpp"
 
@@ -38,11 +39,13 @@ void parse_ship(std::vector<Ship *> & fleet,
                 std::vector<std::string> & info,
                 std::string & source,
                 std::string & dest,
-                unsigned capacity);
+                unsigned total_capacity,
+                std::vector<Cargo> & cargos_carried);
 void parse_route(std::vector<Route> & routes,
                  std::string & source,
                  std::string & dest,
                  unsigned capacity);
-
 void clear_fleet(std::vector<Ship *> fleet);
+void parse_cargo(const std::string & line, std::vector<Cargo> & cargos);
+
 #endif

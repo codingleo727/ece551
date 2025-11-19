@@ -65,11 +65,12 @@ void parse_fleet(const std::string & line,
   std::string source;
   std::string dest;
   unsigned capacity = 0;
+  std::vector<Cargo> cargos_carried;
 
   std::vector<std::string> ship_info;
   parse_fleet_info(line, ship_info, name, info, source, dest, capacity);
 
-  parse_ship(fleet, name, info, source, dest, capacity);
+  parse_ship(fleet, name, info, source, dest, capacity, cargos_carried);
   parse_route(routes, source, dest, capacity);
 }
 
@@ -98,15 +99,25 @@ void parse_ship(std::vector<Ship *> & fleet,
                 std::vector<std::string> & info,
                 std::string & source,
                 std::string & dest,
-                unsigned capacity) {
+                unsigned total_capacity,
+                std::vector<Cargo> & cargos_carried) {
   Ship * member;
-  if (info[0] == "Container") {
+  std::string ship_type = info[0];
+  std::vector<std::string> capabilities;
+  if (ship_type == "Container") {
     unsigned num_slots = to_unsigned(info[1]);
-    std::vector<std::string> cap_vector;
     for (size_t i = 2; i < info.size(); i++) {
-      cap_vector.push_back(info[i]);
+      capabilities.push_back(info[i]);
     }
-    member = new Container(name, info, source, dest, capacity, num_slots, cap_vector);
+    member = new Container(name,
+                           ship_type,
+                           source,
+                           dest,
+                           total_capacity,
+                           0,
+                           capabilities,
+                           cargos_carried,
+                           num_slots);
   }
   /* else if (info[0] == "Tanker") {
   }
@@ -140,8 +151,33 @@ void parse_route(std::vector<Route> & routes,
 
 /* Frees the memory within fleet */
 void clear_fleet(std::vector<Ship *> fleet) {
-  for (size_t i = 0; i < fleet.size(); i++) {
+  for (size_t i = 0; i < fleet.size(); ++i) {
     delete fleet[i];
   }
   fleet.clear();
+}
+
+void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
+  std::vector<std::string> cargo_info;
+  std::string name;
+  std::string source;
+  std::string dest;
+  unsigned capacity = 0;
+  std::vector<std::string> properties;
+
+  cargo_info = split(line, ',');
+  name = cargo_info[0];
+  source = cargo_info[1];
+  dest = cargo_info[2];
+  capacity = to_unsigned(cargo_info[3]);
+  for (size_t i = 4; i < cargo_info.size(); ++i) {
+    std::string word_to_remove = "hazardous-";
+    size_t pos = cargo_info[i].find(word_to_remove);
+    if (pos != std::string::npos) {
+      cargo_info[i].erase(pos, word_to_remove.length());
+    }
+    properties.push_back(cargo_info[i]);
+  }
+  Cargo cargo(name, source, dest, capacity, properties);
+  cargos.push_back(cargo);
 }

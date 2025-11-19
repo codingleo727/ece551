@@ -5,45 +5,64 @@
 #include <string>
 #include <vector>
 
+#include "cargo.hpp"
+
 class Ship {
  private:
   std::string name;
-  std::vector<std::string> info;
+  std::string ship_type;
   std::string source;
   std::string dest;
-  unsigned capacity;
+  unsigned total_capacity;
+  unsigned used_capacity;
+  std::vector<std::string> capabilities;
+  std::vector<Cargo> cargos_carried;
 
  public:
   Ship();
   Ship(std::string name_,
-       std::vector<std::string> info_,
+       std::string ship_type_,
        std::string source_,
        std::string dest_,
-       unsigned capacity_);
+       unsigned total_capacity_,
+       unsigned used_capacity_,
+       std::vector<std::string> capabilities_,
+       std::vector<Cargo> cargos_carried_);
   const std::string & get_name() const;
+  const std::string & get_ship_type() const;
   const std::string & get_source() const;
-  const std::vector<std::string> & get_info() const;
   const std::string & get_dest() const;
-  unsigned get_capacity() const;
+  unsigned get_total_capacity() const;
+  unsigned get_used_capacity() const;
+  const std::vector<std::string> & get_capabilities() const;
+  const std::vector<Cargo> & get_cargos_carried() const;
+  bool operator<(const Ship & rhs) const;
+  virtual bool can_load(const Cargo & cargo) const = 0;
+  virtual void load_cargo(const Cargo & cargo);
+  virtual void print_remaining_space() const = 0;
   virtual ~Ship(){};
 };
+
+bool ship_ptr_less(Ship * lhs, Ship * rhs);
 
 class Container : public Ship {
  private:
   unsigned num_slots;
-  std::vector<std::string> capabilities;
 
  public:
   Container();
   Container(std::string name_,
-            std::vector<std::string> info_,
+            std::string ship_type_,
             std::string source_,
             std::string dest_,
-            unsigned capacity_,
-            unsigned num_slots_,
-            std::vector<std::string> capabilities_);
-  unsigned get_slots() const;
-  const std::vector<std::string> & get_capabilities() const;
+            unsigned total_capacity_,
+            unsigned used_capacity_,
+            std::vector<std::string> capabilities_,
+            std::vector<Cargo> cargos_carried_,
+            unsigned num_slots_);
+  virtual bool can_load(const Cargo & cargo) const;
+  virtual void load_cargo(const Cargo & cargo);
+  virtual void print_remaining_space() const;
   virtual ~Container(){};
 };
 
@@ -52,23 +71,23 @@ class Tanker : public Ship {
   signed min_temp;
   signed max_temp;
   unsigned num_tanks;
-  std::vector<std::string> capabilities;
 
  public:
   Tanker();
   Tanker(std::string name_,
-         std::vector<std::string> info_,
+         std::string ship_type_,
          std::string source_,
          std::string dest_,
-         unsigned capacity_,
+         unsigned total_capacity_,
+         unsigned used_capacity_,
+         std::vector<std::string> capabilities_,
+         std::vector<Cargo> cargos_carried_,
          signed min_temp_,
          signed max_temp_,
-         unsigned num_tanks_,
-         std::vector<std::string> capabilities_);
-  signed get_min_temp() const;
-  signed get_max_temp() const;
-  unsigned get_tanks() const;
-  const std::vector<std::string> & get_capabilities() const;
+         unsigned num_tanks_);
+  virtual bool can_load(const Cargo & cargo) const;
+  virtual void load_cargo(const Cargo & cargo);
+  virtual void print_remaining_space() const;
   virtual ~Tanker(){};
 };
 
@@ -79,12 +98,17 @@ class Animal : public Ship {
  public:
   Animal();
   Animal(std::string name_,
-         std::vector<std::string> info_,
+         std::string ship_type_,
          std::string source_,
          std::string dest_,
-         unsigned capacity_,
+         unsigned total_capacity_,
+         unsigned used_capacity_,
+         std::vector<std::string> capabilities_,
+         std::vector<Cargo> cargos_carried_,
          unsigned size_);
-  unsigned get_size() const;
+  virtual bool can_load(const Cargo & cargo) const;
+  virtual void load_cargo(const Cargo & cargo);
+  virtual void print_remaining_space() const;
   virtual ~Animal(){};
 };
 

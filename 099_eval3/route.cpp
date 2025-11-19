@@ -29,18 +29,18 @@ void Route::update_capacity(unsigned int extra_capacity) {
 
 /* Checks if other route is the same as current route */
 bool Route::operator==(const Route & rhs) const {
-  return get_source() == rhs.get_source() && get_dest() == rhs.get_dest();
+  return source == rhs.source && dest == rhs.dest;
 }
 
 /* Used for sorting the route in alphabetical order, starting with source, then destination */
 bool Route::operator<(const Route & rhs) const {
-  if (get_source() < rhs.get_source()) {
+  if (source < rhs.source) {
     return true;
   }
-  if (get_source() > rhs.get_source()) {
+  if (source > rhs.source) {
     return false;
   }
-  return get_dest() < rhs.get_dest();
+  return dest < rhs.dest;
 }
 
 /* Used for printing */

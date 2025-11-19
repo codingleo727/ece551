@@ -6,3 +6,4 @@ ships-step1 inputs/ships_wrong1.txt
 ships-step1 inputs/ships_wrong2.txt
 ships-step1 inputs/ships_wrong3.txt
 ships-step1
+ships-step2 inputs/ships0.txt inputs/cargo0.txt

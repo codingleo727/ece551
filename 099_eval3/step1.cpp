@@ -20,7 +20,7 @@ int main(int argc, char * argv[]) {
 
   while (std::getline(input, line)) {
     try {
-      parse_line(line, fleet, routes);
+      parse_fleet(line, fleet, routes);
     }
     catch (const parsing_failure & e) {
       std::cerr << "Error: " << e.what() << std::endl;
@@ -36,7 +36,7 @@ int main(int argc, char * argv[]) {
     }
   }
 
-  print_route(routes);
+  //print_route(routes);
   clear_fleet(fleet);
 
   return EXIT_SUCCESS;
