@@ -87,7 +87,6 @@ int main(int argc, char * argv[]) {
     (*s)->print_remaining_space();
   }
 
-  //print_route(routes);
   clear_fleet(fleet);
 
   return EXIT_SUCCESS;

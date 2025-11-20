@@ -36,7 +36,7 @@ int main(int argc, char * argv[]) {
     }
   }
 
-  //print_route(routes);
+  print_route(routes);
   clear_fleet(fleet);
 
   return EXIT_SUCCESS;
