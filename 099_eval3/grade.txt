@@ -1,6 +1,6 @@
-Grading at 11/19/2025:22:48:50.858385
-For commit ID c29cb1a98ba852b045aeb430e72f35971cbb7a10
-Grading at Wed Nov 19 05:48:38 PM EST 2025
+Grading at 11/20/2025:00:49:33.279291
+For commit ID d8ee582ff1df8e4f18dd3e11f41e5a857e4380fd
+Grading at Wed Nov 19 07:49:21 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 
 Running your test cases
@@ -20,12 +20,8 @@ g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 util.cpp
 g++ -o ships-step1 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step1.cpp cargo.o route.o ships.o util.o
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-							      >	(Gondor -> The Shire) has total capacity 1550
-							      >	(Mordor -> Luthadel) has total capacity 2150
-							      >	(Mordor -> Sarth) has total capacity 4550
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
+ *** This is one of the three test cases for step 1 early start EC **
 -------------------------
  This test case will run 
  ships-step1 
@@ -74,55 +70,55 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 Valgrind reported errors
-==1451461== Memcheck, a memory error detector
-==1451461== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
-==1451461== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
-==1451461== Command: ./ships-step1 inputs/ships_wrong1.txt
-==1451461== Parent PID: 1451458
-==1451461== 
-==1451461== Invalid read of size 8
-==1451461==    at 0x49AB054: std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1451461==    by 0x10E9C8: to_unsigned(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (util.cpp:35)
-==1451461==    by 0x10F0A8: parse_ship(std::vector<Ship*, std::allocator<Ship*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int, std::vector<Cargo, std::allocator<Cargo> >&) (util.cpp:108)
-==1451461==    by 0x10ECC8: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:73)
-==1451461==    by 0x10A846: main (step1.cpp:23)
-==1451461==  Address 0x4dda398 is 8 bytes after a block of size 32 alloc'd
-==1451461==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1451461==    by 0x10C36D: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:127)
-==1451461==    by 0x10C22A: __gnu_cxx::__alloc_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (alloc_traits.h:133)
-==1451461==    by 0x10C0C1: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:346)
-==1451461==    by 0x110A1D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(unsigned long, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >) (stl_vector.h:1511)
-==1451461==    by 0x110144: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::operator=(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (vector.tcc:226)
-==1451461==    by 0x10EF0D: parse_fleet_info(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int&) (util.cpp:90)
-==1451461==    by 0x10EC8F: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:71)
-==1451461==    by 0x10A846: main (step1.cpp:23)
-==1451461== 
-==1451461== Invalid read of size 8
-==1451461==    at 0x49AB05C: std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
-==1451461==    by 0x10E9C8: to_unsigned(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (util.cpp:35)
-==1451461==    by 0x10F0A8: parse_ship(std::vector<Ship*, std::allocator<Ship*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int, std::vector<Cargo, std::allocator<Cargo> >&) (util.cpp:108)
-==1451461==    by 0x10ECC8: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:73)
-==1451461==    by 0x10A846: main (step1.cpp:23)
-==1451461==  Address 0x4dda390 is 0 bytes after a block of size 32 alloc'd
-==1451461==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
-==1451461==    by 0x10C36D: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:127)
-==1451461==    by 0x10C22A: __gnu_cxx::__alloc_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (alloc_traits.h:133)
-==1451461==    by 0x10C0C1: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:346)
-==1451461==    by 0x110A1D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(unsigned long, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >) (stl_vector.h:1511)
-==1451461==    by 0x110144: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::operator=(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (vector.tcc:226)
-==1451461==    by 0x10EF0D: parse_fleet_info(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int&) (util.cpp:90)
-==1451461==    by 0x10EC8F: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:71)
-==1451461==    by 0x10A846: main (step1.cpp:23)
-==1451461== 
-==1451461== 
-==1451461== HEAP SUMMARY:
-==1451461==     in use at exit: 8,833 bytes in 4 blocks
-==1451461==   total heap usage: 12 allocs, 8 frees, 82,241 bytes allocated
-==1451461== 
-==1451461== For a detailed leak analysis, rerun with: --leak-check=full
-==1451461== 
-==1451461== For lists of detected and suppressed errors, rerun with: -s
-==1451461== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
+==1458017== Memcheck, a memory error detector
+==1458017== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==1458017== Using Valgrind-3.18.1 and LibVEX; rerun with -h for copyright info
+==1458017== Command: ./ships-step1 inputs/ships_wrong1.txt
+==1458017== Parent PID: 1458016
+==1458017== 
+==1458017== Invalid read of size 8
+==1458017==    at 0x49AB054: std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==1458017==    by 0x10E9D8: to_unsigned(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (util.cpp:35)
+==1458017==    by 0x10F0B8: parse_ship(std::vector<Ship*, std::allocator<Ship*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int, std::vector<Cargo, std::allocator<Cargo> >&) (util.cpp:108)
+==1458017==    by 0x10ECD8: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:73)
+==1458017==    by 0x10A846: main (step1.cpp:23)
+==1458017==  Address 0x4dda398 is 8 bytes after a block of size 32 alloc'd
+==1458017==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1458017==    by 0x10C37D: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:127)
+==1458017==    by 0x10C23A: __gnu_cxx::__alloc_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (alloc_traits.h:133)
+==1458017==    by 0x10C0D1: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:346)
+==1458017==    by 0x110A2D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(unsigned long, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >) (stl_vector.h:1511)
+==1458017==    by 0x110154: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::operator=(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (vector.tcc:226)
+==1458017==    by 0x10EF1D: parse_fleet_info(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int&) (util.cpp:90)
+==1458017==    by 0x10EC9F: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:71)
+==1458017==    by 0x10A846: main (step1.cpp:23)
+==1458017== 
+==1458017== Invalid read of size 8
+==1458017==    at 0x49AB05C: std::__cxx11::basic_stringstream<char, std::char_traits<char>, std::allocator<char> >::basic_stringstream(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::_Ios_Openmode) (in /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30)
+==1458017==    by 0x10E9D8: to_unsigned(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (util.cpp:35)
+==1458017==    by 0x10F0B8: parse_ship(std::vector<Ship*, std::allocator<Ship*> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int, std::vector<Cargo, std::allocator<Cargo> >&) (util.cpp:108)
+==1458017==    by 0x10ECD8: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:73)
+==1458017==    by 0x10A846: main (step1.cpp:23)
+==1458017==  Address 0x4dda390 is 0 bytes after a block of size 32 alloc'd
+==1458017==    at 0x4849013: operator new(unsigned long) (in /usr/libexec/valgrind/vgpreload_memcheck-amd64-linux.so)
+==1458017==    by 0x10C37D: __gnu_cxx::new_allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(unsigned long, void const*) (new_allocator.h:127)
+==1458017==    by 0x10C23A: __gnu_cxx::__alloc_traits<std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >::allocate(std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >&, unsigned long) (alloc_traits.h:133)
+==1458017==    by 0x10C0D1: std::_Vector_base<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate(unsigned long) (stl_vector.h:346)
+==1458017==    by 0x110A2D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >* std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::_M_allocate_and_copy<__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > > >(unsigned long, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >) (stl_vector.h:1511)
+==1458017==    by 0x110154: std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >::operator=(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&) (vector.tcc:226)
+==1458017==    by 0x10EF1D: parse_fleet_info(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, unsigned int&) (util.cpp:90)
+==1458017==    by 0x10EC9F: parse_fleet(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, std::vector<Ship*, std::allocator<Ship*> >&, std::vector<Route, std::allocator<Route> >&) (util.cpp:71)
+==1458017==    by 0x10A846: main (step1.cpp:23)
+==1458017== 
+==1458017== 
+==1458017== HEAP SUMMARY:
+==1458017==     in use at exit: 8,833 bytes in 4 blocks
+==1458017==   total heap usage: 12 allocs, 8 frees, 82,241 bytes allocated
+==1458017== 
+==1458017== For a detailed leak analysis, rerun with: --leak-check=full
+==1458017== 
+==1458017== For lists of detected and suppressed errors, rerun with: -s
+==1458017== ERROR SUMMARY: 2 errors from 2 contexts (suppressed: 0 from 0)
 -------------------------
  This test case will run 
  ships-step1 
@@ -169,6 +165,7 @@ We agreed on this testcase and valgrind was clean
  *** This is the test case for step 2 early start EC **
 You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1763351308** : 819dc323e3b7b641a36627aae3c52e64c144e9f8  -
+You have already pass the basic tests for step2:
 **step2 basic tests passed for ldw59 at 1763592530** : 4f1a74bab8f844bc8544eb6bbedb3809a57beb79  -
 You have FAILED one or more of your test cases
 Keep debugging
