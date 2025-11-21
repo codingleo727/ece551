@@ -1,13 +1,12 @@
-Grading at 11/21/2025:00:43:49.276388
-For commit ID bc7dc084c2c08e1b8f9ca8eac64e9ba9431753ac
-Grading at Thu Nov 20 07:43:49 PM EST 2025
+Grading at 11/21/2025:00:49:09.546564
+For commit ID 9de61b78dee794a9cbf16536377b3d98c5e0b10a
+Grading at Thu Nov 20 07:49:09 PM EST 2025
 Comparing answer1.txt
 Your file matched the expected output
  answer1.txt is correct
 Comparing answer2.txt
-Line_1_did_not_match
-Your file did not match the expected output
- answer2.txt is incorrect
+Your file matched the expected output
+ answer2.txt is correct
 Comparing answer3.txt to one possible solution
  (two child delete uses left, then all the way right)
 Line_1_did_not_match
@@ -18,4 +17,4 @@ Comparing answer3.txt to the other possible solution
 Your file matched the expected output
  answer3.txt is correct
 
-Overall Grade: FAILED
+Overall Grade: PASSED
