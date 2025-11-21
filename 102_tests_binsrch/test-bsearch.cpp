@@ -43,7 +43,7 @@ public:
 class SinFunction : public Function<int, int> {
 public:
   virtual int invoke(int arg) {
-    return 10000000 * (sin(arg / 100000.0) - 0.5);
+    return 5000000 * (sin(arg / 200000.0) - 0.3);
   }
 };
 
@@ -94,7 +94,7 @@ int main() {
   check(&nf, -100, -10, -11, "Negative in range [-100, -10]");
   check(&nf, 0, 0, 0, "Negative in the range [0,0]");
  
-  check(&sf, 0, 150000, 52359, "Sin");
+  check(&sf, 0, 150000, 60938, "Sin in range [0, 150000]");
 
   check(&psf, -100, 100, -1, "Positive slope function in range [-100, 100]");
   check(&psf, 10, 1000, 10, "Positive slope function in range [10, 1000]");
