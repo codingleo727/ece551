@@ -48,6 +48,24 @@ unsigned to_unsigned(const std::string & num) {
   return value;
 }
 
+/* Converts a string to a signed integer */
+signed to_signed(const std::string & num) {
+  std::stringstream ss(num);
+  signed value;
+  ss >> value;
+
+  if (ss.fail()) {
+    throw parsing_failure();
+  }
+
+  char leftover;
+  if (ss >> leftover) {
+    throw parsing_failure();
+  }
+
+  return value;
+}
+
 /* Prints the route in the required format */
 void print_route(std::vector<Route> & routes) {
   std::sort(routes.begin(), routes.end());
@@ -105,8 +123,8 @@ void parse_ship(std::vector<Ship *> & fleet,
   std::string ship_type = info[0];
   std::vector<std::string> capabilities;
   if (ship_type == "Container") {
-    unsigned num_slots = to_unsigned(info[1]);
-    for (size_t i = 2; i < info.size(); i++) {
+    unsigned num_slots = to_number<unsigned>(info[1]);
+    for (size_t i = 2; i < info.size(); ++i) {
       capabilities.push_back(info[i]);
     }
     member = new Container(name,
@@ -119,10 +137,37 @@ void parse_ship(std::vector<Ship *> & fleet,
                            cargos_carried,
                            num_slots);
   }
-  /* else if (info[0] == "Tanker") {
+  else if (info[0] == "Tanker") {
+    signed min_temp = to_number<signed>(info[1]);
+    signed max_temp = to_number<signed>(info[2]);
+    unsigned tanks = to_number<unsigned>(info[3]);
+    for (size_t i = 4; i < info.size(); ++i) {
+      capabilities.push_back(info[i]);
+    }
+    member = new Tanker(name,
+                        ship_type,
+                        source,
+                        dest,
+                        total_capacity,
+                        0,
+                        capabilities,
+                        cargos_carried,
+                        min_temp,
+                        max_temp,
+                        tanks);
   }
   else if (info[0] == "Animal") {
-  }*/
+    unsigned size = to_unsigned(info[1]);
+    member = new Animal(name,
+                        ship_type,
+                        source,
+                        dest,
+                        total_capacity,
+                        0,
+                        capabilities,
+                        cargos_carried,
+                        size);
+  }
 
   for (std::vector<Ship *>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
     if ((*it)->get_name() == name) {

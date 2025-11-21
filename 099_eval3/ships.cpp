@@ -164,3 +164,53 @@ void Container::load_cargo(const Cargo & cargo) {
 void Container::print_remaining_space() const {
   std::cout << "  (" << num_slots << ") slots remain\n";
 }
+
+Tanker::Tanker() : Ship(), min_temp(), max_temp() {
+}
+
+Tanker::Tanker(std::string name_,
+               std::string ship_type_,
+               std::string source_,
+               std::string dest_,
+               unsigned total_capacity_,
+               unsigned used_capacity_,
+               std::vector<std::string> capabilities_,
+               std::vector<Cargo> cargos_carried_,
+               signed min_temp_,
+               signed max_temp_,
+               unsigned num_tanks_) :
+    Ship(name_,
+         ship_type_,
+         source_,
+         dest_,
+         total_capacity_,
+         used_capacity_,
+         capabilities_,
+         cargos_carried_),
+    min_temp(min_temp_),
+    max_temp(max_temp_),
+    num_tanks(num_tanks_) {
+}
+
+Animal::Animal() : Ship(), size() {
+}
+
+Animal::Animal(std::string name_,
+               std::string ship_type_,
+               std::string source_,
+               std::string dest_,
+               unsigned total_capacity_,
+               unsigned used_capacity_,
+               std::vector<std::string> capabilities_,
+               std::vector<Cargo> cargos_carried_,
+               unsigned size_) :
+    Ship(name_,
+         ship_type_,
+         source_,
+         dest_,
+         total_capacity_,
+         used_capacity_,
+         capabilities_,
+         cargos_carried_),
+    size(size_) {
+}

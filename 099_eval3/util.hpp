@@ -2,6 +2,7 @@
 #define UTIL_HPP
 
 #include <exception>
+#include <sstream>
 #include <string>
 #include <vector>
 
@@ -22,7 +23,8 @@ class duplicate_name : public std::exception {
 };
 
 std::vector<std::string> split(const std::string & line, const char delim);
-unsigned to_unsigned(const std::string & s);
+unsigned to_unsigned(const std::string & num);
+signed to_signed(const std::string & num);
 void print_route(std::vector<Route> & routes);
 void parse_fleet(const std::string & line,
                  std::vector<Ship *> & fleet,
@@ -48,4 +50,25 @@ void parse_route(std::vector<Route> & routes,
 void clear_fleet(std::vector<Ship *> fleet);
 void parse_cargo(const std::string & line, std::vector<Cargo> & cargos);
 
+template<typename T>
+T to_number(const std::string & num) {
+  std::stringstream ss(num);
+  long value;
+  ss >> value;
+
+  if (ss.fail()) {
+    throw parsing_failure();
+  }
+
+  char leftover;
+  if (ss >> leftover) {
+    throw parsing_failure();
+  }
+
+  if (value < 0 && static_cast<T>(-1) > 0) {
+    throw parsing_failure();
+  }
+
+  return static_cast<T>(value);
+}
 #endif
