@@ -48,7 +48,7 @@ void parse_fleet_info(const std::string & line,
   info = split(ship_info[1], ',');
   source = ship_info[2];
   dest = ship_info[3];
-  capacity = to_unsigned(ship_info[4]);
+  capacity = to_number<unsigned>(ship_info[4]);
 }
 
 /* Adds a ship to the fleet */
@@ -63,9 +63,12 @@ void parse_ship(std::vector<Ship *> & fleet,
   std::string ship_type = info[0];
   std::vector<std::string> capabilities;
   if (ship_type == "Container") {
-    unsigned num_slots = to_number<unsigned>(info[1]);
-    for (size_t i = 2; i < info.size(); ++i) {
-      capabilities.push_back(info[i]);
+    unsigned num_slots = 0;
+    if (info.size() > 1) {
+      num_slots = to_number<unsigned>(info[1]);
+      for (size_t i = 2; i < info.size(); ++i) {
+        capabilities.push_back(info[i]);
+      }
     }
     member = new Container(name,
                            ship_type,
@@ -107,6 +110,9 @@ void parse_ship(std::vector<Ship *> & fleet,
                         capabilities,
                         cargos_carried,
                         size);
+  }
+  else {
+    throw parsing_failure();
   }
 
   for (std::vector<Ship *>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
