@@ -3,11 +3,11 @@
 Cargo::Cargo() : name(), source(), dest(), capacity(0), properties() {
 }
 
-Cargo::Cargo(std::string name_,
-             std::string source_,
-             std::string dest_,
+Cargo::Cargo(const std::string & name_,
+             const std::string & source_,
+             const std::string & dest_,
              unsigned capacity_,
-             std::vector<std::string> properties_) :
+             const std::vector<std::string> & properties_) :
     name(name_),
     source(source_),
     dest(dest_),

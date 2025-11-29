@@ -14,11 +14,11 @@ class Cargo {
 
  public:
   Cargo();
-  Cargo(std::string name_,
-        std::string source_,
-        std::string dest_,
+  Cargo(const std::string & name_,
+        const std::string & source_,
+        const std::string & dest_,
         unsigned capacity_,
-        std::vector<std::string> properties_);
+        const std::vector<std::string> & properties_);
   const std::string & get_name() const;
   const std::string & get_source() const;
   const std::string & get_dest() const;

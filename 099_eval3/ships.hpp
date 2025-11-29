@@ -20,14 +20,14 @@ class Ship {
 
  public:
   Ship();
-  Ship(std::string name_,
-       std::string ship_type_,
-       std::string source_,
-       std::string dest_,
+  Ship(const std::string & name_,
+       const std::string & ship_type_,
+       const std::string & source_,
+       const std::string & dest_,
        unsigned total_capacity_,
        unsigned used_capacity_,
-       std::vector<std::string> capabilities_,
-       std::vector<Cargo> cargos_carried_);
+       const std::vector<std::string> & capabilities_,
+       const std::vector<Cargo> & cargos_carried_);
   const std::string & get_name() const;
   const std::string & get_ship_type() const;
   const std::string & get_source() const;
@@ -44,6 +44,7 @@ class Ship {
 };
 
 bool ship_ptr_less(Ship * lhs, Ship * rhs);
+bool contains_type(const std::vector<std::string> & properities, std::string type);
 
 class Container : public Ship {
  private:
@@ -51,14 +52,14 @@ class Container : public Ship {
 
  public:
   Container();
-  Container(std::string name_,
-            std::string ship_type_,
-            std::string source_,
-            std::string dest_,
+  Container(const std::string & name_,
+            const std::string & ship_type_,
+            const std::string & source_,
+            const std::string & dest_,
             unsigned total_capacity_,
             unsigned used_capacity_,
-            std::vector<std::string> capabilities_,
-            std::vector<Cargo> cargos_carried_,
+            const std::vector<std::string> & capabilities_,
+            const std::vector<Cargo> & cargos_carried_,
             unsigned num_slots_);
   virtual bool can_load(const Cargo & cargo) const;
   virtual void load_cargo(const Cargo & cargo);
@@ -70,21 +71,26 @@ class Tanker : public Ship {
  private:
   signed min_temp;
   signed max_temp;
-  unsigned num_tanks;
+  unsigned capacity_per_tank;
+  std::vector<std::pair<unsigned, std::string> > tanks;
 
  public:
   Tanker();
-  Tanker(std::string name_,
-         std::string ship_type_,
-         std::string source_,
-         std::string dest_,
+  Tanker(const std::string & name_,
+         const std::string & ship_type_,
+         const std::string & source_,
+         const std::string & dest_,
          unsigned total_capacity_,
          unsigned used_capacity_,
-         std::vector<std::string> capabilities_,
-         std::vector<Cargo> cargos_carried_,
+         const std::vector<std::string> & capabilities_,
+         const std::vector<Cargo> & cargos_carried_,
          signed min_temp_,
          signed max_temp_,
          unsigned num_tanks_);
+  bool check_tank_capacity(const Cargo & cargo) const;
+  bool check_temps(const std::vector<std::string> & properties) const;
+  void update_tanks(unsigned & tank_capacity, unsigned & cargo_size);
+  unsigned get_tanks_used() const;
   virtual bool can_load(const Cargo & cargo) const;
   virtual void load_cargo(const Cargo & cargo);
   virtual void print_remaining_space() const;
@@ -97,15 +103,16 @@ class Animal : public Ship {
 
  public:
   Animal();
-  Animal(std::string name_,
-         std::string ship_type_,
-         std::string source_,
-         std::string dest_,
+  Animal(const std::string & name_,
+         const std::string & ship_type_,
+         const std::string & source_,
+         const std::string & dest_,
          unsigned total_capacity_,
          unsigned used_capacity_,
-         std::vector<std::string> capabilities_,
-         std::vector<Cargo> cargos_carried_,
+         const std::vector<std::string> & capabilities_,
+         const std::vector<Cargo> & cargos_carried_,
          unsigned size_);
+  bool check_roamer(const std::vector<Cargo> & cargos_carried) const;
   virtual bool can_load(const Cargo & cargo) const;
   virtual void load_cargo(const Cargo & cargo);
   virtual void print_remaining_space() const;

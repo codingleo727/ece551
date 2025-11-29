@@ -2,6 +2,7 @@
 #include <fstream>
 #include <iostream>
 
+#include "parsing_util.hpp"
 #include "route.hpp"
 #include "ships.hpp"
 #include "util.hpp"
