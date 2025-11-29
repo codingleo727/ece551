@@ -244,24 +244,31 @@ bool Tanker::can_load(const Cargo & cargo) const {
 }
 
 bool Tanker::check_tank_capacity(const Cargo & cargo) const {
-  if (get_total_capacity() - get_used_capacity() < cargo.get_capacity()) {
+  unsigned remaining_capacity = get_total_capacity() - get_used_capacity();
+  if (remaining_capacity < cargo.get_capacity()) {
     return false;
   }
 
-  unsigned tanks_needed =
-      (cargo.get_capacity() + capacity_per_tank - 1) / capacity_per_tank;
-  unsigned free_tanks = tanks.size() - tanks_used;
-  if (tanks_needed > free_tanks) {
-    return false;
-  }
-
+  unsigned remaining_cargo = cargo.get_capacity();
   for (std::vector<std::pair<unsigned, std::string> >::const_iterator it = tanks.begin();
        it != tanks.end();
        ++it) {
-    if ((it->second == "" || it->second == cargo.get_name()) && (it->first > 0)) {
+    if (it->first == 0) {
+      continue;
+    }
+
+    if (!(it->second == "" || it->second == cargo.get_name())) {
+      continue;
+    }
+
+    unsigned put_cargo = it->first;
+    if (put_cargo >= remaining_cargo) {
       return true;
     }
+
+    remaining_cargo -= put_cargo;
   }
+
   return false;
 }
 
