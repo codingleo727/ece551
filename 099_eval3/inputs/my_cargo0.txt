@@ -1,7 +1,1 @@
-liquid hydrogen,Luthadel,Midgar,200,liquid,maxtemp=-253,hazardous-flammable
-milk,Luthadel,Midgar,472,liquid,mintemp=1,maxtemp=10
-propane,Luthadel,Midgar,4,gas,hazardous-flammable
-liquid hydrogen,Luthadel,Midgar,200,liquid,maxtemp=-253,hazardous-flammable
-hot stuff,Luthadel,Midgar,10,liquid,mintemp=51,maxtemp=100
-liquid helium,Luthadel,Midgar,100,liquid,maxtemp=-261
-milk,Luthadel,Midgar,1,liquid,mintemp=1,maxtemp=10
+cargo144,Luthadel,Mordor,310,gas
