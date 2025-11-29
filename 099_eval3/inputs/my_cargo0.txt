@@ -1,1 +1,2 @@
 cargo144,Luthadel,Mordor,310,gas
+cargo329,Luthadel,Mordor,220,gas,maxtemp=49
