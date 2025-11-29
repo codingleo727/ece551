@@ -73,6 +73,7 @@ class Tanker : public Ship {
   signed max_temp;
   unsigned capacity_per_tank;
   std::vector<std::pair<unsigned, std::string> > tanks;
+  unsigned tanks_used;
 
  public:
   Tanker();
@@ -90,7 +91,7 @@ class Tanker : public Ship {
   bool check_tank_capacity(const Cargo & cargo) const;
   bool check_temps(const std::vector<std::string> & properties) const;
   void update_tanks(unsigned & tank_capacity, unsigned & cargo_size);
-  unsigned get_tanks_used() const;
+  unsigned update_tanks_used();
   virtual bool can_load(const Cargo & cargo) const;
   virtual void load_cargo(const Cargo & cargo);
   virtual void print_remaining_space() const;

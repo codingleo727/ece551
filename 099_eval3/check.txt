@@ -662,14 +662,13 @@ No ships can carry the cargo132 from Luthadel to Mordor
   The Secret Galleon
   **Loading the cargo onto The Gleaming Dreadnought**
 No ships can carry the cargo143 from Sarth to Elantris
-6 ships can carry the cargo144 from Luthadel to Mordor
-  The Dawn Leviathan
+5 ships can carry the cargo144 from Luthadel to Mordor
   The Night Whale
   The Royal Clipper
   The Secret Kraken
   The Wet Boat
   The Wooden Narwhal
-  **Loading the cargo onto The Dawn Leviathan**
+  **Loading the cargo onto The Night Whale**
 No ships can carry the cargo145 from Sarth to Elantris
 No ships can carry the cargo146 from Sarth to Elantris
 1 ships can carry the cargo147 from Sarth to Luthadel
@@ -1388,15 +1387,14 @@ No ships can carry the cargo286 from Luthadel to Sarth
   The Wooden Shark
   **Loading the cargo onto The Queen's Dragon**
 No ships can carry the cargo297 from Luthadel to Mordor
-7 ships can carry the cargo298 from Mordor to Midgar
-  The King's Dolphin
+6 ships can carry the cargo298 from Mordor to Midgar
   The Night Hawk
   The Queen's Boat
   The Sailing Dragon
   The Secret Clipper
   The Wooden Eagle
   The Wooden Galleon
-  **Loading the cargo onto The King's Dolphin**
+  **Loading the cargo onto The Night Hawk**
 No ships can carry the cargo299 from Midgar to Elantris
 No ships can carry the cargo300 from Luthadel to Midgar
 8 ships can carry the cargo301 from Mordor to Luthadel
@@ -1421,12 +1419,11 @@ No ships can carry the cargo302 from Elantris to Luthadel
 1 ships can carry the cargo305 from Luthadel to Mordor
   The Wooden Narwhal
   **Loading the cargo onto The Wooden Narwhal**
-4 ships can carry the cargo306 from Midgar to Luthadel
-  The Gleaming Narwhal
+3 ships can carry the cargo306 from Midgar to Luthadel
   The Queen's Dolphin
   The Swift Phoenix
   The Wet Phoenix
-  **Loading the cargo onto The Gleaming Narwhal**
+  **Loading the cargo onto The Queen's Dolphin**
 No ships can carry the cargo307 from Midgar to Luthadel
 2 ships can carry the cargo308 from Elantris to Mordor
   The Secret Narwhal
@@ -1518,13 +1515,14 @@ No ships can carry the cargo325 from Mordor to Sarth
   The Secret Hawk
   **Loading the cargo onto The Majestic Dolphin**
 No ships can carry the cargo328 from Luthadel to Midgar
-5 ships can carry the cargo329 from Luthadel to Mordor
+6 ships can carry the cargo329 from Luthadel to Mordor
+  The Dawn Leviathan
   The Night Whale
   The Royal Clipper
   The Secret Kraken
   The Wet Boat
   The Wooden Narwhal
-  **Loading the cargo onto The Night Whale**
+  **Loading the cargo onto The Dawn Leviathan**
 2 ships can carry the cargo330 from Mordor to Luthadel
   The Queen's Dragon
   The Wooden Shark
@@ -1883,10 +1881,9 @@ No ships can carry the cargo418 from Elantris to Mordor
   The Swift Dragon
   **Loading the cargo onto The Majestic Turtle**
 No ships can carry the cargo423 from Mordor to Elantris
-2 ships can carry the cargo424 from Mordor to Elantris
-  The Night Narwhal
+1 ships can carry the cargo424 from Mordor to Elantris
   The Swift Turtle
-  **Loading the cargo onto The Night Narwhal**
+  **Loading the cargo onto The Swift Turtle**
 3 ships can carry the cargo425 from Mordor to Elantris
   The Majestic Turtle
   The Misty Shark
@@ -2029,15 +2026,14 @@ No ships can carry the cargo453 from Sarth to Elantris
   The Royal Galleon
   The Slippery Dolphin
   **Loading the cargo onto The Royal Galleon**
-7 ships can carry the cargo461 from Mordor to Midgar
-  The Night Hawk
+6 ships can carry the cargo461 from Mordor to Midgar
   The Queen's Boat
   The Royal Dolphin
   The Sailing Dragon
   The Secret Clipper
   The Wooden Eagle
   The Wooden Galleon
-  **Loading the cargo onto The Night Hawk**
+  **Loading the cargo onto The Queen's Boat**
 1 ships can carry the cargo462 from Luthadel to Midgar
   The King's Whale
   **Loading the cargo onto The King's Whale**
@@ -2133,12 +2129,11 @@ No ships can carry the cargo488 from Elantris to Midgar
   The Queen's Eagle
   The Secret Hawk
   **Loading the cargo onto The Majestic Dolphin**
-4 ships can carry the cargo492 from Luthadel to Mordor
-  The Night Whale
+3 ships can carry the cargo492 from Luthadel to Mordor
   The Secret Kraken
   The Wet Boat
   The Wooden Narwhal
-  **Loading the cargo onto The Night Whale**
+  **Loading the cargo onto The Secret Kraken**
 1 ships can carry the cargo493 from Mordor to Luthadel
   The Wooden Shark
   **Loading the cargo onto The Wooden Shark**
@@ -2225,11 +2220,12 @@ No ships can carry the cargo518 from Luthadel to Midgar
   The Shining Dolphin
   The Slippery Galleon
   **Loading the cargo onto The Queen's Eel**
-3 ships can carry the cargo520 from Midgar to Luthadel
+4 ships can carry the cargo520 from Midgar to Luthadel
+  The Gleaming Narwhal
   The Queen's Dolphin
   The Swift Phoenix
   The Wet Phoenix
-  **Loading the cargo onto The Queen's Dolphin**
+  **Loading the cargo onto The Gleaming Narwhal**
 No ships can carry the cargo521 from Mordor to Luthadel
 No ships can carry the cargo522 from Elantris to Sarth
 13 ships can carry the cargo523 from Luthadel to Mordor
@@ -2301,13 +2297,11 @@ No ships can carry the cargo539 from Sarth to Midgar
 1 ships can carry the cargo542 from Elantris to Luthadel
   The Shining Eel
   **Loading the cargo onto The Shining Eel**
-2 ships can carry the cargo543 from Mordor to Midgar
-  The Night Hawk
+1 ships can carry the cargo543 from Mordor to Midgar
   The Sailing Dragon
-  **Loading the cargo onto The Night Hawk**
-4 ships can carry the cargo544 from Mordor to Midgar
+  **Loading the cargo onto The Sailing Dragon**
+3 ships can carry the cargo544 from Mordor to Midgar
   The Queen's Boat
-  The Sailing Dragon
   The Secret Clipper
   The Wooden Eagle
   **Loading the cargo onto The Queen's Boat**
@@ -2402,10 +2396,9 @@ No ships can carry the cargo566 from Elantris to Mordor
   The Swift Narwhal
   The Wet Eel
   **Loading the cargo onto The Swift Eel**
-2 ships can carry the cargo568 from Mordor to Luthadel
-  The Night Eel
+1 ships can carry the cargo568 from Mordor to Luthadel
   The Royal Dreadnought
-  **Loading the cargo onto The Night Eel**
+  **Loading the cargo onto The Royal Dreadnought**
 No ships can carry the cargo569 from Midgar to Elantris
 No ships can carry the cargo570 from Mordor to Sarth
 3 ships can carry the cargo571 from Mordor to Midgar
@@ -2524,7 +2517,9 @@ No ships can carry the cargo603 from Elantris to Sarth
   The Sailing Boat
   The Shining Boat
   **Loading the cargo onto The Majestic Galleon**
-No ships can carry the cargo607 from Mordor to Luthadel
+1 ships can carry the cargo607 from Mordor to Luthadel
+  The Night Eel
+  **Loading the cargo onto The Night Eel**
 1 ships can carry the cargo608 from Midgar to Mordor
   The Wooden Kraken
   **Loading the cargo onto The Wooden Kraken**
@@ -2608,9 +2603,7 @@ No ships can carry the cargo634 from Mordor to Luthadel
 1 ships can carry the cargo635 from Midgar to Luthadel
   The Slippery Dolphin
   **Loading the cargo onto The Slippery Dolphin**
-1 ships can carry the cargo636 from Mordor to Midgar
-  The Sailing Dragon
-  **Loading the cargo onto The Sailing Dragon**
+No ships can carry the cargo636 from Mordor to Midgar
 No ships can carry the cargo637 from Luthadel to Mordor
 15 ships can carry the cargo638 from Mordor to Midgar
   The Dawn Whale
@@ -2644,11 +2637,10 @@ No ships can carry the cargo643 from Midgar to Mordor
   **Loading the cargo onto The Royal Dreadnought**
 No ships can carry the cargo645 from Midgar to Sarth
 No ships can carry the cargo646 from Sarth to Mordor
-3 ships can carry the cargo647 from Mordor to Luthadel
-  The Royal Dreadnought
+2 ships can carry the cargo647 from Mordor to Luthadel
   The Secret Dolphin
   The Shining Dreadnought
-  **Loading the cargo onto The Royal Dreadnought**
+  **Loading the cargo onto The Secret Dolphin**
 No ships can carry the cargo648 from Midgar to Elantris
 7 ships can carry the cargo649 from Mordor to Luthadel
   The King's Clipper
@@ -2822,12 +2814,11 @@ No ships can carry the cargo704 from Sarth to Midgar
   **Loading the cargo onto The King's Kraken**
 No ships can carry the cargo706 from Sarth to Elantris
 No ships can carry the cargo707 from Mordor to Sarth
-4 ships can carry the cargo708 from Mordor to Luthadel
-  The Royal Dreadnought
+3 ships can carry the cargo708 from Mordor to Luthadel
   The Sailing Leviathan
   The Secret Dolphin
   The Shining Dreadnought
-  **Loading the cargo onto The Royal Dreadnought**
+  **Loading the cargo onto The Sailing Leviathan**
 No ships can carry the cargo709 from Mordor to Luthadel
 No ships can carry the cargo710 from Luthadel to Elantris
 3 ships can carry the cargo711 from Luthadel to Midgar
@@ -3001,15 +2992,14 @@ No ships can carry the cargo758 from Midgar to Luthadel
   The Wooden Phoenix
   **Loading the cargo onto The Royal Phoenix**
 No ships can carry the cargo760 from Sarth to Mordor
-7 ships can carry the cargo761 from Midgar to Mordor
-  The King's Phoenix
+6 ships can carry the cargo761 from Midgar to Mordor
   The Majestic Hawk
   The Queen's Turtle
   The Royal Eagle
   The Slippery Snake
   The Slippery Whale
   The Wet Whale
-  **Loading the cargo onto The King's Phoenix**
+  **Loading the cargo onto The Majestic Hawk**
 No ships can carry the cargo762 from Luthadel to Mordor
 No ships can carry the cargo763 from Sarth to Luthadel
 2 ships can carry the cargo764 from Sarth to Mordor
@@ -3111,14 +3101,12 @@ No ships can carry the cargo794 from Midgar to Mordor
   The Wet Galleon
   The Wet Leviathan
   **Loading the cargo onto The King's Eel**
-6 ships can carry the cargo797 from Midgar to Mordor
-  The Majestic Hawk
+4 ships can carry the cargo797 from Midgar to Mordor
   The Queen's Turtle
-  The Royal Eagle
   The Slippery Snake
   The Slippery Whale
   The Wet Whale
-  **Loading the cargo onto The Majestic Hawk**
+  **Loading the cargo onto The Queen's Turtle**
 No ships can carry the cargo798 from Sarth to Elantris
 No ships can carry the cargo799 from Sarth to Elantris
 No ships can carry the cargo800 from Luthadel to Mordor
@@ -3149,13 +3137,14 @@ No ships can carry the cargo805 from Sarth to Luthadel
   The Wooden Dolphin
   **Loading the cargo onto The Gleaming Hawk**
 No ships can carry the cargo807 from Elantris to Mordor
-5 ships can carry the cargo808 from Midgar to Mordor
+6 ships can carry the cargo808 from Midgar to Mordor
+  The King's Phoenix
   The Queen's Turtle
   The Royal Eagle
   The Slippery Snake
   The Slippery Whale
   The Wet Whale
-  **Loading the cargo onto The Queen's Turtle**
+  **Loading the cargo onto The King's Phoenix**
 No ships can carry the cargo809 from Elantris to Midgar
 No ships can carry the cargo810 from Midgar to Elantris
 No ships can carry the cargo811 from Mordor to Sarth
@@ -3291,11 +3280,10 @@ No ships can carry the cargo857 from Mordor to Midgar
 No ships can carry the cargo860 from Elantris to Midgar
 No ships can carry the cargo861 from Luthadel to Midgar
 No ships can carry the cargo862 from Luthadel to Elantris
-3 ships can carry the cargo863 from Luthadel to Midgar
-  The Dawn Narwhal
+2 ships can carry the cargo863 from Luthadel to Midgar
   The Dawn Snake
   The Shining Phoenix
-  **Loading the cargo onto The Dawn Narwhal**
+  **Loading the cargo onto The Dawn Snake**
 2 ships can carry the cargo864 from Luthadel to Sarth
   The Queen's Galleon
   The Swift Eagle
@@ -3573,7 +3561,9 @@ No ships can carry the cargo938 from Midgar to Mordor
   The Slippery Boat
   The Wet Dreadnought
   **Loading the cargo onto The Gleaming Dragon**
-No ships can carry the cargo940 from Mordor to Elantris
+1 ships can carry the cargo940 from Mordor to Elantris
+  The Night Narwhal
+  **Loading the cargo onto The Night Narwhal**
 No ships can carry the cargo941 from Mordor to Luthadel
 3 ships can carry the cargo942 from Luthadel to Sarth
   The Gleaming Eel
@@ -3609,12 +3599,11 @@ No ships can carry the cargo948 from Midgar to Mordor
   The Shining Hawk
   The Wooden Leviathan
   **Loading the cargo onto The Dawn Shark**
-4 ships can carry the cargo950 from Mordor to Luthadel
-  The Gleaming Galleon
+3 ships can carry the cargo950 from Mordor to Luthadel
   The Sailing Leviathan
   The Secret Dolphin
   The Shining Dreadnought
-  **Loading the cargo onto The Gleaming Galleon**
+  **Loading the cargo onto The Sailing Leviathan**
 5 ships can carry the cargo951 from Luthadel to Mordor
   The Night Whale
   The Royal Clipper
@@ -3681,11 +3670,10 @@ No ships can carry the cargo974 from Luthadel to Mordor
 1 ships can carry the cargo975 from Luthadel to Midgar
   The Shining Phoenix
   **Loading the cargo onto The Shining Phoenix**
-3 ships can carry the cargo976 from Mordor to Luthadel
-  The Sailing Leviathan
+2 ships can carry the cargo976 from Mordor to Luthadel
   The Secret Dolphin
   The Shining Dreadnought
-  **Loading the cargo onto The Sailing Leviathan**
+  **Loading the cargo onto The Secret Dolphin**
 No ships can carry the cargo977 from Midgar to Elantris
 No ships can carry the cargo978 from Luthadel to Midgar
 No ships can carry the cargo979 from Luthadel to Elantris
@@ -3793,11 +3781,9 @@ No ships can carry the cargo1010 from Mordor to Luthadel
 No ships can carry the cargo1011 from Luthadel to Mordor
 No ships can carry the cargo1012 from Midgar to Sarth
 No ships can carry the cargo1013 from Luthadel to Midgar
-3 ships can carry the cargo1014 from Luthadel to Mordor
-  The Royal Clipper
-  The Secret Kraken
+1 ships can carry the cargo1014 from Luthadel to Mordor
   The Wet Boat
-  **Loading the cargo onto The Royal Clipper**
+  **Loading the cargo onto The Wet Boat**
 2 ships can carry the cargo1015 from Sarth to Midgar
   The Majestic Whale
   The Slippery Eel
@@ -4004,10 +3990,9 @@ No ships can carry the cargo1089 from Mordor to Luthadel
   The Majestic Eagle
   The Night Galleon
   **Loading the cargo onto The Majestic Eagle**
-2 ships can carry the cargo1091 from Luthadel to Mordor
-  The Secret Kraken
+1 ships can carry the cargo1091 from Luthadel to Mordor
   The Wet Boat
-  **Loading the cargo onto The Secret Kraken**
+  **Loading the cargo onto The Wet Boat**
 5 ships can carry the cargo1092 from Midgar to Sarth
   The Gleaming Hawk
   The Night Kraken
@@ -4149,9 +4134,7 @@ No ships can carry the cargo1144 from Mordor to Midgar
   The Wet Phoenix
   **Loading the cargo onto The Queen's Dolphin**
 No ships can carry the cargo1147 from Luthadel to Elantris
-1 ships can carry the cargo1148 from Luthadel to Midgar
-  The Dawn Snake
-  **Loading the cargo onto The Dawn Snake**
+No ships can carry the cargo1148 from Luthadel to Midgar
 No ships can carry the cargo1149 from Mordor to Luthadel
 1 ships can carry the cargo1150 from Luthadel to Elantris
   The Secret Galleon
@@ -4257,9 +4240,7 @@ No ships can carry the cargo1185 from Elantris to Mordor
 No ships can carry the cargo1186 from Sarth to Elantris
 No ships can carry the cargo1187 from Mordor to Midgar
 No ships can carry the cargo1188 from Sarth to Midgar
-1 ships can carry the cargo1189 from Elantris to Luthadel
-  The Slippery Dreadnought
-  **Loading the cargo onto The Slippery Dreadnought**
+No ships can carry the cargo1189 from Elantris to Luthadel
 No ships can carry the cargo1190 from Mordor to Elantris
 1 ships can carry the cargo1191 from Mordor to Midgar
   The Wooden Snake
@@ -4281,17 +4262,17 @@ No ships can carry the cargo1201 from Midgar to Sarth
   The Misty Kraken
   The Shining Dragon
   **Loading the cargo onto The Misty Kraken**
-3 ships can carry the cargo1203 from Midgar to Mordor
-  The Queen's Turtle
+2 ships can carry the cargo1203 from Midgar to Mordor
   The Slippery Whale
   The Wet Whale
-  **Loading the cargo onto The Queen's Turtle**
+  **Loading the cargo onto The Slippery Whale**
 No ships can carry the cargo1204 from Midgar to Elantris
 No ships can carry the cargo1205 from Midgar to Luthadel
 No ships can carry the cargo1206 from Elantris to Mordor
-1 ships can carry the cargo1207 from Luthadel to Mordor
+2 ships can carry the cargo1207 from Luthadel to Mordor
+  The Secret Kraken
   The Wet Boat
-  **Loading the cargo onto The Wet Boat**
+  **Loading the cargo onto The Secret Kraken**
 1 ships can carry the cargo1208 from Luthadel to Elantris
   The Secret Galleon
   **Loading the cargo onto The Secret Galleon**
@@ -4441,10 +4422,11 @@ No ships can carry the cargo1240 from Midgar to Luthadel
   The Wet Dreadnought
   **Loading the cargo onto The Gleaming Dragon**
 No ships can carry the cargo1243 from Luthadel to Midgar
-2 ships can carry the cargo1244 from Midgar to Mordor
+3 ships can carry the cargo1244 from Midgar to Mordor
+  The Queen's Turtle
   The Slippery Whale
   The Wet Whale
-  **Loading the cargo onto The Slippery Whale**
+  **Loading the cargo onto The Queen's Turtle**
 6 ships can carry the cargo1245 from Midgar to Mordor
   The Gleaming Dragon
   The Queen's Whale
@@ -4483,9 +4465,7 @@ No ships can carry the cargo1257 from Sarth to Mordor
   The Shining Leviathan
   The Wooden Dreadnought
   **Loading the cargo onto The Majestic Boat**
-1 ships can carry the cargo1259 from Elantris to Luthadel
-  The Wooden Turtle
-  **Loading the cargo onto The Wooden Turtle**
+No ships can carry the cargo1259 from Elantris to Luthadel
 1 ships can carry the cargo1260 from Mordor to Elantris
   The Dawn Kraken
   **Loading the cargo onto The Dawn Kraken**
@@ -4507,11 +4487,10 @@ No ships can carry the cargo1269 from Mordor to Midgar
   **Loading the cargo onto The Night Phoenix**
 No ships can carry the cargo1271 from Elantris to Sarth
 No ships can carry the cargo1272 from Mordor to Luthadel
-3 ships can carry the cargo1273 from Mordor to Midgar
-  The Queen's Boat
-  The Sailing Dragon
+2 ships can carry the cargo1273 from Mordor to Midgar
+  The King's Dolphin
   The Wooden Galleon
-  **Loading the cargo onto The Queen's Boat**
+  **Loading the cargo onto The King's Dolphin**
 No ships can carry the cargo1274 from Mordor to Midgar
 5 ships can carry the cargo1275 from Midgar to Mordor
   The Queen's Whale
@@ -4550,7 +4529,10 @@ No ships can carry the cargo1277 from Luthadel to Mordor
 1 ships can carry the cargo1280 from Luthadel to Midgar
   The Night Phoenix
   **Loading the cargo onto The Night Phoenix**
-No ships can carry the cargo1281 from Elantris to Luthadel
+2 ships can carry the cargo1281 from Elantris to Luthadel
+  The Slippery Dreadnought
+  The Wooden Turtle
+  **Loading the cargo onto The Slippery Dreadnought**
 No ships can carry the cargo1282 from Luthadel to Elantris
 1 ships can carry the cargo1283 from Luthadel to Mordor
   The Shining Hawk
@@ -4619,10 +4601,9 @@ No ships can carry the cargo1312 from Luthadel to Sarth
   The Wooden Eagle
   The Wooden Galleon
   **Loading the cargo onto The Royal Dolphin**
-2 ships can carry the cargo1315 from Mordor to Luthadel
-  The Secret Dolphin
+1 ships can carry the cargo1315 from Mordor to Luthadel
   The Shining Dreadnought
-  **Loading the cargo onto The Secret Dolphin**
+  **Loading the cargo onto The Shining Dreadnought**
 3 ships can carry the cargo1316 from Luthadel to Midgar
   The Night Phoenix
   The Wet Galleon
@@ -4693,10 +4674,9 @@ No ships can carry the cargo1334 from Midgar to Mordor
   The Wet Leviathan
   **Loading the cargo onto The Night Phoenix**
 No ships can carry the cargo1336 from Luthadel to Sarth
-2 ships can carry the cargo1337 from Mordor to Luthadel
-  The Secret Dolphin
+1 ships can carry the cargo1337 from Mordor to Luthadel
   The Shining Dreadnought
-  **Loading the cargo onto The Secret Dolphin**
+  **Loading the cargo onto The Shining Dreadnought**
 3 ships can carry the cargo1338 from Sarth to Luthadel
   The Gleaming Eagle
   The Shining Kraken
@@ -5196,9 +5176,10 @@ No ships can carry the cargo1530 from Sarth to Elantris
   The Secret Galleon
   The Slippery Galleon
   **Loading the cargo onto The Secret Galleon**
-1 ships can carry the cargo1532 from Luthadel to Mordor
+2 ships can carry the cargo1532 from Luthadel to Mordor
+  The Royal Clipper
   The Wet Boat
-  **Loading the cargo onto The Wet Boat**
+  **Loading the cargo onto The Royal Clipper**
 No ships can carry the cargo1533 from Mordor to Sarth
 1 ships can carry the cargo1534 from Sarth to Mordor
   The Shining Shark
@@ -5277,10 +5258,9 @@ No ships can carry the cargo1560 from Midgar to Luthadel
 1 ships can carry the cargo1564 from Luthadel to Midgar
   The Wet Clipper
   **Loading the cargo onto The Wet Clipper**
-3 ships can carry the cargo1565 from Mordor to Elantris
+2 ships can carry the cargo1565 from Mordor to Elantris
   The Sailing Hawk
   The Secret Leviathan
-  The Swift Turtle
   **Loading the cargo onto The Sailing Hawk**
 1 ships can carry the cargo1566 from Elantris to Midgar
   The Wet Narwhal
@@ -5381,10 +5361,9 @@ No ships can carry the cargo1608 from Midgar to Luthadel
   The Shining Hawk
   The Wooden Leviathan
   **Loading the cargo onto The Gleaming Kraken**
-2 ships can carry the cargo1610 from Sarth to Midgar
-  The Secret Whale
+1 ships can carry the cargo1610 from Sarth to Midgar
   The Wet Dolphin
-  **Loading the cargo onto The Secret Whale**
+  **Loading the cargo onto The Wet Dolphin**
 No ships can carry the cargo1611 from Sarth to Mordor
 5 ships can carry the cargo1612 from Mordor to Luthadel
   The Majestic Galleon
@@ -5425,9 +5404,7 @@ No ships can carry the cargo1623 from Elantris to Luthadel
   The Wooden Snake
   **Loading the cargo onto The Misty Hawk**
 No ships can carry the cargo1625 from Midgar to Mordor
-1 ships can carry the cargo1626 from Mordor to Elantris
-  The Swift Turtle
-  **Loading the cargo onto The Swift Turtle**
+No ships can carry the cargo1626 from Mordor to Elantris
 No ships can carry the cargo1627 from Mordor to Midgar
 No ships can carry the cargo1628 from Midgar to Luthadel
 No ships can carry the cargo1629 from Mordor to Luthadel
@@ -5472,10 +5449,9 @@ No ships can carry the cargo1648 from Elantris to Sarth
   **Loading the cargo onto The Secret Snake**
 No ships can carry the cargo1650 from Elantris to Midgar
 No ships can carry the cargo1651 from Midgar to Sarth
-2 ships can carry the cargo1652 from Mordor to Midgar
-  The Wooden Eagle
+1 ships can carry the cargo1652 from Mordor to Midgar
   The Wooden Galleon
-  **Loading the cargo onto The Wooden Eagle**
+  **Loading the cargo onto The Wooden Galleon**
 1 ships can carry the cargo1653 from Luthadel to Elantris
   The Slippery Galleon
   **Loading the cargo onto The Slippery Galleon**
@@ -5556,12 +5532,11 @@ No ships can carry the cargo1684 from Sarth to Mordor
   The Night Kraken
   The Slippery Phoenix
   **Loading the cargo onto The Night Kraken**
-4 ships can carry the cargo1686 from Mordor to Midgar
-  The Queen's Boat
-  The Sailing Dragon
+3 ships can carry the cargo1686 from Mordor to Midgar
   The Secret Clipper
+  The Wooden Eagle
   The Wooden Galleon
-  **Loading the cargo onto The Queen's Boat**
+  **Loading the cargo onto The Secret Clipper**
 5 ships can carry the cargo1687 from Midgar to Mordor
   The Gleaming Dragon
   The Queen's Whale
@@ -5665,9 +5640,7 @@ No ships can carry the cargo1725 from Luthadel to Mordor
 1 ships can carry the cargo1726 from Luthadel to Mordor
   The Wet Boat
   **Loading the cargo onto The Wet Boat**
-1 ships can carry the cargo1727 from Midgar to Sarth
-  The Dawn Eagle
-  **Loading the cargo onto The Dawn Eagle**
+No ships can carry the cargo1727 from Midgar to Sarth
 2 ships can carry the cargo1728 from Midgar to Elantris
   The King's Hawk
   The Wet Kraken
@@ -5854,9 +5827,7 @@ No ships can carry the cargo1818 from Midgar to Mordor
   The Shining Leviathan
   The Wooden Dreadnought
   **Loading the cargo onto The Royal Eel**
-1 ships can carry the cargo1820 from Luthadel to Mordor
-  The Wet Boat
-  **Loading the cargo onto The Wet Boat**
+No ships can carry the cargo1820 from Luthadel to Mordor
 No ships can carry the cargo1821 from Midgar to Mordor
 7 ships can carry the cargo1822 from Sarth to Luthadel
   The Night Clipper
@@ -5988,10 +5959,7 @@ No ships can carry the cargo1874 from Sarth to Mordor
   The Wooden Boat
   **Loading the cargo onto The Misty Dolphin**
 No ships can carry the cargo1876 from Mordor to Elantris
-2 ships can carry the cargo1877 from Mordor to Elantris
-  The Sailing Hawk
-  The Swift Turtle
-  **Loading the cargo onto The Sailing Hawk**
+No ships can carry the cargo1877 from Mordor to Elantris
 No ships can carry the cargo1878 from Mordor to Sarth
 No ships can carry the cargo1879 from Midgar to Mordor
 No ships can carry the cargo1880 from Luthadel to Elantris
@@ -6027,14 +5995,14 @@ No ships can carry the cargo1888 from Elantris to Midgar
   The Wooden Leviathan
   **Loading the cargo onto The Gleaming Snake**
 No ships can carry the cargo1890 from Elantris to Sarth
-1 ships can carry the cargo1891 from Mordor to Luthadel
-  The Shining Dreadnought
-  **Loading the cargo onto The Shining Dreadnought**
+No ships can carry the cargo1891 from Mordor to Luthadel
 No ships can carry the cargo1892 from Luthadel to Sarth
 1 ships can carry the cargo1893 from Luthadel to Sarth
   The Swift Eagle
   **Loading the cargo onto The Swift Eagle**
-No ships can carry the cargo1894 from Elantris to Luthadel
+1 ships can carry the cargo1894 from Elantris to Luthadel
+  The Wooden Turtle
+  **Loading the cargo onto The Wooden Turtle**
 2 ships can carry the cargo1895 from Sarth to Luthadel
   The Night Clipper
   The Wooden Hawk
@@ -6058,15 +6026,13 @@ No ships can carry the cargo1902 from Mordor to Luthadel
 No ships can carry the cargo1903 from Elantris to Mordor
 No ships can carry the cargo1904 from Mordor to Luthadel
 No ships can carry the cargo1905 from Midgar to Luthadel
-3 ships can carry the cargo1906 from Sarth to Luthadel
+2 ships can carry the cargo1906 from Sarth to Luthadel
   The Gleaming Eagle
   The Shining Kraken
-  The Wooden Eel
   **Loading the cargo onto The Gleaming Eagle**
 No ships can carry the cargo1907 from Midgar to Mordor
-4 ships can carry the cargo1908 from Midgar to Luthadel
+3 ships can carry the cargo1908 from Midgar to Luthadel
   The Queen's Dolphin
-  The Shining Snake
   The Swift Phoenix
   The Wet Phoenix
   **Loading the cargo onto The Queen's Dolphin**
@@ -6144,9 +6110,7 @@ No ships can carry the cargo1939 from Sarth to Midgar
   **Loading the cargo onto The Majestic Phoenix**
 No ships can carry the cargo1941 from Midgar to Mordor
 No ships can carry the cargo1942 from Elantris to Midgar
-1 ships can carry the cargo1943 from Mordor to Midgar
-  The Wooden Galleon
-  **Loading the cargo onto The Wooden Galleon**
+No ships can carry the cargo1943 from Mordor to Midgar
 No ships can carry the cargo1944 from Luthadel to Elantris
 No ships can carry the cargo1945 from Mordor to Sarth
 No ships can carry the cargo1946 from Luthadel to Sarth
@@ -6291,10 +6255,9 @@ The Container Ship The Dawn Dreadnought(1410/1550) is carrying :
   cargo1213(80)
   cargo1449(265)
   (37) slots remain
-The Tanker Ship The Dawn Eagle(300/300) is carrying : 
+The Tanker Ship The Dawn Eagle(230/300) is carrying : 
   cargo22(230)
-  cargo1727(70)
-  10 / 10 tanks used
+  8 / 10 tanks used
 The Animals Ship The Dawn Eel(179/180) is carrying : 
   cargo34(24)
   cargo50(33)
@@ -6330,16 +6293,15 @@ The Container Ship The Dawn Kraken(2400/2500) is carrying :
   cargo1180(200)
   cargo1260(85)
   (41) slots remain
-The Tanker Ship The Dawn Leviathan(900/900) is carrying : 
+The Tanker Ship The Dawn Leviathan(810/900) is carrying : 
   cargo30(400)
   cargo135(190)
-  cargo144(310)
-  50 / 50 tanks used
-The Tanker Ship The Dawn Narwhal(680/700) is carrying : 
+  cargo329(220)
+  47 / 50 tanks used
+The Tanker Ship The Dawn Narwhal(560/700) is carrying : 
   cargo51(380)
   cargo693(180)
-  cargo863(120)
-  25 / 25 tanks used
+  21 / 25 tanks used
 The Container Ship The Dawn Phoenix(300/300) is carrying : 
   cargo13(205)
   cargo214(95)
@@ -6361,10 +6323,10 @@ The Container Ship The Dawn Shark(2410/2500) is carrying :
   cargo1039(160)
   cargo1216(265)
   (75) slots remain
-The Tanker Ship The Dawn Snake(760/800) is carrying : 
+The Tanker Ship The Dawn Snake(660/800) is carrying : 
   cargo191(230)
   cargo840(210)
-  cargo1148(220)
+  cargo863(120)
   cargo1333(100)
   10 / 10 tanks used
 The Tanker Ship The Dawn Turtle(170/800) is carrying : 
@@ -6429,12 +6391,11 @@ The Container Ship The Gleaming Eel(1175/1200) is carrying :
   cargo1380(125)
   cargo1900(75)
   (23) slots remain
-The Tanker Ship The Gleaming Galleon(600/600) is carrying : 
+The Tanker Ship The Gleaming Galleon(540/600) is carrying : 
   cargo37(200)
   cargo149(180)
   cargo255(160)
-  cargo950(60)
-  50 / 50 tanks used
+  46 / 50 tanks used
 The Container Ship The Gleaming Hawk(1530/1650) is carrying : 
   cargo8(220)
   cargo27(175)
@@ -6461,11 +6422,11 @@ The Container Ship The Gleaming Leviathan(460/1900) is carrying :
   cargo1773(190)
   cargo1886(270)
   (58) slots remain
-The Tanker Ship The Gleaming Narwhal(1150/1200) is carrying : 
+The Tanker Ship The Gleaming Narwhal(1100/1200) is carrying : 
   cargo82(350)
   cargo173(320)
   cargo193(260)
-  cargo306(220)
+  cargo520(170)
   25 / 25 tanks used
 The Container Ship The Gleaming Phoenix(615/650) is carrying : 
   cargo46(205)
@@ -6519,13 +6480,13 @@ The Container Ship The King's Clipper(2440/2450) is carrying :
   cargo1086(250)
   cargo1654(125)
   (60) slots remain
-The Tanker Ship The King's Dolphin(1000/1100) is carrying : 
+The Tanker Ship The King's Dolphin(770/1100) is carrying : 
   cargo75(150)
   cargo108(100)
   cargo131(60)
   cargo194(340)
   cargo226(60)
-  cargo298(290)
+  cargo1273(60)
   10 / 10 tanks used
 The Tanker Ship The King's Dragon(750/800) is carrying : 
   cargo52(340)
@@ -6590,9 +6551,9 @@ The Container Ship The King's Narwhal(1475/1550) is carrying :
   cargo983(85)
   cargo1408(105)
   (80) slots remain
-The Tanker Ship The King's Phoenix(500/500) is carrying : 
+The Tanker Ship The King's Phoenix(480/500) is carrying : 
   cargo439(280)
-  cargo761(220)
+  cargo808(200)
   10 / 10 tanks used
 The Animals Ship The King's Shark(175/180) is carrying : 
   cargo58(48)
@@ -6681,9 +6642,9 @@ The Container Ship The Majestic Galleon(1720/2100) is carrying :
   cargo1792(240)
   cargo1995(70)
   (44) slots remain
-The Tanker Ship The Majestic Hawk(310/400) is carrying : 
-  cargo797(310)
-  78 / 100 tanks used
+The Tanker Ship The Majestic Hawk(220/400) is carrying : 
+  cargo761(220)
+  55 / 100 tanks used
 The Tanker Ship The Majestic Kraken(250/300) is carrying : 
   cargo95(80)
   cargo250(170)
@@ -6877,11 +6838,11 @@ The Container Ship The Night Eagle(480/550) is carrying :
   cargo883(280)
   cargo1372(200)
   (68) slots remain
-The Tanker Ship The Night Eel(1140/1200) is carrying : 
+The Tanker Ship The Night Eel(980/1200) is carrying : 
   cargo210(340)
   cargo397(190)
   cargo565(260)
-  cargo568(350)
+  cargo607(190)
   10 / 10 tanks used
 The Tanker Ship The Night Galleon(650/700) is carrying : 
   cargo273(100)
@@ -6889,12 +6850,11 @@ The Tanker Ship The Night Galleon(650/700) is carrying :
   cargo652(220)
   cargo1298(120)
   48 / 50 tanks used
-The Tanker Ship The Night Hawk(1060/1100) is carrying : 
+The Tanker Ship The Night Hawk(950/1100) is carrying : 
+  cargo298(290)
   cargo363(220)
   cargo377(310)
   cargo395(130)
-  cargo461(120)
-  cargo543(280)
   10 / 10 tanks used
 The Container Ship The Night Kraken(2110/2300) is carrying : 
   cargo59(275)
@@ -6916,11 +6876,11 @@ The Animals Ship The Night Leviathan(137/140) is carrying :
   cargo277(44)
   cargo685(10)
   has a roamer
-The Tanker Ship The Night Narwhal(1190/1200) is carrying : 
+The Tanker Ship The Night Narwhal(1060/1200) is carrying : 
   cargo134(350)
   cargo244(350)
   cargo294(280)
-  cargo424(210)
+  cargo940(80)
   10 / 10 tanks used
 The Container Ship The Night Phoenix(1970/2000) is carrying : 
   cargo391(130)
@@ -6954,32 +6914,30 @@ The Container Ship The Night Turtle(465/500) is carrying :
   cargo1385(65)
   cargo1580(125)
   (67) slots remain
-The Tanker Ship The Night Whale(1140/1200) is carrying : 
+The Tanker Ship The Night Whale(1050/1200) is carrying : 
   cargo73(50)
+  cargo144(310)
   cargo201(160)
-  cargo329(220)
   cargo448(140)
   cargo456(280)
-  cargo492(180)
   cargo951(110)
   25 / 25 tanks used
-The Tanker Ship The Queen's Boat(1170/1200) is carrying : 
+The Tanker Ship The Queen's Boat(1180/1200) is carrying : 
   cargo421(280)
+  cargo461(120)
   cargo544(260)
   cargo830(270)
   cargo1074(250)
-  cargo1273(60)
-  cargo1686(50)
   100 / 100 tanks used
 The Container Ship The Queen's Clipper(310/2150) is carrying : 
   cargo1985(310)
   (64) slots remain
-The Tanker Ship The Queen's Dolphin(900/1100) is carrying : 
-  cargo520(170)
+The Tanker Ship The Queen's Dolphin(950/1100) is carrying : 
+  cargo306(220)
   cargo1146(240)
   cargo1617(360)
   cargo1908(130)
-  42 / 50 tanks used
+  44 / 50 tanks used
 The Animals Ship The Queen's Dragon(160/160) is carrying : 
   cargo272(39)
   cargo280(19)
@@ -7055,12 +7013,12 @@ The Container Ship The Queen's Snake(1900/1950) is carrying :
   cargo1109(245)
   cargo1479(50)
   (36) slots remain
-The Tanker Ship The Queen's Turtle(1050/1200) is carrying : 
+The Tanker Ship The Queen's Turtle(1110/1200) is carrying : 
   cargo528(190)
   cargo714(350)
-  cargo808(200)
-  cargo1203(310)
-  24 / 25 tanks used
+  cargo797(310)
+  cargo1244(260)
+  25 / 25 tanks used
 The Container Ship The Queen's Whale(720/850) is carrying : 
   cargo1275(225)
   cargo1458(195)
@@ -7079,10 +7037,10 @@ The Container Ship The Royal Boat(1655/1700) is carrying :
   cargo879(95)
   cargo1063(120)
   (74) slots remain
-The Tanker Ship The Royal Clipper(900/900) is carrying : 
+The Tanker Ship The Royal Clipper(740/900) is carrying : 
   cargo561(280)
   cargo688(300)
-  cargo1014(320)
+  cargo1532(160)
   5 / 5 tanks used
 The Tanker Ship The Royal Dolphin(280/300) is carrying : 
   cargo38(180)
@@ -7090,13 +7048,12 @@ The Tanker Ship The Royal Dolphin(280/300) is carrying :
   10 / 10 tanks used
 The Container Ship The Royal Dragon(0/1750) is carrying : 
   (60) slots remain
-The Tanker Ship The Royal Dreadnought(830/1200) is carrying : 
+The Tanker Ship The Royal Dreadnought(940/1200) is carrying : 
   cargo278(170)
   cargo313(150)
   cargo352(150)
+  cargo568(350)
   cargo644(120)
-  cargo647(70)
-  cargo708(170)
   10 / 10 tanks used
 The Tanker Ship The Royal Eagle(1010/1200) is carrying : 
   cargo198(190)
@@ -7180,10 +7137,10 @@ The Container Ship The Sailing Clipper(1500/1550) is carrying :
   cargo1135(95)
   cargo1344(75)
   (67) slots remain
-The Tanker Ship The Sailing Dragon(430/500) is carrying : 
+The Tanker Ship The Sailing Dragon(460/500) is carrying : 
+  cargo543(280)
   cargo571(180)
-  cargo636(250)
-  43 / 50 tanks used
+  46 / 50 tanks used
 The Container Ship The Sailing Dreadnought(0/500) is carrying : 
   (55) slots remain
 The Tanker Ship The Sailing Eagle(360/400) is carrying : 
@@ -7201,24 +7158,24 @@ The Container Ship The Sailing Galleon(810/850) is carrying :
   cargo1113(75)
   cargo1519(240)
   (40) slots remain
-The Tanker Ship The Sailing Hawk(1100/1200) is carrying : 
+The Tanker Ship The Sailing Hawk(890/1200) is carrying : 
   cargo335(280)
   cargo631(220)
   cargo985(170)
   cargo1565(200)
   cargo1681(20)
-  cargo1877(210)
-  25 / 25 tanks used
+  21 / 25 tanks used
 The Tanker Ship The Sailing Kraken(390/400) is carrying : 
   cargo48(160)
   cargo69(60)
   cargo256(170)
   50 / 50 tanks used
-The Tanker Ship The Sailing Leviathan(780/1000) is carrying : 
+The Tanker Ship The Sailing Leviathan(800/1000) is carrying : 
+  cargo708(170)
   cargo717(240)
   cargo770(190)
   cargo946(140)
-  cargo976(210)
+  cargo950(60)
   10 / 10 tanks used
 The Animals Ship The Sailing Narwhal(99/100) is carrying : 
   cargo21(15)
@@ -7253,16 +7210,17 @@ The Container Ship The Sailing Whale(900/1000) is carrying :
 The Container Ship The Secret Boat(185/2050) is carrying : 
   cargo549(185)
   (69) slots remain
-The Tanker Ship The Secret Clipper(390/500) is carrying : 
+The Tanker Ship The Secret Clipper(440/500) is carrying : 
   cargo1134(230)
   cargo1175(160)
-  78 / 100 tanks used
-The Tanker Ship The Secret Dolphin(720/800) is carrying : 
+  cargo1686(50)
+  88 / 100 tanks used
+The Tanker Ship The Secret Dolphin(620/800) is carrying : 
+  cargo647(70)
+  cargo976(210)
   cargo1122(20)
   cargo1178(320)
-  cargo1315(220)
-  cargo1337(160)
-  10 / 10 tanks used
+  9 / 10 tanks used
 The Animals Ship The Secret Dragon(119/120) is carrying : 
   cargo548(43)
   cargo583(45)
@@ -7304,10 +7262,11 @@ The Animals Ship The Secret Hawk(163/170) is carrying :
   cargo1299(18)
   cargo1398(45)
   has a roamer
-The Tanker Ship The Secret Kraken(450/500) is carrying : 
-  cargo1091(350)
+The Tanker Ship The Secret Kraken(480/500) is carrying : 
+  cargo492(180)
+  cargo1207(200)
   cargo1249(100)
-  9 / 10 tanks used
+  10 / 10 tanks used
 The Tanker Ship The Secret Leviathan(0/800) is carrying : 
   0 / 25 tanks used
 The Animals Ship The Secret Narwhal(160/170) is carrying : 
@@ -7354,13 +7313,12 @@ The Animals Ship The Secret Turtle(155/160) is carrying :
   cargo933(22)
   cargo1033(39)
   does not have a roamer
-The Tanker Ship The Secret Whale(980/1000) is carrying : 
+The Tanker Ship The Secret Whale(690/1000) is carrying : 
   cargo729(310)
   cargo1104(170)
   cargo1217(110)
   cargo1307(100)
-  cargo1610(290)
-  50 / 50 tanks used
+  36 / 50 tanks used
 The Container Ship The Shining Boat(0/450) is carrying : 
   (70) slots remain
 The Container Ship The Shining Clipper(0/1150) is carrying : 
@@ -7377,11 +7335,12 @@ The Container Ship The Shining Dragon(345/1850) is carrying :
   cargo593(145)
   cargo1557(200)
   (43) slots remain
-The Tanker Ship The Shining Dreadnought(940/1100) is carrying : 
+The Tanker Ship The Shining Dreadnought(980/1100) is carrying : 
+  cargo1315(220)
+  cargo1337(160)
   cargo1448(260)
   cargo1768(340)
-  cargo1891(340)
-  44 / 50 tanks used
+  46 / 50 tanks used
 The Animals Ship The Shining Eagle(140/140) is carrying : 
   cargo1004(51)
   cargo1140(36)
@@ -7471,10 +7430,10 @@ The Animals Ship The Slippery Dragon(154/160) is carrying :
   cargo412(44)
   cargo471(25)
   has a roamer
-The Tanker Ship The Slippery Dreadnought(590/600) is carrying : 
+The Tanker Ship The Slippery Dreadnought(570/600) is carrying : 
   cargo99(230)
   cargo551(230)
-  cargo1189(130)
+  cargo1281(110)
   25 / 25 tanks used
 The Tanker Ship The Slippery Eagle(250/300) is carrying : 
   cargo1114(250)
@@ -7522,10 +7481,10 @@ The Tanker Ship The Slippery Snake(370/500) is carrying :
   8 / 10 tanks used
 The Container Ship The Slippery Turtle(0/1650) is carrying : 
   (60) slots remain
-The Tanker Ship The Slippery Whale(500/700) is carrying : 
-  cargo1244(260)
+The Tanker Ship The Slippery Whale(550/700) is carrying : 
+  cargo1203(310)
   cargo1382(240)
-  4 / 5 tanks used
+  5 / 5 tanks used
 The Container Ship The Swift Boat(0/400) is carrying : 
   (50) slots remain
 The Animals Ship The Swift Clipper(189/190) is carrying : 
@@ -7597,9 +7556,9 @@ The Container Ship The Swift Shark(770/900) is carrying :
   (70) slots remain
 The Container Ship The Swift Snake(0/1050) is carrying : 
   (95) slots remain
-The Tanker Ship The Swift Turtle(340/600) is carrying : 
+The Tanker Ship The Swift Turtle(380/600) is carrying : 
+  cargo424(210)
   cargo1501(170)
-  cargo1626(170)
   4 / 5 tanks used
 The Animals Ship The Swift Whale(110/110) is carrying : 
   cargo1353(40)
@@ -7607,22 +7566,22 @@ The Animals Ship The Swift Whale(110/110) is carrying :
   cargo1563(25)
   cargo1750(12)
   does not have a roamer
-The Tanker Ship The Wet Boat(1010/1200) is carrying : 
-  cargo1207(200)
-  cargo1532(160)
+The Tanker Ship The Wet Boat(960/1200) is carrying : 
+  cargo1014(320)
+  cargo1091(350)
   cargo1726(290)
-  cargo1820(360)
-  24 / 25 tanks used
+  22 / 25 tanks used
 The Animals Ship The Wet Clipper(111/120) is carrying : 
   cargo1483(42)
   cargo1498(41)
   cargo1564(28)
   does not have a roamer
-The Tanker Ship The Wet Dolphin(360/800) is carrying : 
+The Tanker Ship The Wet Dolphin(650/800) is carrying : 
   cargo694(100)
   cargo1522(110)
+  cargo1610(290)
   cargo1751(150)
-  6 / 10 tanks used
+  10 / 10 tanks used
 The Container Ship The Wet Dragon(0/700) is carrying : 
   (65) slots remain
 The Container Ship The Wet Dreadnought(0/950) is carrying : 
@@ -7703,20 +7662,19 @@ The Tanker Ship The Wooden Dragon(740/800) is carrying :
   48 / 50 tanks used
 The Container Ship The Wooden Dreadnought(0/900) is carrying : 
   (70) slots remain
-The Tanker Ship The Wooden Eagle(700/700) is carrying : 
+The Tanker Ship The Wooden Eagle(580/700) is carrying : 
   cargo775(330)
   cargo1559(250)
-  cargo1652(120)
-  25 / 25 tanks used
+  21 / 25 tanks used
 The Tanker Ship The Wooden Eel(400/600) is carrying : 
   cargo32(90)
   cargo1896(310)
   17 / 25 tanks used
-The Tanker Ship The Wooden Galleon(400/500) is carrying : 
+The Tanker Ship The Wooden Galleon(450/500) is carrying : 
   cargo260(110)
   cargo360(220)
-  cargo1943(70)
-  80 / 100 tanks used
+  cargo1652(120)
+  90 / 100 tanks used
 The Container Ship The Wooden Hawk(785/2000) is carrying : 
   cargo668(150)
   cargo1370(260)
@@ -7758,12 +7716,12 @@ The Container Ship The Wooden Snake(725/2050) is carrying :
   cargo1261(230)
   cargo1932(40)
   (75) slots remain
-The Tanker Ship The Wooden Turtle(1150/1200) is carrying : 
+The Tanker Ship The Wooden Turtle(1120/1200) is carrying : 
   cargo776(240)
   cargo988(330)
   cargo1042(230)
   cargo1136(150)
-  cargo1259(200)
+  cargo1894(170)
   25 / 25 tanks used
 The Container Ship The Wooden Whale(2095/2150) is carrying : 
   cargo26(220)

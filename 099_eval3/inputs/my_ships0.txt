@@ -1,2 +1,2 @@
 The Dawn Leviathan:Tanker,1,90,50:Luthadel:Mordor:900
-The Night Hawk:Tanker,1,90,10,toxic,corrosive,explosive:Mordor:Midgar:1100
+The Night Whale:Tanker,0,10,25,explosive,corrosive:Luthadel:Mordor:120

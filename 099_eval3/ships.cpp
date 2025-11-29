@@ -164,7 +164,7 @@ void Container::print_remaining_space() const {
   std::cout << "  (" << num_slots << ") slots remain\n";
 }
 
-Tanker::Tanker() : Ship(), min_temp(), max_temp(), tanks() {
+Tanker::Tanker() : Ship(), min_temp(), max_temp(), tanks(), tanks_used(0) {
 }
 
 Tanker::Tanker(const std::string & name_,
@@ -188,7 +188,8 @@ Tanker::Tanker(const std::string & name_,
          cargos_carried_),
     min_temp(min_temp_),
     max_temp(max_temp_),
-    tanks() {
+    tanks(),
+    tanks_used(0) {
   capacity_per_tank = get_total_capacity() / num_tanks_;
   for (unsigned i = 0; i < num_tanks_; ++i) {
     tanks.push_back(std::make_pair(capacity_per_tank, ""));
@@ -246,6 +247,14 @@ bool Tanker::check_tank_capacity(const Cargo & cargo) const {
   if (get_total_capacity() - get_used_capacity() < cargo.get_capacity()) {
     return false;
   }
+
+  unsigned tanks_needed =
+      (cargo.get_capacity() + capacity_per_tank - 1) / capacity_per_tank;
+  unsigned free_tanks = tanks.size() - tanks_used;
+  if (tanks_needed > free_tanks) {
+    return false;
+  }
+
   for (std::vector<std::pair<unsigned, std::string> >::const_iterator it = tanks.begin();
        it != tanks.end();
        ++it) {
@@ -319,6 +328,7 @@ void Tanker::load_cargo(const Cargo & cargo) {
       update_tanks(it->first, remaining_cargo);
     }
   }
+  tanks_used = update_tanks_used();
 }
 
 void Tanker::update_tanks(unsigned & tank_capacity, unsigned & cargo_size) {
@@ -332,21 +342,21 @@ void Tanker::update_tanks(unsigned & tank_capacity, unsigned & cargo_size) {
   }
 }
 
-unsigned Tanker::get_tanks_used() const {
-  unsigned tanks_used = 0;
+unsigned Tanker::update_tanks_used() {
+  unsigned clean_count = 0;
   for (std::vector<std::pair<unsigned, std::string> >::const_iterator it = tanks.begin();
        it != tanks.end();
        ++it) {
     if (it->first < capacity_per_tank) {
-      tanks_used++;
+      clean_count++;
     }
   }
 
-  return tanks_used;
+  return clean_count;
 }
 
 void Tanker::print_remaining_space() const {
-  std::cout << "  " << get_tanks_used() << " / " << tanks.size() << " tanks used\n";
+  std::cout << "  " << tanks_used << " / " << tanks.size() << " tanks used\n";
 }
 
 Animal::Animal() : Ship(), size() {
