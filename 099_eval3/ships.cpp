@@ -4,6 +4,46 @@
 
 #include "util.hpp"
 
+namespace {
+  /* Helper function check if a ship can handle the hazardous properties of the cargo */
+  bool check_hazard(const std::vector<std::string> & properties,
+                    const std::vector<std::string> & capabilities) {
+    size_t hazard_amount = 0;
+    size_t found_capabilities = 0;
+    for (size_t i = 0; i < properties.size(); ++i) {
+      std::string word_to_find = "hazardous-";
+      size_t pos = properties[i].find(word_to_find);
+      if (pos == std::string::npos) {
+        continue;
+      }
+      else {
+        hazard_amount++;
+      }
+
+      for (size_t j = 0; j < capabilities.size(); ++j) {
+        if (properties[i].substr(pos + word_to_find.length()) == capabilities[j]) {
+          found_capabilities++;
+        }
+      }
+    }
+
+    return found_capabilities == hazard_amount;
+  }
+
+  /* Helper function to check if the ship contains a property */
+  bool contains_property(const std::vector<std::string> & properties,
+                         std::string property) {
+    for (std::vector<std::string>::const_iterator it = properties.begin();
+         it != properties.end();
+         ++it) {
+      if (it->find(property) != std::string::npos) {
+        return true;
+      }
+    }
+    return false;
+  }
+}  // namespace
+
 Ship::Ship() :
     name(),
     ship_type(),
@@ -73,17 +113,20 @@ const std::vector<Cargo> & Ship::get_cargos_carried() const {
   return cargos_carried;
 }
 
+/* Loads the cargo onto the ship */
 void Ship::load_cargo(const Cargo & cargo) {
   used_capacity += cargo.get_capacity();
   cargos_carried.push_back(cargo);
 }
 
-bool ship_ptr_less(Ship * lhs, Ship * rhs) {
-  return *lhs < *rhs;
-}
-
+/* Used in ship_ptr_less to compare the ships */
 bool Ship::operator<(const Ship & rhs) const {
   return name < rhs.name;
+}
+
+/* Used for sorting the ships in alphabetical order */
+bool ship_ptr_less(Ship * lhs, Ship * rhs) {
+  return *lhs < *rhs;
 }
 
 Container::Container() : Ship(), num_slots() {
@@ -109,6 +152,7 @@ Container::Container(const std::string & name_,
     num_slots(num_slots_) {
 }
 
+/* Checks if the current ship can load the cargo */
 bool Container::can_load(const Cargo & cargo) const {
   const std::vector<std::string> & properties = cargo.get_properties();
   const std::vector<std::string> & capabilities = get_capabilities();
@@ -124,43 +168,31 @@ bool Container::can_load(const Cargo & cargo) const {
     return false;
   }
 
-  bool has_container = contains_type(properties, "container");
+  bool has_container = contains_property(properties, "container");
   if (!has_container) {
     return false;
   }
 
-  size_t hazard_amount = 0;
-  size_t found_capabilities = 0;
-  for (size_t i = 0; i < properties.size(); ++i) {
-    std::string word_to_find = "hazardous-";
-    size_t pos = properties[i].find(word_to_find);
-    if (pos == std::string::npos) {
-      continue;
-    }
-    else {
-      hazard_amount++;
-    }
-
-    for (size_t j = 0; j < capabilities.size(); ++j) {
-      if (properties[i].substr(pos + word_to_find.length()) == capabilities[j]) {
-        found_capabilities++;
-      }
-    }
+  bool hazard_carriable = check_hazard(properties, capabilities);
+  if (!hazard_carriable) {
+    return false;
   }
 
-  return found_capabilities == hazard_amount;
+  return true;
 }
 
+/* Loads the cargo onto the Container ship */
 void Container::load_cargo(const Cargo & cargo) {
   Ship::load_cargo(cargo);
   num_slots--;
 }
 
+/* Prints the remaining number of slots on the ship */
 void Container::print_remaining_space() const {
   std::cout << "  (" << num_slots << ") slots remain\n";
 }
 
-Tanker::Tanker() : Ship(), min_temp(), max_temp(), tanks(), tanks_used(0) {
+Tanker::Tanker() : Ship(), min_temp(), max_temp(), tanks() {
 }
 
 Tanker::Tanker(const std::string & name_,
@@ -184,14 +216,16 @@ Tanker::Tanker(const std::string & name_,
          cargos_carried_),
     min_temp(min_temp_),
     max_temp(max_temp_),
-    tanks(),
-    tanks_used(0) {
+    tanks() {
   capacity_per_tank = get_total_capacity() / num_tanks_;
   for (unsigned i = 0; i < num_tanks_; ++i) {
-    tanks.push_back(std::make_pair(capacity_per_tank, ""));
+    tanks.push_back(std::make_pair(
+        capacity_per_tank,
+        ""));  // Creates a pair that represents the remaining capacity and content inside the tank
   }
 }
 
+/* Checks if the current ship can load the cargo */
 bool Tanker::can_load(const Cargo & cargo) const {
   const std::vector<std::string> & properties = cargo.get_properties();
   const std::vector<std::string> & capabilities = get_capabilities();
@@ -212,33 +246,22 @@ bool Tanker::can_load(const Cargo & cargo) const {
   }
 
   bool has_liquid_or_gas =
-      contains_type(properties, "liquid") || contains_type(properties, "gas");
+      contains_property(properties, "liquid") || contains_property(properties, "gas");
   if (!has_liquid_or_gas) {
     return false;
   }
 
-  size_t hazard_amount = 0;
-  size_t found_capabilities = 0;
-  for (size_t i = 0; i < properties.size(); ++i) {
-    std::string word_to_find = "hazardous-";
-    size_t pos = properties[i].find(word_to_find);
-    if (pos == std::string::npos) {
-      continue;
-    }
-    else {
-      hazard_amount++;
-    }
-
-    for (size_t j = 0; j < capabilities.size(); ++j) {
-      if (properties[i].substr(pos + word_to_find.length()) == capabilities[j]) {
-        found_capabilities++;
-      }
-    }
+  bool hazard_carriable = check_hazard(properties, capabilities);
+  if (!hazard_carriable) {
+    return false;
   }
 
-  return found_capabilities == hazard_amount;
+  return true;
 }
 
+/* Checks for 2 conditions:
+     1. Does the ship have enough remaining capacity
+     2. Checks if there are empty tanks or enough existing tanks for the cargo */
 bool Tanker::check_tank_capacity(const Cargo & cargo) const {
   unsigned remaining_capacity = get_total_capacity() - get_used_capacity();
   if (remaining_capacity < cargo.get_capacity()) {
@@ -268,6 +291,7 @@ bool Tanker::check_tank_capacity(const Cargo & cargo) const {
   return false;
 }
 
+/* Checks if the ship has the correct temperature capability to transport the cargo */
 bool Tanker::check_temps(const std::vector<std::string> & properties) const {
   std::string cargo_min_temp;
   std::string cargo_max_temp;
@@ -317,6 +341,7 @@ bool Tanker::check_temps(const std::vector<std::string> & properties) const {
   return true;
 }
 
+/* Loads the cargo onto the Tanker ship */
 void Tanker::load_cargo(const Cargo & cargo) {
   unsigned remaining_cargo = cargo.get_capacity();
   Ship::load_cargo(cargo);
@@ -331,9 +356,9 @@ void Tanker::load_cargo(const Cargo & cargo) {
       update_tanks(it->first, remaining_cargo);
     }
   }
-  tanks_used = update_tanks_used();
 }
 
+/* Updates the capacity of each tank on the Tanker ship */
 void Tanker::update_tanks(unsigned & tank_capacity, unsigned & cargo_size) {
   if (tank_capacity < cargo_size) {
     cargo_size = cargo_size - tank_capacity;
@@ -345,21 +370,23 @@ void Tanker::update_tanks(unsigned & tank_capacity, unsigned & cargo_size) {
   }
 }
 
-unsigned Tanker::update_tanks_used() {
-  unsigned clean_count = 0;
+/* Returns the amount of tanks used */
+unsigned Tanker::get_tanks_used() const {
+  unsigned tanks_used = 0;
   for (std::vector<std::pair<unsigned, std::string> >::const_iterator it = tanks.begin();
        it != tanks.end();
        ++it) {
     if (it->first < capacity_per_tank) {
-      clean_count++;
+      tanks_used++;
     }
   }
 
-  return clean_count;
+  return tanks_used;
 }
 
+/* Prints the amount of tanks used */
 void Tanker::print_remaining_space() const {
-  std::cout << "  " << tanks_used << " / " << tanks.size() << " tanks used\n";
+  std::cout << "  " << get_tanks_used() << " / " << tanks.size() << " tanks used\n";
 }
 
 Animal::Animal() : Ship(), size() {
@@ -385,6 +412,7 @@ Animal::Animal(const std::string & name_,
     size(size_) {
 }
 
+/* Checks if the current ship can load the cargo */
 bool Animal::can_load(const Cargo & cargo) const {
   const std::vector<std::string> & properties = cargo.get_properties();
 
@@ -399,16 +427,16 @@ bool Animal::can_load(const Cargo & cargo) const {
     return false;
   }
 
-  bool has_animal = contains_type(properties, "animal");
+  bool has_animal = contains_property(properties, "animal");
   if (has_animal) {
-    bool has_roamer = contains_type(properties, "roamer");
+    bool has_roamer = contains_property(properties, "roamer");
     if (has_roamer) {
       return !check_roamer(get_cargos_carried());
     }
   }
   else {
     bool has_liquid_or_gas =
-        contains_type(properties, "liquid") || contains_type(properties, "gas");
+        contains_property(properties, "liquid") || contains_property(properties, "gas");
     if (has_liquid_or_gas) {
       return false;
     }
@@ -429,10 +457,12 @@ bool Animal::can_load(const Cargo & cargo) const {
   return true;
 }
 
+/* Loads the cargo onto the Animal ship */
 void Animal::load_cargo(const Cargo & cargo) {
   Ship::load_cargo(cargo);
 }
 
+/* Prints if the ship has a roamer or not */
 void Animal::print_remaining_space() const {
   if (check_roamer(get_cargos_carried())) {
     std::cout << "  has a roamer\n";
@@ -442,23 +472,13 @@ void Animal::print_remaining_space() const {
   }
 }
 
+/* Checks if the ship has a roamer or not */
 bool Animal::check_roamer(const std::vector<Cargo> & cargos_carried) const {
   for (std::vector<Cargo>::const_iterator it = cargos_carried.begin();
        it != cargos_carried.end();
        ++it) {
     std::vector<std::string> cargo_properties = it->get_properties();
-    if (contains_type(cargo_properties, "roamer")) {
-      return true;
-    }
-  }
-  return false;
-}
-
-bool contains_type(const std::vector<std::string> & properties, std::string type) {
-  for (std::vector<std::string>::const_iterator it = properties.begin();
-       it != properties.end();
-       ++it) {
-    if (it->find(type) != std::string::npos) {
+    if (contains_property(cargo_properties, "roamer")) {
       return true;
     }
   }

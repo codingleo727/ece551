@@ -15,22 +15,27 @@ Cargo::Cargo(const std::string & name_,
     properties(properties_) {
 }
 
+/* Returns the name of the cargo */
 const std::string & Cargo::get_name() const {
   return name;
 }
 
+/* Returns the source of the cargo */
 const std::string & Cargo::get_source() const {
   return source;
 }
 
+/* Returns the destination of the cargo */
 const std::string & Cargo::get_dest() const {
   return dest;
 }
 
+/* Returns the capacity of the cargo */
 unsigned Cargo::get_capacity() const {
   return capacity;
 }
 
+/* Returns a vector of properties of the cargo */
 const std::vector<std::string> & Cargo::get_properties() const {
   return properties;
 }
