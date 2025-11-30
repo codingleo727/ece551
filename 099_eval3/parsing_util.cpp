@@ -100,7 +100,7 @@ void parse_ship(std::vector<Ship *> & fleet,
                         num_tanks);
   }
   else if (info[0] == "Animals") {
-    unsigned size = to_unsigned(info[1]);
+    unsigned size = to_number<unsigned>(info[1]);
     member = new Animal(name,
                         ship_type,
                         source,
@@ -161,7 +161,7 @@ void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
   name = cargo_info[0];
   source = cargo_info[1];
   dest = cargo_info[2];
-  capacity = to_unsigned(cargo_info[3]);
+  capacity = to_number<unsigned>(cargo_info[3]);
   for (size_t i = 4; i < cargo_info.size(); ++i) {
     properties.push_back(cargo_info[i]);
   }
@@ -176,6 +176,7 @@ void loading_process(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
   clear_fleet(fleet);
 }
 
+/* Begins the cargo loading process */
 void loading_cargo_begin(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
   for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
     int num_ships = 0;
@@ -191,6 +192,7 @@ void loading_cargo_begin(std::vector<Ship *> & fleet, std::vector<Cargo> & cargo
   }
 }
 
+/* Loads the cargo onto the available ship */
 void loading_cargo_process(int num_ships,
                            std::vector<Ship *> & available_ships,
                            const Cargo & cargo) {
@@ -214,6 +216,7 @@ void loading_cargo_process(int num_ships,
   }
 }
 
+/* Finishes loading all the loadable cargos onto the fleet */
 void loading_cargo_finish(const std::vector<Ship *> & fleet) {
   std::cout << "---Done Loading---Here are the ships---\n";
   for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {

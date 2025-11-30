@@ -3,7 +3,7 @@
 Route::Route() : source(), dest(), capacity(0) {
 }
 
-Route::Route(std::string source_, std::string dest_, unsigned capacity_) :
+Route::Route(const std::string & source_, const std::string & dest_, unsigned capacity_) :
     source(source_), dest(dest_), capacity(capacity_) {
 }
 

@@ -129,30 +129,26 @@ bool Container::can_load(const Cargo & cargo) const {
     return false;
   }
 
-  if (properties.size() - 1 > 0) {
-    size_t hazard_amount = 0;
-    size_t found_capabilities = 0;
-    for (size_t i = 0; i < properties.size(); ++i) {
-      std::string word_to_find = "hazardous-";
-      size_t pos = properties[i].find(word_to_find);
-      if (pos == std::string::npos) {
-        continue;
-      }
-      else {
-        hazard_amount++;
-      }
-
-      for (size_t j = 0; j < capabilities.size(); ++j) {
-        if (properties[i].substr(pos + word_to_find.length()) == capabilities[j]) {
-          found_capabilities++;
-        }
-      }
+  size_t hazard_amount = 0;
+  size_t found_capabilities = 0;
+  for (size_t i = 0; i < properties.size(); ++i) {
+    std::string word_to_find = "hazardous-";
+    size_t pos = properties[i].find(word_to_find);
+    if (pos == std::string::npos) {
+      continue;
+    }
+    else {
+      hazard_amount++;
     }
 
-    return found_capabilities == hazard_amount;
+    for (size_t j = 0; j < capabilities.size(); ++j) {
+      if (properties[i].substr(pos + word_to_find.length()) == capabilities[j]) {
+        found_capabilities++;
+      }
+    }
   }
 
-  return true;
+  return found_capabilities == hazard_amount;
 }
 
 void Container::load_cargo(const Cargo & cargo) {

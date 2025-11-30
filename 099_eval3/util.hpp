@@ -19,9 +19,8 @@ class duplicate_name : public std::exception {
 };
 
 std::vector<std::string> split(const std::string & line, const char delim);
-unsigned to_unsigned(const std::string & num);
-signed to_signed(const std::string & num);
 
+/* Converts a number string to a number in the target type */
 template<typename T>
 T to_number(const std::string & num) {
   std::stringstream ss(num);

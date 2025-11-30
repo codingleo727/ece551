@@ -12,7 +12,7 @@ class Route {
 
  public:
   Route();
-  Route(std::string source_, std::string dest_, unsigned capacity_);
+  Route(const std::string & source_, const std::string & dest_, unsigned capacity_);
   const std::string & get_source() const;
   const std::string & get_dest() const;
   unsigned get_capacity() const;
