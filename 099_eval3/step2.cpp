@@ -20,6 +20,10 @@ int main(int argc, char * argv[]) {
     std::cerr << e.what() << std::endl;
     exit(EXIT_FAILURE);
   }
+  catch (const failed_to_open_file & e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+    exit(EXIT_FAILURE);
+  }
   catch (const parsing_failure & e) {
     std::cerr << "Error: " << e.what() << std::endl;
     exit(EXIT_FAILURE);

@@ -9,7 +9,13 @@
 
 void run(char * file1, char * file2) {
   std::ifstream fleet_file(file1);
+  if (!fleet_file.is_open()) {
+    throw failed_to_open_file();
+  }
   std::ifstream cargo_file(file2);
+  if (!cargo_file.is_open()) {
+    throw failed_to_open_file();
+  }
   std::string line;
   std::vector<Ship *> fleet;
   std::vector<Route> routes;

@@ -15,6 +15,10 @@ int main(int argc, char * argv[]) {
   }
 
   std::ifstream input(argv[1]);
+  if (!input.is_open()) {
+    std::cerr << "Error: File does not exist or failed to open file" << std::endl;
+    exit(EXIT_FAILURE);
+  }
   std::string line;
   std::vector<Ship *> fleet;
   std::vector<Route> routes;

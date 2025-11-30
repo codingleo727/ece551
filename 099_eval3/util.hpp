@@ -13,6 +13,13 @@ class invalid_argument_format : public std::exception {
   }
 };
 
+class failed_to_open_file : public std::exception {
+ public:
+  virtual const char * what() const throw() {
+    return "File does not exist or failed to open file";
+  }
+};
+
 class parsing_failure : public std::exception {
  public:
   virtual const char * what() const throw() {
