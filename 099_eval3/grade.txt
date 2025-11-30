@@ -1,6 +1,6 @@
-Grading at 11/30/2025:05:03:04.968955
-For commit ID a5b86044f50919b6af47c28799e4747611a4fd25
-Grading at Sun Nov 30 12:02:45 AM EST 2025
+Grading at 11/30/2025:05:06:28.135263
+For commit ID ee04827b8005ef0d8d6db6c321d11053e77820d9
+Grading at Sun Nov 30 12:06:05 AM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 
 Running your test cases
@@ -87,6 +87,17 @@ And valgrind reported no errors
  This test case will run 
  ships-step1 
  With arguments 
+ hi 
+-------------------------
+Running our code...
+Running your code
+We said this was an error.  Our error message was
+Cannot open file hi: No such file or directory
+However, you exited with EXIT_SUCCESS
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
   
 -------------------------
 Running our code...
@@ -151,13 +162,44 @@ Running our code...
 Running your code
 We agreed on this testcase and valgrind was clean
  *** This is one of the four cases for step 3 early start EC **
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
+ inputs/ships1.txt inputs/cargo_wrong0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
+ hi hi 
+-------------------------
+Running our code...
+Running your code
+We said this was an error.  Our error message was
+Cannot open file hi: No such file or directory
+However, you exited with EXIT_SUCCESS
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
+  
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1763351308** : 819dc323e3b7b641a36627aae3c52e64c144e9f8  -
 You have already pass the basic tests for step2:
 **step2 basic tests passed for ldw59 at 1763592530** : 4f1a74bab8f844bc8544eb6bbedb3809a57beb79  -
 You have already pass the basic tests for step3:
 **step3 basic tests passed for ldw59 at 1764452613** : b763120153726be1883f5fc9b071c2fa0add514f  -
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
