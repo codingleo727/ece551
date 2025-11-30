@@ -446,9 +446,12 @@ bool Animal::can_load(const Cargo & cargo) const {
       return false;
     }
 
-    for (size_t i = 0; i < properties.size(); ++i) {
+    // If any property contains the word hazardous, immediately return false
+    for (std::vector<std::string>::const_iterator it = properties.begin();
+         it != properties.end();
+         ++it) {
       std::string word_to_find = "hazardous-";
-      if (properties[i].find(word_to_find) != std::string::npos) {
+      if (it->find(word_to_find) != std::string::npos) {
         return false;
       }
     }
