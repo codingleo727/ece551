@@ -11,6 +11,7 @@
 #include "ships.hpp"
 #include "util.hpp"
 
+void run(char * file1, char * file2);
 void print_route(std::vector<Route> & routes);
 void parse_fleet(const std::string & line,
                  std::vector<Ship *> & fleet,

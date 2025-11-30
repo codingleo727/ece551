@@ -6,6 +6,13 @@
 #include <string>
 #include <vector>
 
+class invalid_argument_format : public std::exception {
+ public:
+  virtual const char * what() const throw() {
+    return "Please input in the format: ./ships-step# \"ship file\" \"cargo file\"";
+  }
+};
+
 class parsing_failure : public std::exception {
  public:
   virtual const char * what() const throw() {

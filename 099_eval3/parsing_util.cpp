@@ -1,10 +1,30 @@
 #include "parsing_util.hpp"
 
 #include <algorithm>
+#include <fstream>
 #include <iostream>
 #include <sstream>
 
 #include "util.hpp"
+
+void run(char * file1, char * file2) {
+  std::ifstream fleet_file(file1);
+  std::ifstream cargo_file(file2);
+  std::string line;
+  std::vector<Ship *> fleet;
+  std::vector<Route> routes;
+  std::vector<Cargo> cargos;
+
+  while (std::getline(fleet_file, line)) {
+    parse_fleet(line, fleet, routes);
+  }
+
+  while (std::getline(cargo_file, line)) {
+    parse_cargo(line, cargos);
+  }
+
+  loading_process(fleet, cargos);
+}
 
 /* Prints the route in the required format */
 void print_route(std::vector<Route> & routes) {
