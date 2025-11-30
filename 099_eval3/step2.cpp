@@ -45,7 +45,7 @@ int main(int argc, char * argv[]) {
     parse_cargo(line, cargos);
   }
 
-  for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
+  /* for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
     int num_ships = 0;
     std::vector<Ship *> available_ships;
     for (std::vector<Ship *>::iterator s = fleet.begin(); s != fleet.end(); ++s) {
@@ -88,7 +88,9 @@ int main(int argc, char * argv[]) {
     (*s)->print_remaining_space();
   }
 
-  clear_fleet(fleet);
+  clear_fleet(fleet); */
+
+  loading_process(fleet, cargos);
 
   return EXIT_SUCCESS;
 }

@@ -35,5 +35,11 @@ void parse_route(std::vector<Route> & routes,
                  unsigned capacity);
 void clear_fleet(std::vector<Ship *> fleet);
 void parse_cargo(const std::string & line, std::vector<Cargo> & cargos);
+void loading_process(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos);
+void loading_cargo_begin(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos);
+void loading_cargo_process(int num_ships,
+                           std::vector<Ship *> & available_ships,
+                           const Cargo & cargo);
+void loading_cargo_finish(const std::vector<Ship *> & fleet);
 
 #endif

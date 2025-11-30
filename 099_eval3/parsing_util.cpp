@@ -148,6 +148,7 @@ void clear_fleet(std::vector<Ship *> fleet) {
   fleet.clear();
 }
 
+/* Adds a cargo */
 void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
   std::vector<std::string> cargo_info;
   std::string name;
@@ -166,4 +167,65 @@ void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
   }
   Cargo cargo(name, source, dest, capacity, properties);
   cargos.push_back(cargo);
+}
+
+/* Simulates the loading process of cargos onto the fleet */
+void loading_process(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
+  loading_cargo_begin(fleet, cargos);
+  loading_cargo_finish(fleet);
+  clear_fleet(fleet);
+}
+
+void loading_cargo_begin(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
+  for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
+    int num_ships = 0;
+    std::vector<Ship *> available_ships;
+    for (std::vector<Ship *>::iterator s = fleet.begin(); s != fleet.end(); ++s) {
+      if ((*s)->can_load(*c)) {
+        num_ships++;
+        available_ships.push_back(*s);
+      }
+    }
+    std::sort(available_ships.begin(), available_ships.end(), ship_ptr_less);
+    loading_cargo_process(num_ships, available_ships, *c);
+  }
+}
+
+void loading_cargo_process(int num_ships,
+                           std::vector<Ship *> & available_ships,
+                           const Cargo & cargo) {
+  if (num_ships > 0) {
+    std::cout << num_ships << " ships can carry the " << cargo.get_name() << " from "
+              << cargo.get_source() << " to " << cargo.get_dest() << "\n";
+    for (std::vector<Ship *>::iterator as = available_ships.begin();
+         as != available_ships.end();
+         ++as) {
+      std::cout << "  " << (*as)->get_name() << "\n";
+    }
+    Ship * first_ship = available_ships[0];
+    std::cout << "  **Loading the cargo onto " << (*first_ship).get_name() << "**"
+              << "\n";
+
+    (*first_ship).load_cargo(cargo);
+  }
+  else {
+    std::cout << "No ships can carry the " << cargo.get_name() << " from "
+              << cargo.get_source() << " to " << cargo.get_dest() << "\n";
+  }
+}
+
+void loading_cargo_finish(const std::vector<Ship *> & fleet) {
+  std::cout << "---Done Loading---Here are the ships---\n";
+  for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {
+    std::cout << "The " << (*s)->get_ship_type() << " Ship " << (*s)->get_name() << "("
+              << (*s)->get_used_capacity() << "/" << (*s)->get_total_capacity()
+              << ") is carrying : \n";
+    std::vector<Cargo> cargos_carried = (*s)->get_cargos_carried();
+    for (std::vector<Cargo>::iterator c = cargos_carried.begin();
+         c != cargos_carried.end();
+         ++c) {
+      std::cout << "  " << (*c).get_name() << "(" << (*c).get_capacity() << ")\n";
+    }
+    (*s)->print_remaining_space();
+  }
 }
