@@ -6,7 +6,8 @@
 template<typename K, typename V>
 class BstMap : public Map<K, V> {
  private:
-  struct Node {
+  class Node {
+   public:
     K key;
     V value;
     Node * left;
@@ -17,21 +18,46 @@ class BstMap : public Map<K, V> {
   Node * root;
 
  public:
-  virtual void add(const K & key, const V & value) { root = add(root, key, value); }
+  BstMap() : root(NULL) {}
 
-  Node * add(Node * root, const K & key, const V & value) {
+  BstMap(const BstMap & rhs) : root(NULL) { root = copy_tree(rhs.root); }
+
+  virtual ~BstMap<K, V>() { destroy(root); }
+
+  Node * copy_tree(const Node * rhs_root) {
+    if (rhs_root == NULL) {
+      return NULL;
+    }
+
+    Node * node = new Node(rhs_root->key, rhs_root->value);
+    node->left = copy_tree(rhs_root->left);
+    node->right = copy_tree(rhs_root->right);
+
+    return node;
+  }
+
+  BstMap & operator=(const BstMap & rhs) {
+    if (this != &rhs) {
+      destroy(root);
+      root = copy_tree(rhs.root);
+    }
+    return *this;
+  }
+
+  virtual void add(const K & key, const V & value) { root = add_node(root, key, value); }
+
+  Node * add_node(Node * root, const K & key, const V & value) {
     if (root == NULL) {
       root = new Node(key, value);
     }
     else {
       if (key < root->key) {
-        root->left = add(root->left, key, value);
+        root->left = add_node(root->left, key, value);
       }
       else if (key > root->key) {
-        root->right = add(root->right, key, value);
+        root->right = add_node(root->right, key, value);
       }
       else {
-        root->key = key;
         root->value = value;
       }
     }
@@ -39,10 +65,10 @@ class BstMap : public Map<K, V> {
   }
 
   virtual const V & lookup(const K & key) const throw(std::invalid_argument) {
-    return lookup(root, key);
+    return lookup_node(root, key);
   }
 
-  const V & lookup(Node * root, const K & key) const {
+  const V & lookup_node(Node * root, const K & key) const throw(std::invalid_argument) {
     if (root == NULL) {
       throw std::invalid_argument("Key not found in map");
     }
@@ -50,67 +76,67 @@ class BstMap : public Map<K, V> {
     if (key == root->key) {
       return root->value;
     }
+    else if (key < root->key) {
+      return lookup_node(root->left, key);
+    }
     else {
-      if (key < root->key) {
-        return lookup(root->left, key);
-      }
-      else {
-        return lookup(root->right, key);
-      }
+      return lookup_node(root->right, key);
     }
   }
 
-  virtual void remove(const K & key) { root = remove(root, key); }
+  virtual void remove(const K & key) { root = remove_node(root, key); }
 
-  Node * remove(Node * root, const K & key) {
+  Node * remove_node(Node * root, const K & key) {
     if (root == NULL) {
+      return NULL;
+    }
+
+    if (key < root->key) {
+      root->left = remove_node(root->left, key);
       return root;
     }
-
-    if (key == root->key) {
-      if (root->left == NULL && root->right == NULL) {
-        delete root;
-      }
-      else if (root->right == NULL) {
-        Node * temp = root;
-        root = root->left;
-        delete temp;
-      }
-      else if (root->left == NULL) {
-        Node * temp = root;
-        root = root->right;
-        delete temp;
-      }
-      else {
-        Node * succ = min(root);
-        root->key = succ->key;
-        root->value = succ->value;
-        root->right = remove(root->right, succ->key);
-      }
+    else if (key > root->key) {
+      root->right = remove_node(root->right, key);
+      return root;
     }
     else {
-      if (key < root->key) {
-        root->left = remove(root->left, key);
+      if (root->left == NULL && root->right == NULL) {
+        delete root;
+        return NULL;
+      }
+      else if (root->right == NULL) {
+        Node * child = root->left;
+        delete root;
+        return child;
+      }
+      else if (root->left == NULL) {
+        Node * child = root->right;
+        delete root;
+        return child;
       }
       else {
-        root->right = remove(root->right, key);
+        Node * succ = min(root->right);
+        root->key = succ->key;
+        root->value = succ->value;
+        root->right = remove_node(root->right, succ->key);
+        return root;
       }
     }
-    return root;
   }
 
   Node * min(Node * root) {
-    if (root->left == NULL) {
-      return root;
+    Node * curr = root;
+    while (curr->left != NULL) {
+      curr = curr->left;
     }
-    else {
-      return min(root->left);
-    }
+    return curr;
   }
 
-  virtual ~BstMap<K, V>() { destroy(root); }
-
   void destroy(Node * root) {
+    if (root == NULL) {
+      return;
+    }
+
     if (root != NULL) {
       destroy(root->left);
       destroy(root->right);
