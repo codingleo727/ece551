@@ -35,6 +35,7 @@ class BstSet : public Set<T> {
 
   const BstSet & operator=(const BstSet & rhs) {
     if (this != &rhs) {
+      destroy(root);
       root = copy_tree(rhs.root);
     }
     return *this;
@@ -47,11 +48,9 @@ class BstSet : public Set<T> {
       return;
     }
 
-    if (root != NULL) {
-      destroy(root->left);
-      destroy(root->right);
-      delete root;
-    }
+    destroy(root->left);
+    destroy(root->right);
+    delete root;
   }
 
   virtual void add(const T & key) { root = add_node(root, key); }
