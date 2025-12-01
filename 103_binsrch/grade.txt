@@ -1,11 +1,32 @@
-Grading at 12/01/2025:04:29:10.075005
-For commit ID f0210a93c1d6621a1a1a7e41fde8e2a1be5ec843
-Grading at Sun Nov 30 11:29:09 PM EST 2025
+Grading at 12/01/2025:04:30:06.286670
+For commit ID 73c8b82ddbb5b4cfe79ee0b3210f67fafd595978
+Grading at Sun Nov 30 11:30:00 PM EST 2025
 Stripping out any main you may have written, and compiling...
-newsearch.cpp: In function ‘int binarySearchForZero(Function<int, int>*, int, int)’:
-newsearch.cpp:5:21: error: request for member ‘invoke’ in ‘f’, which is of pointer type ‘Function<int, int>*’ (maybe you meant to use ‘->’ ?)
-    5 |   int mid_value = f.invoke(mid);
-      |                     ^~~~~~
-The code did not compile
+Testcase 1
+-----------------
+  - You got the correct result in 18 steps (correct is 17)
+  - Test Passed
+Testcase 2
+-----------------
+  - You got the correct result in 16 steps (correct is 15)
+  - Test Passed
+Testcase 3
+-----------------
+  - You got the correct result in 18 steps (correct is 17)
+  - Test Passed
+Testcase 4
+-----------------
+  - Valgrind reported errors (test failed).
+Testcase 5
+-----------------
+  - Valgrind reported errors (test failed).
+Testcase 6
+-----------------
+  - You got the correct result in 13 steps (correct is 12)
+  - Test Passed
+Testcase 7
+-----------------
+  - You got the correct result in 5 steps (correct is 4)
+  - Test Passed
 
-Overall Grade: F
+Overall Grade: C
