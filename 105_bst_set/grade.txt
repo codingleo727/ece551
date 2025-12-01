@@ -1,0 +1,20 @@
+Grading at 12/01/2025:06:15:19.484182
+For commit ID 2aac9d4d0380e8c29f5f1732efeb8074ab9eb1f0
+Grading at Mon Dec  1 01:15:16 AM EST 2025
+-----------------------------------------------
+testcase 1 : Testing with BstSet<int>
+...compiling...
+The code compiled.
+Valgrind reported errors (test failed).
+-----------------------------------------------
+testcase 2 : Testing with BstSet<std::string>
+...compiling...
+The code compiled.
+Valgrind reported errors (test failed).
+-----------------------------------------------
+testcase 3 : Testing with BstSet<(a custom class we wrote)>
+...compiling...
+The code compiled.
+Valgrind reported errors (test failed).
+
+Overall Grade: F
