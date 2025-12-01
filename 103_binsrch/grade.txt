@@ -1,0 +1,11 @@
+Grading at 12/01/2025:04:29:10.075005
+For commit ID f0210a93c1d6621a1a1a7e41fde8e2a1be5ec843
+Grading at Sun Nov 30 11:29:09 PM EST 2025
+Stripping out any main you may have written, and compiling...
+newsearch.cpp: In function ‘int binarySearchForZero(Function<int, int>*, int, int)’:
+newsearch.cpp:5:21: error: request for member ‘invoke’ in ‘f’, which is of pointer type ‘Function<int, int>*’ (maybe you meant to use ‘->’ ?)
+    5 |   int mid_value = f.invoke(mid);
+      |                     ^~~~~~
+The code did not compile
+
+Overall Grade: F
