@@ -2,7 +2,7 @@
 
 int binarySearchForZero(Function<int, int> * f, int low, int high) {
   int mid = (high + low) / 2;
-  int mid_value = f.invoke(mid);
+  int mid_value = f->invoke(mid);
 
   if (high == low + 1) {
     return low;
