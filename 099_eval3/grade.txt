@@ -1,287 +1,42 @@
-Grading at 12/04/2025:21:06:48.940634
-For commit ID 9d8c95d773508d802649955e26458b2edd00574c
-Grading at Thu Dec  4 04:06:17 PM EST 2025
+Grading at 12/04/2025:21:13:23.843894
+For commit ID 4e07d971a06e602005d3789d002ba65da6571524
+Grading at Thu Dec  4 04:13:19 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
 -------------------------
  This test case will run 
- ships-step1 
+ ships-step4 
  With arguments 
- inputs/ships0.txt 
+ leo_testing/tanker.txt leo_testing/test_cargo3.txt 
 -------------------------
-I need to compile your code for ships-step1 (make ships-step1)
+I need to compile your code for ships-step4 (make ships-step4)
 
-Compiling ships-step1
+Compiling ships-step4
 g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 cargo.cpp
 g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 parsing_util.cpp
 g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 route.cpp
 g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 ships.cpp
 g++ -c -Wall -Werror -ggdb3 -pedantic --std=gnu++03 util.cpp
-g++ -o ships-step1 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step1.cpp cargo.o parsing_util.o route.o ships.o util.o
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the three test cases for step 1 early start EC **
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships1.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the three test cases for step 1 early start EC **
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships2.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the three test cases for step 1 early start EC **
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships_wrong0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships_wrong1.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships_wrong2.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- inputs/ships_wrong3.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
- hi 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step1 
- With arguments 
-  
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step2 
- With arguments 
- inputs/ships0.txt inputs/cargo0.txt 
--------------------------
-I need to compile your code for ships-step2 (make ships-step2)
-
-Compiling ships-step2
-g++ -o ships-step2 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step2.cpp cargo.o parsing_util.o route.o ships.o util.o
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is the test case for step 2 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships0.txt inputs/cargo1.txt 
--------------------------
-I need to compile your code for ships-step3 (make ships-step3)
-
-Compiling ships-step3
-g++ -o ships-step3 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step3.cpp cargo.o parsing_util.o route.o ships.o util.o
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four test cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships1.txt inputs/cargo0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four test cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships1.txt inputs/cargo1.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships2.txt inputs/cargo2.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 3 early start EC **
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- inputs/ships1.txt inputs/cargo_wrong0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
- hi hi 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step3 
- With arguments 
-  
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- inputs/ships0.txt inputs/cargo1.txt 
--------------------------
-I need to compile your code for ships-step4 (make ships-step4)
-
-Compiling ships-step4
 g++ -o ships-step4 -Wall -Werror -ggdb3 -pedantic --std=gnu++03 step4.cpp cargo.o parsing_util.o route.o ships.o util.o
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- inputs/ships1.txt inputs/cargo0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- inputs/ships1.txt inputs/cargo1.txt 
--------------------------
-Running our code...
-Running your code
-We agreed on this testcase and valgrind was clean
- *** This is one of the four cases for step 4 early start EC **
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- hi hi 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
-  
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- leo_testing/tanker.txt leo_testing/test_cargo2.txt 
--------------------------
 Running our code...
 Running your code
 We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
 Loading cargo350 onto The Dawn Galleon from Mordor to Luthade	Loading cargo350 onto The Dawn Galleon from Mordor to Luthade
-No ships can carry the cargo380 from Luthadel to Elantris	No ships can carry the cargo380 from Luthadel to Elantris
 Loading cargo88 onto The Wet Snake from Luthadel to Midgar 60	Loading cargo88 onto The Wet Snake from Luthadel to Midgar 60
 Loading cargo377 onto The Sailing Dragon from Mordor to Midga	Loading cargo377 onto The Sailing Dragon from Mordor to Midga
-No ships can carry the cargo393 from Mordor to Sarth		No ships can carry the cargo393 from Mordor to Sarth
-No ships can carry the cargo339 from Mordor to Elantris		No ships can carry the cargo339 from Mordor to Elantris
 Loading cargo335 onto The Swift Turtle from Mordor to Elantri	Loading cargo335 onto The Swift Turtle from Mordor to Elantri
 Loading cargo975 onto The Dawn Narwhal from Luthadel to Midga	Loading cargo975 onto The Dawn Narwhal from Luthadel to Midga
-No ships can carry the cargo396 from Midgar to Elantris		No ships can carry the cargo396 from Midgar to Elantris
 Loading cargo329 onto The Secret Kraken from Luthadel to Mord	Loading cargo329 onto The Secret Kraken from Luthadel to Mord
 Loading cargo360 onto The Wooden Galleon from Mordor to Midga	Loading cargo360 onto The Wooden Galleon from Mordor to Midga
 Loading cargo363 onto The Majestic Kraken from Mordor to Midg |	Loading cargo363 onto The Wooden Galleon from Mordor to Midga
 Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9	Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9
-No ships can carry the cargo342 from Elantris to Sarth		No ships can carry the cargo342 from Elantris to Sarth
-No ships can carry the cargo375 from Mordor to Luthadel		No ships can carry the cargo375 from Mordor to Luthadel
-No ships can carry the cargo348 from Midgar to Mordor		No ships can carry the cargo348 from Midgar to Mordor
-No ships can carry the cargo349 from Mordor to Sarth		No ships can carry the cargo349 from Mordor to Sarth
 Loading cargo397 onto The Gleaming Galleon from Mordor to Lut	Loading cargo397 onto The Gleaming Galleon from Mordor to Lut
 Loading cargo394 onto The Swift Phoenix from Midgar to Luthad	Loading cargo394 onto The Swift Phoenix from Midgar to Luthad
-No ships can carry the cargo398 from Luthadel to Midgar		No ships can carry the cargo398 from Luthadel to Midgar
-No ships can carry the cargo884 from Sarth to Mordor		No ships can carry the cargo884 from Sarth to Mordor
 Loading cargo352 onto The Royal Dreadnought from Mordor to Lu	Loading cargo352 onto The Royal Dreadnought from Mordor to Lu
-No ships can carry the cargo885 from Luthadel to Midgar		No ships can carry the cargo885 from Luthadel to Midgar
 Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Sailing Dragon from Mordor to Midga
-No ships can carry the cargo399 from Sarth to Mordor		No ships can carry the cargo399 from Sarth to Mordor
 Loading cargo378 onto The Slippery Clipper from Sarth to Mord	Loading cargo378 onto The Slippery Clipper from Sarth to Mord
-No ships can carry the cargo379 from Sarth to Mordor		No ships can carry the cargo379 from Sarth to Mordor
 ---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
 The Tanker Ship The Dawn Clipper(0/1000) is carrying : 		The Tanker Ship The Dawn Clipper(0/1000) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
@@ -460,12 +215,9 @@ The Tanker Ship The Wooden Narwhal(0/1000) is carrying : 	The Tanker Ship The Wo
 The Tanker Ship The Wooden Turtle(0/1200) is carrying : 	The Tanker Ship The Wooden Turtle(0/1200) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 Your file did not match the expected output
-You have already pass the basic tests for step1:
-**step1 basic tests passed for ldw59 at 1763351308** : 819dc323e3b7b641a36627aae3c52e64c144e9f8  -
-You have already pass the basic tests for step2:
-**step2 basic tests passed for ldw59 at 1763592530** : 4f1a74bab8f844bc8544eb6bbedb3809a57beb79  -
-You have already pass the basic tests for step3:
-**step3 basic tests passed for ldw59 at 1764452613** : b763120153726be1883f5fc9b071c2fa0add514f  -
+The info about step1 in your grade.txt is weird. Please ask Drew
+The info about step2 in your grade.txt is weird. Please ask Drew
+The info about step3 in your grade.txt is weird. Please ask Drew
 You have FAILED one or more of your test cases
 Keep debugging
 
