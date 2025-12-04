@@ -1,1 +1,1 @@
-ships-step4 leo_testing/tanker.txt leo_testing/test_cargo3.txt
+ships-step4 leo_testing/tanker1.txt leo_testing/test_cargo3.txt

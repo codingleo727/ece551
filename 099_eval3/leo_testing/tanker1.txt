@@ -1,0 +1,3 @@
+The Wooden Galleon:Tanker,-185,-150,100,explosive,corrosive,radioactive,toxic:Mordor:Midgar:500
+The Majestic Kraken:Tanker,0,10,5,toxic,flammable,explosive:Mordor:Midgar:300
+The Royal Dolphin:Tanker,0,10,10,flammable,radioactive,corrosive,toxic:Mordor:Midgar:300
