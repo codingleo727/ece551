@@ -1,6 +1,6 @@
-Grading at 12/04/2025:23:31:30.760805
-For commit ID 8339c1dd87d1f1557eeae2e0577d303d85a5fe67
-Grading at Thu Dec  4 06:30:42 PM EST 2025
+Grading at 12/04/2025:23:45:42.891937
+For commit ID f6902966354d7a08b23a26a22a07c9522d69428a
+Grading at Thu Dec  4 06:44:41 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -98,6 +98,16 @@ And valgrind reported no errors
  ships-step1 
  With arguments 
  inputs/ships_wrong5.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ inputs/ships_wrong6.txt 
 -------------------------
 Running our code...
 Running your code
@@ -265,6 +275,16 @@ And valgrind reported no errors
  This test case will run 
  ships-step3 
  With arguments 
+ inputs/ships_wrong6.txt inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
  hi hi 
 -------------------------
 Running our code...
@@ -395,36 +415,9 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- inputs/ships1.txt inputs/cargo_wrong0.txt 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
- hi hi 
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
--------------------------
- This test case will run 
- ships-step4 
- With arguments 
-  
--------------------------
-Running our code...
-Running your code
-We agreed this was an error, and you printed something to stderr
-And valgrind reported no errors
+
+Grading has taken more than 60 seconds
+Skipping remaining test cases
 You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1764884312** : 55fa33cefe7113c42b2f6904e152ca671d515aca  -
 You have already pass the basic tests for step2:
