@@ -7,6 +7,7 @@
 
 #include "util.hpp"
 
+/* Runs the program */
 void run(char * file1, char * file2, int step, int option) {
   std::string line;
   std::vector<Ship *> fleet;
@@ -15,8 +16,7 @@ void run(char * file1, char * file2, int step, int option) {
   if (step == 1) {
     std::ifstream fleet_file(file1);
     if (!fleet_file.is_open()) {
-      std::cerr << "Error: File does not exist or failed to open file" << std::endl;
-      exit(EXIT_FAILURE);
+      throw failed_to_open_file(step);
     }
 
     while (std::getline(fleet_file, line)) {
@@ -29,12 +29,12 @@ void run(char * file1, char * file2, int step, int option) {
   else {
     std::ifstream fleet_file(file1);
     if (!fleet_file.is_open()) {
-      throw failed_to_open_file();
+      throw failed_to_open_file(step);
     }
 
     std::ifstream cargo_file(file2);
     if (!cargo_file.is_open()) {
-      throw failed_to_open_file();
+      throw failed_to_open_file(step);
     }
 
     while (std::getline(fleet_file, line)) {
@@ -227,7 +227,8 @@ void sort_cargo(std::vector<Cargo> & cargos) {
 ShipTree build_ship_tree(const std::vector<Ship *> & fleet) {
   ShipTree ship_tree;
   for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {
-    ship_tree.add((*s)->get_total_capacity(), *s);
+    ship_tree.add((*s)->get_total_capacity(),
+                  *s);  // Remaining capacity at start is total capacity
   }
   return ship_tree;
 }

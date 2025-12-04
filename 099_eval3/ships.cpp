@@ -274,12 +274,12 @@ bool Tanker::check_tank_capacity(const Cargo & cargo) const {
       continue;
     }
 
-    unsigned put_cargo = it->first;
-    if (put_cargo >= remaining_cargo) {
+    unsigned load_cargo = it->first;
+    if (load_cargo >= remaining_cargo) {
       return true;
     }
 
-    remaining_cargo -= put_cargo;
+    remaining_cargo -= load_cargo;
   }
 
   return false;
@@ -450,7 +450,6 @@ bool Animal::can_load(const Cargo & cargo) const {
       }
     }
   }
-
   return true;
 }
 
