@@ -24,6 +24,11 @@ class Cargo {
   const std::string & get_dest() const;
   unsigned get_capacity() const;
   const std::vector<std::string> & get_properties() const;
+  struct Descending {
+    bool operator()(const Cargo & lhs, const Cargo & rhs) const {
+      return lhs.get_capacity() > rhs.get_capacity();
+    }
+  };
 };
 
 #endif

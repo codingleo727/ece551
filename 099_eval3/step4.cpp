@@ -13,7 +13,7 @@ int main(int argc, char * argv[]) {
     if (argc != 3) {
       throw invalid_argument_format();
     }
-    run(argv[1], argv[2], 0);
+    run(argv[1], argv[2], 1);
   }
   catch (const invalid_argument_format & e) {
     std::cerr << e.what() << std::endl;

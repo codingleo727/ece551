@@ -7,7 +7,7 @@
 
 #include "util.hpp"
 
-void run(char * file1, char * file2) {
+void run(char * file1, char * file2, int option) {
   std::ifstream fleet_file(file1);
   if (!fleet_file.is_open()) {
     throw failed_to_open_file();
@@ -29,7 +29,7 @@ void run(char * file1, char * file2) {
     parse_cargo(line, cargos);
   }
 
-  loading_process(fleet, cargos);
+  loading_process(fleet, cargos, option);
 }
 
 /* Prints the route in the required format */
@@ -141,8 +141,8 @@ void parse_ship(std::vector<Ship *> & fleet,
     throw parsing_failure();
   }
 
-  for (std::vector<Ship *>::iterator it = fleet.begin(); it != fleet.end(); ++it) {
-    if ((*it)->get_name() == name) {
+  for (std::vector<Ship *>::iterator s = fleet.begin(); s != fleet.end(); ++s) {
+    if ((*s)->get_name() == name) {
       throw duplicate_name();  // In case of duplicate ship names
     }
   }
@@ -195,26 +195,80 @@ void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
   cargos.push_back(cargo);
 }
 
+/* Sorts the cargos from largest to smallest */
+void sort_cargo(std::vector<Cargo> & cargos) {
+  std::stable_sort(cargos.begin(), cargos.end(), Cargo::Descending());
+}
+
+/* Builds an AVL tree of sets of ships sorted by remaining_capacity */
+AVLMultiMap<unsigned, Ship *> build_ship_tree(const std::vector<Ship *> & fleet) {
+  AVLMultiMap<unsigned, Ship *> ship_tree;
+  for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {
+    ship_tree.add((*s)->get_total_capacity(), *s);
+  }
+  return ship_tree;
+}
+
 /* Simulates the loading process of cargos onto the fleet */
-void loading_process(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
-  loading_cargo_begin(fleet, cargos);
+void loading_process(std::vector<Ship *> & fleet,
+                     std::vector<Cargo> & cargos,
+                     int option) {
+  loading_cargo_begin(fleet, cargos, option);
   loading_cargo_finish(fleet);
   clear_fleet(fleet);
 }
 
-/* Begins the cargo loading process */
-void loading_cargo_begin(std::vector<Ship *> & fleet, std::vector<Cargo> & cargos) {
-  for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
-    int num_ships = 0;
-    std::vector<Ship *> available_ships;
-    for (std::vector<Ship *>::iterator s = fleet.begin(); s != fleet.end(); ++s) {
-      if ((*s)->can_load(*c)) {
-        num_ships++;
-        available_ships.push_back(*s);
+/* Loads the cargo using an AVLMultimap */
+void loading_cargo_tree(AVLMultiMap<unsigned, Ship *> & ship_tree, const Cargo & cargo) {
+  AVLMultiMap<unsigned, Ship *>::Iterator s =
+      ship_tree.lowest_bound(cargo.get_capacity());
+  for (AVLMultiMap<unsigned, Ship *>::Iterator it = s; !it.is_past_end(); it.next()) {
+    const std::set<Ship *> & available_ships = it.get_vals();
+    for (std::set<Ship *>::const_iterator ship = available_ships.begin();
+         ship != available_ships.end();
+         ++ship) {
+      Ship * curr_ship = *ship;
+      if (curr_ship->can_load(cargo)) {
+        unsigned original_remaining_cap =
+            curr_ship->get_total_capacity() - curr_ship->get_used_capacity();
+        ship_tree.remove(original_remaining_cap, *ship);
+
+        curr_ship->load_cargo(cargo);
+        unsigned new_remaining_cap =
+            curr_ship->get_total_capacity() - curr_ship->get_used_capacity();
+        ship_tree.add(new_remaining_cap, *ship);
+        loading_cargo_process_tree(curr_ship, cargo, new_remaining_cap);
+        return;
       }
     }
-    std::sort(available_ships.begin(), available_ships.end(), ship_ptr_less);
-    loading_cargo_process(num_ships, available_ships, *c);
+  }
+}
+
+/* Begins the cargo loading process */
+void loading_cargo_begin(std::vector<Ship *> & fleet,
+                         std::vector<Cargo> & cargos,
+                         int option) {
+  if (option != 0) {
+    sort_cargo(cargos);
+  }
+
+  for (std::vector<Cargo>::iterator c = cargos.begin(); c != cargos.end(); ++c) {
+    if (option == 0) {
+      int num_ships = 0;
+      std::vector<Ship *> available_ships;
+      for (std::vector<Ship *>::iterator s = fleet.begin(); s != fleet.end(); ++s) {
+        if ((*s)->can_load(*c)) {
+          num_ships++;
+          available_ships.push_back(*s);
+        }
+      }
+      std::sort(available_ships.begin(), available_ships.end(), ship_ptr_less);
+      loading_cargo_process(num_ships, available_ships, *c);
+    }
+    else {
+      AVLMultiMap<unsigned, Ship *> ship_tree = build_ship_tree(fleet);
+      loading_cargo_tree(ship_tree, *c);
+    }
   }
 }
 
@@ -240,6 +294,15 @@ void loading_cargo_process(int num_ships,
     std::cout << "No ships can carry the " << cargo.get_name() << " from "
               << cargo.get_source() << " to " << cargo.get_dest() << "\n";
   }
+}
+
+/* Loads the cargo onto the available ship using a tree */
+void loading_cargo_process_tree(const Ship * ship,
+                                const Cargo & cargo,
+                                unsigned remaining_capacity) {
+  std::cout << "Loading " << cargo.get_name() << " onto " << ship->get_name() << " from "
+            << ship->get_source() << " to " << ship->get_dest() << " "
+            << remaining_capacity << " capacity remains\n";
 }
 
 /* Finishes loading all the loadable cargos onto the fleet */

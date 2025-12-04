@@ -208,5 +208,90 @@ class AVLMultiMap {
     preOrderDumpHelper(ans, root);
     return ans;
   }
+
+ private:
+  Node * min_node(Node * curr) const {
+    if (curr == NULL) {
+      return NULL;
+    }
+    while (curr->left != NULL) {
+      curr = curr->left;
+    }
+    return curr;
+  }
+
+  Node * next_in_order_node(Node * node) const {
+    if (node == NULL) {
+      return NULL;
+    }
+
+    if (node->right != NULL) {
+      return min_node(node->right);
+    }
+
+    Node * next = NULL;
+    Node * curr = root;
+
+    while (curr != NULL) {
+      if (node->key < curr->key) {
+        next = curr;
+        curr = curr->left;
+      }
+      else if (node->key > curr->key) {
+        curr = curr->right;
+      }
+      else {
+        break;
+      }
+    }
+    return next;
+  }
+
+  Node * lowest_helper(Node * curr, const K & key) const {
+    if (curr == NULL) {
+      return NULL;
+    }
+
+    Node * best_node = NULL;
+    while (curr != NULL) {
+      if (!(cmp(curr->key, key))) {
+        best_node = curr;
+        curr = curr->left;
+      }
+      else {
+        curr = curr->right;
+      }
+    }
+    return best_node;
+  }
+
+ public:
+  class Iterator {
+   private:
+    Node * curr;
+    const AVLMultiMap * owner;
+
+   public:
+    Iterator(Node * curr_, const AVLMultiMap * owner_) : curr(curr_), owner(owner_) {}
+
+    bool is_past_end() const { return curr == NULL; }
+
+    const K & get_key() { return curr->key; }
+    const std::set<V, CompareV> & get_vals() { return curr->vals; }
+
+    void next() {
+      if (curr != NULL) {
+        curr = owner->next_in_order_node(curr);
+      }
+    }
+  };
+
+  Iterator begin() const { return Iterator(min_node(root), this); }
+
+  Iterator end() const { return Iterator(NULL, this); }
+
+  Iterator lowest_bound(const K & key) const {
+    return Iterator(lowest_helper(root, key), this);
+  }
 };
 #endif
