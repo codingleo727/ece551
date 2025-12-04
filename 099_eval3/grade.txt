@@ -1,6 +1,6 @@
-Grading at 12/04/2025:19:19:20.394502
-For commit ID fcf01cd8ef951def5abdc8088c24946ab5210b0c
-Grading at Thu Dec  4 02:18:32 PM EST 2025
+Grading at 12/04/2025:20:01:27.765251
+For commit ID ad95a0557aed9a6cc9ac1c1089f60c2652115bc4
+Grading at Thu Dec  4 03:00:57 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -210,6 +210,16 @@ We agreed on this testcase and valgrind was clean
  ships-step4 
  With arguments 
  inputs/ships1.txt inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+ *** This is one of the four cases for step 4 early start EC **
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ inputs/ships1.txt inputs/cargo1.txt 
 -------------------------
 Running our code...
 Running your code
