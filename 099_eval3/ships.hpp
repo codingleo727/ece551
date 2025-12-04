@@ -34,6 +34,7 @@ class Ship {
   const std::string & get_dest() const;
   unsigned get_total_capacity() const;
   unsigned get_used_capacity() const;
+  unsigned get_remaining_capacity() const;
   const std::vector<std::string> & get_capabilities() const;
   const std::vector<Cargo> & get_cargos_carried() const;
   bool operator<(const Ship & rhs) const;

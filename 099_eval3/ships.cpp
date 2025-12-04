@@ -103,6 +103,10 @@ unsigned Ship::get_used_capacity() const {
   return used_capacity;
 }
 
+unsigned Ship::get_remaining_capacity() const {
+  return total_capacity - used_capacity;
+}
+
 /* Returns the capabilities of the ship */
 const std::vector<std::string> & Ship::get_capabilities() const {
   return capabilities;
@@ -156,7 +160,7 @@ bool Container::can_load(const Cargo & cargo) const {
     return false;
   }
 
-  unsigned remaining_capacity = get_total_capacity() - get_used_capacity();
+  unsigned remaining_capacity = get_remaining_capacity();
   bool enough_space = cargo.get_capacity() <= remaining_capacity && num_slots > 0;
   if (!enough_space) {
     return false;
@@ -257,7 +261,7 @@ bool Tanker::can_load(const Cargo & cargo) const {
      1. Does the ship have enough remaining capacity
      2. Checks if there are empty tanks or enough existing tanks for the cargo */
 bool Tanker::check_tank_capacity(const Cargo & cargo) const {
-  unsigned remaining_capacity = get_total_capacity() - get_used_capacity();
+  unsigned remaining_capacity = get_remaining_capacity();
   if (remaining_capacity < cargo.get_capacity()) {
     return false;
   }
@@ -415,7 +419,7 @@ bool Animal::can_load(const Cargo & cargo) const {
     return false;
   }
 
-  unsigned remaining_capacity = get_total_capacity() - get_used_capacity();
+  unsigned remaining_capacity = get_remaining_capacity();
   bool enough_space = cargo.get_capacity() <= remaining_capacity;
   if (!enough_space) {
     return false;

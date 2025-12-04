@@ -126,7 +126,10 @@ void parse_ship(std::vector<Ship *> & fleet,
                         num_tanks);
   }
   else if (info[0] == "Animals") {
-    unsigned size = to_number<unsigned>(info[1]);
+    unsigned size = 0;
+    if (info.size() > 1) {
+      size = to_number<unsigned>(info[1]);
+    }
     member = new Animal(name,
                         ship_type,
                         source,
@@ -229,12 +232,11 @@ void loading_cargo_tree(ShipTree & ship_tree, const Cargo & cargo) {
       Ship * curr_ship = *ship;
       if (curr_ship->can_load(cargo)) {
         unsigned original_remaining_cap = it.get_key();
-        ship_tree.remove(original_remaining_cap, *ship);
+        ship_tree.remove(original_remaining_cap, curr_ship);
 
         curr_ship->load_cargo(cargo);
-        unsigned new_remaining_cap =
-            curr_ship->get_total_capacity() - curr_ship->get_used_capacity();
-        ship_tree.add(new_remaining_cap, *ship);
+        unsigned new_remaining_cap = curr_ship->get_remaining_capacity();
+        ship_tree.add(new_remaining_cap, curr_ship);
         loading_cargo_process_tree(curr_ship, cargo, new_remaining_cap);
         return;
       }
