@@ -1,6 +1,6 @@
-Grading at 12/04/2025:21:13:23.843894
-For commit ID 4e07d971a06e602005d3789d002ba65da6571524
-Grading at Thu Dec  4 04:13:19 PM EST 2025
+Grading at 12/04/2025:21:15:48.499159
+For commit ID 358cc7e022f3a2f413780480ec78eaee026b60f1
+Grading at Thu Dec  4 04:15:44 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -23,33 +23,25 @@ Running our code...
 Running your code
 We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
-Loading cargo350 onto The Dawn Galleon from Mordor to Luthade	Loading cargo350 onto The Dawn Galleon from Mordor to Luthade
-Loading cargo88 onto The Wet Snake from Luthadel to Midgar 60	Loading cargo88 onto The Wet Snake from Luthadel to Midgar 60
-Loading cargo377 onto The Sailing Dragon from Mordor to Midga	Loading cargo377 onto The Sailing Dragon from Mordor to Midga
-Loading cargo335 onto The Swift Turtle from Mordor to Elantri	Loading cargo335 onto The Swift Turtle from Mordor to Elantri
-Loading cargo975 onto The Dawn Narwhal from Luthadel to Midga	Loading cargo975 onto The Dawn Narwhal from Luthadel to Midga
-Loading cargo329 onto The Secret Kraken from Luthadel to Mord	Loading cargo329 onto The Secret Kraken from Luthadel to Mord
 Loading cargo360 onto The Wooden Galleon from Mordor to Midga	Loading cargo360 onto The Wooden Galleon from Mordor to Midga
 Loading cargo363 onto The Majestic Kraken from Mordor to Midg |	Loading cargo363 onto The Wooden Galleon from Mordor to Midga
 Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9	Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9
 Loading cargo397 onto The Gleaming Galleon from Mordor to Lut	Loading cargo397 onto The Gleaming Galleon from Mordor to Lut
 Loading cargo394 onto The Swift Phoenix from Midgar to Luthad	Loading cargo394 onto The Swift Phoenix from Midgar to Luthad
 Loading cargo352 onto The Royal Dreadnought from Mordor to Lu	Loading cargo352 onto The Royal Dreadnought from Mordor to Lu
-Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Sailing Dragon from Mordor to Midga
+Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Majestic Kraken from Mordor to Midg
 Loading cargo378 onto The Slippery Clipper from Sarth to Mord	Loading cargo378 onto The Slippery Clipper from Sarth to Mord
 ---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
 The Tanker Ship The Dawn Clipper(0/1000) is carrying : 		The Tanker Ship The Dawn Clipper(0/1000) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Dawn Eagle(0/300) is carrying : 		The Tanker Ship The Dawn Eagle(0/300) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
-The Tanker Ship The Dawn Galleon(340/400) is carrying : 	The Tanker Ship The Dawn Galleon(340/400) is carrying : 
-  cargo350(340)							  cargo350(340)
-  9 / 10 tanks used						  9 / 10 tanks used
+The Tanker Ship The Dawn Galleon(0/400) is carrying : 		The Tanker Ship The Dawn Galleon(0/400) is carrying : 
+  0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Dawn Leviathan(0/900) is carrying : 	The Tanker Ship The Dawn Leviathan(0/900) is carrying : 
   0 / 50 tanks used						  0 / 50 tanks used
-The Tanker Ship The Dawn Narwhal(250/700) is carrying : 	The Tanker Ship The Dawn Narwhal(250/700) is carrying : 
-  cargo975(250)							  cargo975(250)
-  9 / 25 tanks used						  9 / 25 tanks used
+The Tanker Ship The Dawn Narwhal(0/700) is carrying : 		The Tanker Ship The Dawn Narwhal(0/700) is carrying : 
+  0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Dawn Snake(0/800) is carrying : 		The Tanker Ship The Dawn Snake(0/800) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Dawn Turtle(0/800) is carrying : 		The Tanker Ship The Dawn Turtle(0/800) is carrying : 
@@ -87,9 +79,9 @@ The Tanker Ship The Majestic Eagle(0/500) is carrying : 	The Tanker Ship The Maj
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Majestic Hawk(0/400) is carrying : 		The Tanker Ship The Majestic Hawk(0/400) is carrying : 
   0 / 100 tanks used						  0 / 100 tanks used
-The Tanker Ship The Majestic Kraken(220/300) is carrying :    |	The Tanker Ship The Majestic Kraken(0/300) is carrying : 
-  cargo363(220)						      |	  0 / 5 tanks used
-  4 / 5 tanks used					      <
+The Tanker Ship The Majestic Kraken(220/300) is carrying :    |	The Tanker Ship The Majestic Kraken(130/300) is carrying : 
+  cargo363(220)						      |	  cargo395(130)
+  4 / 5 tanks used					      |	  3 / 5 tanks used
 The Tanker Ship The Misty Turtle(220/1200) is carrying : 	The Tanker Ship The Misty Turtle(220/1200) is carrying : 
   cargo364(220)							  cargo364(220)
   1 / 5 tanks used						  1 / 5 tanks used
@@ -129,10 +121,8 @@ The Tanker Ship The Royal Eagle(0/1200) is carrying : 		The Tanker Ship The Roya
   0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Royal Whale(0/900) is carrying : 		The Tanker Ship The Royal Whale(0/900) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
-The Tanker Ship The Sailing Dragon(310/500) is carrying :     |	The Tanker Ship The Sailing Dragon(440/500) is carrying : 
-  cargo377(310)							  cargo377(310)
-  31 / 50 tanks used					      |	  cargo395(130)
-							      >	  44 / 50 tanks used
+The Tanker Ship The Sailing Dragon(0/500) is carrying : 	The Tanker Ship The Sailing Dragon(0/500) is carrying : 
+  0 / 50 tanks used						  0 / 50 tanks used
 The Tanker Ship The Sailing Eagle(0/400) is carrying : 		The Tanker Ship The Sailing Eagle(0/400) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Sailing Eel(0/300) is carrying : 		The Tanker Ship The Sailing Eel(0/300) is carrying : 
@@ -149,9 +139,8 @@ The Tanker Ship The Secret Clipper(0/500) is carrying : 	The Tanker Ship The Sec
   0 / 100 tanks used						  0 / 100 tanks used
 The Tanker Ship The Secret Dolphin(0/800) is carrying : 	The Tanker Ship The Secret Dolphin(0/800) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
-The Tanker Ship The Secret Kraken(220/500) is carrying : 	The Tanker Ship The Secret Kraken(220/500) is carrying : 
-  cargo329(220)							  cargo329(220)
-  5 / 10 tanks used						  5 / 10 tanks used
+The Tanker Ship The Secret Kraken(0/500) is carrying : 		The Tanker Ship The Secret Kraken(0/500) is carrying : 
+  0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Secret Leviathan(0/800) is carrying : 	The Tanker Ship The Secret Leviathan(0/800) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Secret Whale(0/1000) is carrying : 		The Tanker Ship The Secret Whale(0/1000) is carrying : 
@@ -184,9 +173,8 @@ The Tanker Ship The Swift Dreadnought(0/400) is carrying : 	The Tanker Ship The 
 The Tanker Ship The Swift Phoenix(180/1100) is carrying : 	The Tanker Ship The Swift Phoenix(180/1100) is carrying : 
   cargo394(180)							  cargo394(180)
   2 / 10 tanks used						  2 / 10 tanks used
-The Tanker Ship The Swift Turtle(280/600) is carrying : 	The Tanker Ship The Swift Turtle(280/600) is carrying : 
-  cargo335(280)							  cargo335(280)
-  3 / 5 tanks used						  3 / 5 tanks used
+The Tanker Ship The Swift Turtle(0/600) is carrying : 		The Tanker Ship The Swift Turtle(0/600) is carrying : 
+  0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Wet Boat(0/1200) is carrying : 		The Tanker Ship The Wet Boat(0/1200) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Wet Dolphin(0/800) is carrying : 		The Tanker Ship The Wet Dolphin(0/800) is carrying : 
@@ -195,9 +183,8 @@ The Tanker Ship The Wet Kraken(0/1100) is carrying : 		The Tanker Ship The Wet K
   0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Wet Phoenix(0/1200) is carrying : 		The Tanker Ship The Wet Phoenix(0/1200) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
-The Tanker Ship The Wet Snake(340/400) is carrying : 		The Tanker Ship The Wet Snake(340/400) is carrying : 
-  cargo88(340)							  cargo88(340)
-  22 / 25 tanks used						  22 / 25 tanks used
+The Tanker Ship The Wet Snake(0/400) is carrying : 		The Tanker Ship The Wet Snake(0/400) is carrying : 
+  0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Wet Whale(0/1000) is carrying : 		The Tanker Ship The Wet Whale(0/1000) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Wooden Dragon(0/800) is carrying : 		The Tanker Ship The Wooden Dragon(0/800) is carrying : 
@@ -215,9 +202,6 @@ The Tanker Ship The Wooden Narwhal(0/1000) is carrying : 	The Tanker Ship The Wo
 The Tanker Ship The Wooden Turtle(0/1200) is carrying : 	The Tanker Ship The Wooden Turtle(0/1200) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 Your file did not match the expected output
-The info about step1 in your grade.txt is weird. Please ask Drew
-The info about step2 in your grade.txt is weird. Please ask Drew
-The info about step3 in your grade.txt is weird. Please ask Drew
 You have FAILED one or more of your test cases
 Keep debugging
 
