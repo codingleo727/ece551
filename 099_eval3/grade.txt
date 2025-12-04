@@ -1,6 +1,6 @@
-Grading at 12/04/2025:21:38:32.901880
-For commit ID dbbd82d358b08730db22f538f7d358bef14d9e02
-Grading at Thu Dec  4 04:37:46 PM EST 2025
+Grading at 12/04/2025:22:34:44.839912
+For commit ID 58edee6e1d9ce581421741322f6ef066e11802b4
+Grading at Thu Dec  4 05:34:10 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -175,6 +175,16 @@ And valgrind reported no errors
  This test case will run 
  ships-step3 
  With arguments 
+ inputs/ships1.txt inputs/ships1.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
  hi hi 
 -------------------------
 Running our code...
@@ -239,6 +249,16 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  ships-step4 
  With arguments 
+ inputs/ships1.txt inputs/ships1.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
  hi hi 
 -------------------------
 Running our code...
@@ -255,9 +275,13 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1764884312** : 55fa33cefe7113c42b2f6904e152ca671d515aca  -
+You have already pass the basic tests for step2:
 **step2 basic tests passed for ldw59 at 1764884312** : 98d3b72eed1ba54648272861b1a96ff3e822fa94  -
+You have already pass the basic tests for step3:
 **step3 basic tests passed for ldw59 at 1764884312** : b5ec05f75cbb9731ad7944cb5382e8284ee8923b  -
+You have already pass the basic tests for step4:
 **step4 basic tests passed for ldw59 at 1764884312** : 0ea126d769932994393291aaf075f67be1cb0345  -
 You have PASSED all of your test cases
 Keep adding test cases until you are satisfied your program is correct
