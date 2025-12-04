@@ -1,6 +1,6 @@
-Grading at 12/04/2025:21:15:48.499159
-For commit ID 358cc7e022f3a2f413780480ec78eaee026b60f1
-Grading at Thu Dec  4 04:15:44 PM EST 2025
+Grading at 12/04/2025:21:18:13.048364
+For commit ID 6b8990d63a9909b22dd7e1ea35e7225b06688b85
+Grading at Thu Dec  4 04:18:08 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -25,12 +25,9 @@ We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
 Loading cargo360 onto The Wooden Galleon from Mordor to Midga	Loading cargo360 onto The Wooden Galleon from Mordor to Midga
 Loading cargo363 onto The Majestic Kraken from Mordor to Midg |	Loading cargo363 onto The Wooden Galleon from Mordor to Midga
-Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9	Loading cargo364 onto The Misty Turtle from Sarth to Midgar 9
-Loading cargo397 onto The Gleaming Galleon from Mordor to Lut	Loading cargo397 onto The Gleaming Galleon from Mordor to Lut
 Loading cargo394 onto The Swift Phoenix from Midgar to Luthad	Loading cargo394 onto The Swift Phoenix from Midgar to Luthad
 Loading cargo352 onto The Royal Dreadnought from Mordor to Lu	Loading cargo352 onto The Royal Dreadnought from Mordor to Lu
 Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Majestic Kraken from Mordor to Midg
-Loading cargo378 onto The Slippery Clipper from Sarth to Mord	Loading cargo378 onto The Slippery Clipper from Sarth to Mord
 ---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
 The Tanker Ship The Dawn Clipper(0/1000) is carrying : 		The Tanker Ship The Dawn Clipper(0/1000) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
@@ -52,9 +49,8 @@ The Tanker Ship The Gleaming Clipper(0/300) is carrying : 	The Tanker Ship The G
   0 / 50 tanks used						  0 / 50 tanks used
 The Tanker Ship The Gleaming Eagle(0/900) is carrying : 	The Tanker Ship The Gleaming Eagle(0/900) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
-The Tanker Ship The Gleaming Galleon(190/600) is carrying : 	The Tanker Ship The Gleaming Galleon(190/600) is carrying : 
-  cargo397(190)							  cargo397(190)
-  16 / 50 tanks used						  16 / 50 tanks used
+The Tanker Ship The Gleaming Galleon(0/600) is carrying : 	The Tanker Ship The Gleaming Galleon(0/600) is carrying : 
+  0 / 50 tanks used						  0 / 50 tanks used
 The Tanker Ship The Gleaming Narwhal(0/1200) is carrying : 	The Tanker Ship The Gleaming Narwhal(0/1200) is carrying : 
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Gleaming Turtle(0/800) is carrying : 	The Tanker Ship The Gleaming Turtle(0/800) is carrying : 
@@ -82,9 +78,8 @@ The Tanker Ship The Majestic Hawk(0/400) is carrying : 		The Tanker Ship The Maj
 The Tanker Ship The Majestic Kraken(220/300) is carrying :    |	The Tanker Ship The Majestic Kraken(130/300) is carrying : 
   cargo363(220)						      |	  cargo395(130)
   4 / 5 tanks used					      |	  3 / 5 tanks used
-The Tanker Ship The Misty Turtle(220/1200) is carrying : 	The Tanker Ship The Misty Turtle(220/1200) is carrying : 
-  cargo364(220)							  cargo364(220)
-  1 / 5 tanks used						  1 / 5 tanks used
+The Tanker Ship The Misty Turtle(0/1200) is carrying : 		The Tanker Ship The Misty Turtle(0/1200) is carrying : 
+  0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Misty Whale(0/300) is carrying : 		The Tanker Ship The Misty Whale(0/300) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Night Dolphin(0/500) is carrying : 		The Tanker Ship The Night Dolphin(0/500) is carrying : 
@@ -157,9 +152,8 @@ The Tanker Ship The Shining Snake(0/400) is carrying : 		The Tanker Ship The Shi
   0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Shining Whale(0/1100) is carrying : 	The Tanker Ship The Shining Whale(0/1100) is carrying : 
   0 / 10 tanks used						  0 / 10 tanks used
-The Tanker Ship The Slippery Clipper(110/500) is carrying : 	The Tanker Ship The Slippery Clipper(110/500) is carrying : 
-  cargo378(110)							  cargo378(110)
-  11 / 50 tanks used						  11 / 50 tanks used
+The Tanker Ship The Slippery Clipper(0/500) is carrying : 	The Tanker Ship The Slippery Clipper(0/500) is carrying : 
+  0 / 50 tanks used						  0 / 50 tanks used
 The Tanker Ship The Slippery Dreadnought(0/600) is carrying :	The Tanker Ship The Slippery Dreadnought(0/600) is carrying :
   0 / 25 tanks used						  0 / 25 tanks used
 The Tanker Ship The Slippery Eagle(0/300) is carrying : 	The Tanker Ship The Slippery Eagle(0/300) is carrying : 
