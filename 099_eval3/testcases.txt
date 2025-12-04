@@ -20,3 +20,4 @@ ships-step4 inputs/ships1.txt inputs/cargo0.txt
 ships-step4 inputs/ships1.txt inputs/cargo1.txt
 ships-step4 hi hi
 ships-step4 
+ships-step4 leo_testing/tanker.txt leo_testing/test_cargo.txt
