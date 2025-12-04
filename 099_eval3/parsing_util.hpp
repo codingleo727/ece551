@@ -12,6 +12,8 @@
 #include "ships.hpp"
 #include "util.hpp"
 
+typedef AVLMultiMap<unsigned, Ship *, std::less<unsigned>, ShipPtrLess> ShipTree;
+
 void run(char * file1, char * file2, int option);
 void print_route(std::vector<Route> & routes);
 void parse_fleet(const std::string & line,
@@ -38,8 +40,8 @@ void parse_route(std::vector<Route> & routes,
 void clear_fleet(std::vector<Ship *> fleet);
 void parse_cargo(const std::string & line, std::vector<Cargo> & cargos);
 void sort_cargo(std::vector<Cargo> & cargos);
-AVLMultiMap<unsigned, Ship *> build_ship_tree(const std::vector<Ship *> & fleet);
-void loading_cargo_tree(AVLMultiMap<unsigned, Ship *> & ship_tree, const Cargo & cargo);
+ShipTree build_ship_tree(const std::vector<Ship *> & fleet);
+void loading_cargo_tree(ShipTree & ship_tree, const Cargo & cargo);
 void loading_process(std::vector<Ship *> & fleet,
                      std::vector<Cargo> & cargos,
                      int option);

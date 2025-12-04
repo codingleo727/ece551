@@ -124,11 +124,6 @@ bool Ship::operator<(const Ship & rhs) const {
   return name < rhs.name;
 }
 
-/* Used for sorting the ships in alphabetical order */
-bool ship_ptr_less(Ship * lhs, Ship * rhs) {
-  return *lhs < *rhs;
-}
-
 Container::Container() : Ship(), num_slots() {
 }
 

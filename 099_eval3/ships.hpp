@@ -43,7 +43,9 @@ class Ship {
   virtual ~Ship(){};
 };
 
-bool ship_ptr_less(Ship * lhs, Ship * rhs);
+struct ShipPtrLess {
+  bool operator()(Ship * lhs, Ship * rhs) const { return *lhs < *rhs; }
+};
 
 class Container : public Ship {
  private:
