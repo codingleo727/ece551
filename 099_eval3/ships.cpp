@@ -119,7 +119,6 @@ void Ship::load_cargo(const Cargo & cargo) {
   cargos_carried.push_back(cargo);
 }
 
-/* Used in ship_ptr_less to compare the ships */
 bool Ship::operator<(const Ship & rhs) const {
   return name < rhs.name;
 }

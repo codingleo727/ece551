@@ -44,7 +44,12 @@ class Ship {
 };
 
 struct ShipPtrLess {
-  bool operator()(Ship * lhs, Ship * rhs) const { return *lhs < *rhs; }
+  bool operator()(Ship * lhs, Ship * rhs) const {
+    if (lhs->get_name() != rhs->get_name()) {
+      return lhs->get_name() < rhs->get_name();
+    }
+    return lhs < rhs;
+  }
 };
 
 class Container : public Ship {

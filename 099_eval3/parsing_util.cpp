@@ -223,7 +223,7 @@ void loading_cargo_tree(ShipTree & ship_tree, const Cargo & cargo) {
   ShipTree::Iterator s = ship_tree.lowest_bound(cargo.get_capacity());
   for (ShipTree::Iterator it = s; !it.is_past_end(); it.next()) {
     const std::set<Ship *, ShipPtrLess> & available_ships = it.get_vals();
-    for (std::set<Ship *, ShipPtrLess>::const_iterator ship = available_ships.begin();
+    for (std::set<Ship *>::const_iterator ship = available_ships.begin();
          ship != available_ships.end();
          ++ship) {
       Ship * curr_ship = *ship;
