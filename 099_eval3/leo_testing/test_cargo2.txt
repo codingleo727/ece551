@@ -1,14 +1,8 @@
-cargo329,Luthadel,Mordor,220,gas,maxtemp=49
-cargo335,Mordor,Elantris,280,gas,maxtemp=53,hazardous-explosive
-cargo350,Mordor,Luthadel,340,gas,hazardous-flammable,hazardous-toxic,hazardous-radioactive
 cargo352,Mordor,Luthadel,150,gas,maxtemp=-184,hazardous-toxic,hazardous-explosive,hazardous-corrosive
 cargo360,Mordor,Midgar,220,liquid,hazardous-radioactive,hazardous-explosive,hazardous-corrosive
 cargo363,Mordor,Midgar,220,liquid
 cargo364,Sarth,Midgar,220,liquid,mintemp=25,maxtemp=78,hazardous-flammable,hazardous-explosive
-cargo377,Mordor,Midgar,310,liquid,maxtemp=89
 cargo378,Sarth,Mordor,110,gas
 cargo394,Midgar,Luthadel,180,gas,mintemp=-215
 cargo395,Mordor,Midgar,130,gas
 cargo397,Mordor,Luthadel,190,gas,hazardous-corrosive
-cargo88,Luthadel,Midgar,340,gas,hazardous-radioactive
-cargo975,Luthadel,Midgar,250,gas,mintemp=-215,hazardous-corrosive
