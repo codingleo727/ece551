@@ -1,6 +1,6 @@
-Grading at 12/04/2025:21:19:17.615085
-For commit ID 8fcc76291080694cb52062bd97e1b24909d651dd
-Grading at Thu Dec  4 04:19:13 PM EST 2025
+Grading at 12/04/2025:21:22:40.888556
+For commit ID b5aeca5f737b0d786f8d6f374c8586fca1ed24ef
+Grading at Thu Dec  4 04:22:36 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -25,7 +25,6 @@ We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
 Loading cargo360 onto The Wooden Galleon from Mordor to Midga	Loading cargo360 onto The Wooden Galleon from Mordor to Midga
 Loading cargo363 onto The Majestic Kraken from Mordor to Midg |	Loading cargo363 onto The Wooden Galleon from Mordor to Midga
-Loading cargo352 onto The Royal Dreadnought from Mordor to Lu	Loading cargo352 onto The Royal Dreadnought from Mordor to Lu
 Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Majestic Kraken from Mordor to Midg
 ---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
 The Tanker Ship The Dawn Clipper(0/1000) is carrying : 		The Tanker Ship The Dawn Clipper(0/1000) is carrying : 
@@ -108,9 +107,8 @@ The Tanker Ship The Royal Clipper(0/900) is carrying : 		The Tanker Ship The Roy
 The Tanker Ship The Royal Dolphin(130/300) is carrying :      |	The Tanker Ship The Royal Dolphin(0/300) is carrying : 
   cargo395(130)						      |	  0 / 10 tanks used
   5 / 10 tanks used					      <
-The Tanker Ship The Royal Dreadnought(150/1200) is carrying :	The Tanker Ship The Royal Dreadnought(150/1200) is carrying :
-  cargo352(150)							  cargo352(150)
-  2 / 10 tanks used						  2 / 10 tanks used
+The Tanker Ship The Royal Dreadnought(0/1200) is carrying : 	The Tanker Ship The Royal Dreadnought(0/1200) is carrying : 
+  0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Royal Eagle(0/1200) is carrying : 		The Tanker Ship The Royal Eagle(0/1200) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Royal Whale(0/900) is carrying : 		The Tanker Ship The Royal Whale(0/900) is carrying : 
