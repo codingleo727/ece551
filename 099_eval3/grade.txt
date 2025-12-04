@@ -1,6 +1,6 @@
-Grading at 12/04/2025:21:18:13.048364
-For commit ID 6b8990d63a9909b22dd7e1ea35e7225b06688b85
-Grading at Thu Dec  4 04:18:08 PM EST 2025
+Grading at 12/04/2025:21:19:17.615085
+For commit ID 8fcc76291080694cb52062bd97e1b24909d651dd
+Grading at Thu Dec  4 04:19:13 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -25,7 +25,6 @@ We both agreed this was not an error, but your output is different from ours
 Your output on the left, ours on the right
 Loading cargo360 onto The Wooden Galleon from Mordor to Midga	Loading cargo360 onto The Wooden Galleon from Mordor to Midga
 Loading cargo363 onto The Majestic Kraken from Mordor to Midg |	Loading cargo363 onto The Wooden Galleon from Mordor to Midga
-Loading cargo394 onto The Swift Phoenix from Midgar to Luthad	Loading cargo394 onto The Swift Phoenix from Midgar to Luthad
 Loading cargo352 onto The Royal Dreadnought from Mordor to Lu	Loading cargo352 onto The Royal Dreadnought from Mordor to Lu
 Loading cargo395 onto The Royal Dolphin from Mordor to Midgar |	Loading cargo395 onto The Majestic Kraken from Mordor to Midg
 ---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
@@ -164,9 +163,8 @@ The Tanker Ship The Slippery Whale(0/700) is carrying : 	The Tanker Ship The Sli
   0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Swift Dreadnought(0/400) is carrying : 	The Tanker Ship The Swift Dreadnought(0/400) is carrying : 
   0 / 50 tanks used						  0 / 50 tanks used
-The Tanker Ship The Swift Phoenix(180/1100) is carrying : 	The Tanker Ship The Swift Phoenix(180/1100) is carrying : 
-  cargo394(180)							  cargo394(180)
-  2 / 10 tanks used						  2 / 10 tanks used
+The Tanker Ship The Swift Phoenix(0/1100) is carrying : 	The Tanker Ship The Swift Phoenix(0/1100) is carrying : 
+  0 / 10 tanks used						  0 / 10 tanks used
 The Tanker Ship The Swift Turtle(0/600) is carrying : 		The Tanker Ship The Swift Turtle(0/600) is carrying : 
   0 / 5 tanks used						  0 / 5 tanks used
 The Tanker Ship The Wet Boat(0/1200) is carrying : 		The Tanker Ship The Wet Boat(0/1200) is carrying : 
