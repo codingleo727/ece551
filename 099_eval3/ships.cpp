@@ -123,10 +123,6 @@ void Ship::load_cargo(const Cargo & cargo) {
   cargos_carried.push_back(cargo);
 }
 
-bool Ship::operator<(const Ship & rhs) const {
-  return name < rhs.name;
-}
-
 Container::Container() : Ship(), num_slots() {
 }
 

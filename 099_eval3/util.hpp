@@ -7,9 +7,18 @@
 #include <vector>
 
 class invalid_argument_format : public std::exception {
+ private:
+  int step;
+
  public:
+  invalid_argument_format(int step_) : step(step_) {}
   virtual const char * what() const throw() {
-    return "Please input in the format: ./ships-step# \"ship file\" \"cargo file\"";
+    if (step == 1) {
+      return "Please input in the format: ./ships-step1 \"ship file\"";
+    }
+    else {
+      return "Please input in the format: ./ships-step# \"ship file\" \"cargo file\"";
+    }
   }
 };
 
@@ -23,7 +32,7 @@ class failed_to_open_file : public std::exception {
 class parsing_failure : public std::exception {
  public:
   virtual const char * what() const throw() {
-    return "File content does not have the correct format";
+    return "One of the input files does not have the correct format";
   }
 };
 

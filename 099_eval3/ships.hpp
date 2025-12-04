@@ -37,13 +37,13 @@ class Ship {
   unsigned get_remaining_capacity() const;
   const std::vector<std::string> & get_capabilities() const;
   const std::vector<Cargo> & get_cargos_carried() const;
-  bool operator<(const Ship & rhs) const;
   virtual bool can_load(const Cargo & cargo) const = 0;
   virtual void load_cargo(const Cargo & cargo);
   virtual void print_remaining_space() const = 0;
   virtual ~Ship(){};
 };
 
+/* Used in stable_sort and CompareV */
 struct ShipPtrLess {
   bool operator()(Ship * lhs, Ship * rhs) const {
     if (lhs->get_name() != rhs->get_name()) {

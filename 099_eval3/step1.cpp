@@ -8,41 +8,28 @@
 #include "util.hpp"
 
 int main(int argc, char * argv[]) {
-  if (argc != 2) {
-    std::cerr << "Please input in the format: ./ships-step1 \"input filename\""
-              << std::endl;
+  try {
+    if (argc != 2) {
+      throw invalid_argument_format(1);
+    }
+    run(argv[1], NULL, 1, 0);
+  }
+  catch (const invalid_argument_format & e) {
+    std::cerr << e.what() << std::endl;
     exit(EXIT_FAILURE);
   }
-
-  std::ifstream input(argv[1]);
-  if (!input.is_open()) {
-    std::cerr << "Error: File does not exist or failed to open file" << std::endl;
+  catch (const parsing_failure & e) {
+    std::cerr << "Error: " << e.what() << std::endl;
     exit(EXIT_FAILURE);
   }
-  std::string line;
-  std::vector<Ship *> fleet;
-  std::vector<Route> routes;
-
-  while (std::getline(input, line)) {
-    try {
-      parse_fleet(line, fleet, routes);
-    }
-    catch (const parsing_failure & e) {
-      std::cerr << "Error: " << e.what() << std::endl;
-      exit(EXIT_FAILURE);
-    }
-    catch (const duplicate_name & e) {
-      std::cerr << "Error: " << e.what() << std::endl;
-      exit(EXIT_FAILURE);
-    }
-    catch (...) {
-      std::cerr << "An unknown error occurred" << std::endl;
-      exit(EXIT_FAILURE);
-    }
+  catch (const duplicate_name & e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+    exit(EXIT_FAILURE);
   }
-
-  print_route(routes);
-  clear_fleet(fleet);
+  catch (...) {
+    std::cerr << "An unknown error occurred" << std::endl;
+    exit(EXIT_FAILURE);
+  }
 
   return EXIT_SUCCESS;
 }

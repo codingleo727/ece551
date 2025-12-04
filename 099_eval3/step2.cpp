@@ -11,9 +11,9 @@
 int main(int argc, char * argv[]) {
   try {
     if (argc != 3) {
-      throw invalid_argument_format();
+      throw invalid_argument_format(2);
     }
-    run(argv[1], argv[2], 0);
+    run(argv[1], argv[2], 2, 0);
   }
   catch (const invalid_argument_format & e) {
     std::cerr << e.what() << std::endl;

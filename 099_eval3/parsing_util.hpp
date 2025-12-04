@@ -14,7 +14,7 @@
 
 typedef AVLMultiMap<unsigned, Ship *, std::less<unsigned>, ShipPtrLess> ShipTree;
 
-void run(char * file1, char * file2, int option);
+void run(char * file1, char * file2, int step, int option);
 void print_route(std::vector<Route> & routes);
 void parse_fleet(const std::string & line,
                  std::vector<Ship *> & fleet,

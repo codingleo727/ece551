@@ -7,29 +7,46 @@
 
 #include "util.hpp"
 
-void run(char * file1, char * file2, int option) {
-  std::ifstream fleet_file(file1);
-  if (!fleet_file.is_open()) {
-    throw failed_to_open_file();
-  }
-  std::ifstream cargo_file(file2);
-  if (!cargo_file.is_open()) {
-    throw failed_to_open_file();
-  }
+void run(char * file1, char * file2, int step, int option) {
   std::string line;
   std::vector<Ship *> fleet;
   std::vector<Route> routes;
   std::vector<Cargo> cargos;
+  if (step == 1) {
+    std::ifstream fleet_file(file1);
+    if (!fleet_file.is_open()) {
+      std::cerr << "Error: File does not exist or failed to open file" << std::endl;
+      exit(EXIT_FAILURE);
+    }
 
-  while (std::getline(fleet_file, line)) {
-    parse_fleet(line, fleet, routes);
+    while (std::getline(fleet_file, line)) {
+      parse_fleet(line, fleet, routes);
+    }
+
+    print_route(routes);
+    clear_fleet(fleet);
   }
+  else {
+    std::ifstream fleet_file(file1);
+    if (!fleet_file.is_open()) {
+      throw failed_to_open_file();
+    }
 
-  while (std::getline(cargo_file, line)) {
-    parse_cargo(line, cargos);
+    std::ifstream cargo_file(file2);
+    if (!cargo_file.is_open()) {
+      throw failed_to_open_file();
+    }
+
+    while (std::getline(fleet_file, line)) {
+      parse_fleet(line, fleet, routes);
+    }
+
+    while (std::getline(cargo_file, line)) {
+      parse_cargo(line, cargos);
+    }
+
+    loading_process(fleet, cargos, option);
   }
-
-  loading_process(fleet, cargos, option);
 }
 
 /* Prints the route in the required format */
@@ -187,6 +204,9 @@ void parse_cargo(const std::string & line, std::vector<Cargo> & cargos) {
   std::vector<std::string> properties;
 
   cargo_info = split(line, ',');
+  if (cargo_info.size() < 5) {
+    throw parsing_failure();
+  }
   name = cargo_info[0];
   source = cargo_info[1];
   dest = cargo_info[2];
@@ -207,7 +227,7 @@ void sort_cargo(std::vector<Cargo> & cargos) {
 ShipTree build_ship_tree(const std::vector<Ship *> & fleet) {
   ShipTree ship_tree;
   for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {
-    ship_tree.add((*s)->get_remaining_capacity(), *s);
+    ship_tree.add((*s)->get_total_capacity(), *s);
   }
   return ship_tree;
 }
@@ -250,7 +270,9 @@ void loading_cargo_tree(ShipTree & ship_tree, const Cargo & cargo) {
 void loading_cargo_begin(std::vector<Ship *> & fleet,
                          std::vector<Cargo> & cargos,
                          int option) {
+  AVLMultiMap<unsigned, Ship *, std::less<unsigned>, ShipPtrLess> ship_tree;
   if (option != 0) {
+    ship_tree = build_ship_tree(fleet);
     sort_cargo(cargos);
   }
 
@@ -268,8 +290,6 @@ void loading_cargo_begin(std::vector<Ship *> & fleet,
       loading_cargo_process(num_ships, available_ships, *c);
     }
     else {
-      AVLMultiMap<unsigned, Ship *, std::less<unsigned>, ShipPtrLess> ship_tree =
-          build_ship_tree(fleet);
       loading_cargo_tree(ship_tree, *c);
     }
   }
