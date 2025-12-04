@@ -1,4 +1,3 @@
-cargo352,Mordor,Luthadel,150,gas,maxtemp=-184,hazardous-toxic,hazardous-explosive,hazardous-corrosive
 cargo360,Mordor,Midgar,220,liquid,hazardous-radioactive,hazardous-explosive,hazardous-corrosive
 cargo363,Mordor,Midgar,220,liquid
 cargo395,Mordor,Midgar,130,gas
