@@ -14,6 +14,10 @@ ships-step3 inputs/ships1.txt inputs/cargo1.txt
 ships-step3 inputs/ships2.txt inputs/cargo2.txt
 ships-step3 inputs/ships1.txt inputs/cargo_wrong0.txt
 ships-step3 inputs/ships1.txt inputs/ships1.txt
+ships-step3 inputs/ships_wrong0.txt inputs/cargo0.txt
+ships-step3 inputs/ships_wrong1.txt inputs/cargo0.txt
+ships-step3 inputs/ships_wrong2.txt inputs/cargo0.txt
+ships-step3 inputs/ships_wrong3.txt inputs/cargo0.txt
 ships-step3 hi hi
 ships-step3
 ships-step4 inputs/ships0.txt inputs/cargo1.txt
@@ -21,5 +25,10 @@ ships-step4 inputs/ships1.txt inputs/cargo0.txt
 ships-step4 inputs/ships1.txt inputs/cargo1.txt
 ships-step4 inputs/ships2.txt inputs/cargo2.txt
 ships-step4 inputs/ships1.txt inputs/ships1.txt
+ships-step4 inputs/ships_wrong0.txt inputs/cargo0.txt
+ships-step4 inputs/ships_wrong1.txt inputs/cargo0.txt
+ships-step4 inputs/ships_wrong2.txt inputs/cargo0.txt
+ships-step4 inputs/ships_wrong3.txt inputs/cargo0.txt
+ships-step3 inputs/ships1.txt inputs/cargo_wrong0.txt
 ships-step4 hi hi
 ships-step4 
