@@ -207,7 +207,7 @@ void sort_cargo(std::vector<Cargo> & cargos) {
 ShipTree build_ship_tree(const std::vector<Ship *> & fleet) {
   ShipTree ship_tree;
   for (std::vector<Ship *>::const_iterator s = fleet.begin(); s != fleet.end(); ++s) {
-    ship_tree.add((*s)->get_total_capacity(), *s);
+    ship_tree.add((*s)->get_remaining_capacity(), *s);
   }
   return ship_tree;
 }
