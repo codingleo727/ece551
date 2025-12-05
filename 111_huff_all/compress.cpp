@@ -47,6 +47,11 @@ void writeCompressedOutput(const char * inFile,
     std::map<unsigned, BitString>::const_iterator it = theMap.find((unsigned char)c);
     bfw.writeBitString(it->second);
   }
+
+  std::map<unsigned, BitString>::const_iterator it = theMap.find(256);
+  assert(it != theMap.end());
+  bfw.writeBitString(it->second);
+
   input.close();
 }
 
@@ -60,6 +65,7 @@ int main(int argc, char ** argv) {
   //hint 1: most of the work is already done.
   //hint 2: you can look at the main from the previous tester for 90% of this
   uint64_t * counts = readFrequencies(argv[1]);
+  assert(counts != NULL);
   Node * tree = buildTree(counts);
   delete[] counts;
   std::map<unsigned, BitString> theMap;
