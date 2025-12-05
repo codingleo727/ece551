@@ -1,0 +1,12 @@
+Grading at 12/05/2025:14:18:05.682489
+For commit ID 97294e70cafd64ed180b052883284573785923e9
+Grading at Fri Dec  5 09:18:05 AM EST 2025
+Reading your quiz answers from answers.txt
+You got 2 questions incorrect.
+You might want to review these concepts:
+------------
+Multiple Inheritance
+Virtual Multiple Inheritance
+------------
+
+Overall Grade: FAILED
