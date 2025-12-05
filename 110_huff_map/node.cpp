@@ -11,7 +11,7 @@ void Node::buildMap(BitString b, std::map<unsigned, BitString> & theMap) {
   }
 
   if (right != NULL) {
-    BitString right_bits = b.plusZero();
+    BitString right_bits = b.plusOne();
     right->buildMap(right_bits, theMap);
   }
 }
