@@ -94,7 +94,7 @@ const std::string & Ship::get_dest() const {
 }
 
 /* Returns the total capacity of the ship */
-unsigned Ship::get_total_capacity() const {
+unsigned long Ship::get_total_capacity() const {
   return total_capacity;
 }
 
@@ -130,7 +130,7 @@ Container::Container(const std::string & name_,
                      const std::string & ship_type_,
                      const std::string & source_,
                      const std::string & dest_,
-                     unsigned total_capacity_,
+                     unsigned long total_capacity_,
                      unsigned used_capacity_,
                      const std::vector<std::string> & capabilities_,
                      const std::vector<Cargo> & cargos_carried_,
@@ -193,7 +193,7 @@ Tanker::Tanker(const std::string & name_,
                const std::string & ship_type_,
                const std::string & source_,
                const std::string & dest_,
-               unsigned total_capacity_,
+               unsigned long total_capacity_,
                unsigned used_capacity_,
                const std::vector<std::string> & capabilities_,
                const std::vector<Cargo> & cargos_carried_,
@@ -390,7 +390,7 @@ Animal::Animal(const std::string & name_,
                const std::string & ship_type_,
                const std::string & source_,
                const std::string & dest_,
-               unsigned total_capacity_,
+               unsigned long total_capacity_,
                unsigned used_capacity_,
                const std::vector<std::string> & capabilities_,
                const std::vector<Cargo> & cargos_carried_,

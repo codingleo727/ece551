@@ -25,13 +25,13 @@ void parse_fleet_info(const std::string & line,
                       std::vector<std::string> & info,
                       std::string & source,
                       std::string & dest,
-                      unsigned & capacity);
+                      unsigned long & capacity);
 void parse_ship(std::vector<Ship *> & fleet,
                 std::string & name,
                 std::vector<std::string> & info,
                 std::string & source,
                 std::string & dest,
-                unsigned total_capacity,
+                unsigned long total_capacity,
                 std::vector<Cargo> & cargos_carried);
 void parse_route(std::vector<Route> & routes,
                  std::string & source,

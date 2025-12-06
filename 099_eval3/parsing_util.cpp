@@ -65,7 +65,7 @@ void parse_fleet(const std::string & line,
   std::vector<std::string> info;
   std::string source;
   std::string dest;
-  unsigned capacity = 0;
+  unsigned long capacity = 0;
   std::vector<Cargo> cargos_carried;
 
   std::vector<std::string> ship_info;
@@ -82,7 +82,7 @@ void parse_fleet_info(const std::string & line,
                       std::vector<std::string> & info,
                       std::string & source,
                       std::string & dest,
-                      unsigned & capacity) {
+                      unsigned long & capacity) {
   ship_info = split(line, ':');
   if (ship_info.size() != 5) {
     throw parsing_failure();
@@ -100,7 +100,7 @@ void parse_ship(std::vector<Ship *> & fleet,
                 std::vector<std::string> & info,
                 std::string & source,
                 std::string & dest,
-                unsigned total_capacity,
+                unsigned long total_capacity,
                 std::vector<Cargo> & cargos_carried) {
   Ship * member;
   std::string ship_type = info[0];

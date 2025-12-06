@@ -32,7 +32,7 @@ class Ship {
   const std::string & get_ship_type() const;
   const std::string & get_source() const;
   const std::string & get_dest() const;
-  unsigned get_total_capacity() const;
+  unsigned long get_total_capacity() const;
   unsigned get_used_capacity() const;
   unsigned get_remaining_capacity() const;
   const std::vector<std::string> & get_capabilities() const;
@@ -63,7 +63,7 @@ class Container : public Ship {
             const std::string & ship_type_,
             const std::string & source_,
             const std::string & dest_,
-            unsigned total_capacity_,
+            unsigned long total_capacity_,
             unsigned used_capacity_,
             const std::vector<std::string> & capabilities_,
             const std::vector<Cargo> & cargos_carried_,
@@ -87,7 +87,7 @@ class Tanker : public Ship {
          const std::string & ship_type_,
          const std::string & source_,
          const std::string & dest_,
-         unsigned total_capacity_,
+         unsigned long total_capacity_,
          unsigned used_capacity_,
          const std::vector<std::string> & capabilities_,
          const std::vector<Cargo> & cargos_carried_,
@@ -114,7 +114,7 @@ class Animal : public Ship {
          const std::string & ship_type_,
          const std::string & source_,
          const std::string & dest_,
-         unsigned total_capacity_,
+         unsigned long total_capacity_,
          unsigned used_capacity_,
          const std::vector<std::string> & capabilities_,
          const std::vector<Cargo> & cargos_carried_,
