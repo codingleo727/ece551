@@ -1,6 +1,6 @@
-Grading at 12/04/2025:23:45:42.891937
-For commit ID f6902966354d7a08b23a26a22a07c9522d69428a
-Grading at Thu Dec  4 06:44:41 PM EST 2025
+Grading at 12/06/2025:04:04:15.632457
+For commit ID 0b2ae7cf42adecb525ce3e137b89e68fc4f3b55e
+Grading at Fri Dec  5 11:03:22 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -113,6 +113,20 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step1 
+ With arguments 
+ inputs/ships_wrong7.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Error: One or both input files do not have the correct format
+------
 -------------------------
  This test case will run 
  ships-step1 
@@ -285,6 +299,20 @@ And valgrind reported no errors
  This test case will run 
  ships-step3 
  With arguments 
+ inputs/ships_wrong7.txt inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Error: One or both input files do not have the correct format
+------
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
  hi hi 
 -------------------------
 Running our code...
@@ -415,9 +443,60 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
-
-Grading has taken more than 60 seconds
-Skipping remaining test cases
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ inputs/ships_wrong6.txt inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ inputs/ships_wrong7.txt inputs/cargo0.txt 
+-------------------------
+Running our code...
+Running your code
+You said this was an error (exit status was 1), but we said it was valid
+Note: this may happen if your code timed out too...
+Here is what you printed to stderr:
+------
+Error: One or both input files do not have the correct format
+------
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ inputs/ships1.txt inputs/cargo_wrong0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ hi hi 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+  
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
 You have already pass the basic tests for step1:
 **step1 basic tests passed for ldw59 at 1764884312** : 55fa33cefe7113c42b2f6904e152ca671d515aca  -
 You have already pass the basic tests for step2:
@@ -426,7 +505,7 @@ You have already pass the basic tests for step3:
 **step3 basic tests passed for ldw59 at 1764884312** : b5ec05f75cbb9731ad7944cb5382e8284ee8923b  -
 You have already pass the basic tests for step4:
 **step4 basic tests passed for ldw59 at 1764884312** : 0ea126d769932994393291aaf075f67be1cb0345  -
-You have PASSED all of your test cases
-Keep adding test cases until you are satisfied your program is correct
+You have FAILED one or more of your test cases
+Keep debugging
 
 Overall Grade: NO GRADE YET
