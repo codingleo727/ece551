@@ -1,6 +1,6 @@
-Grading at 12/06/2025:04:44:34.449644
-For commit ID 438c42f82fb3472a11d757aea8629953f30eff6b
-Grading at Fri Dec  5 11:43:41 PM EST 2025
+Grading at 12/06/2025:04:50:59.264860
+For commit ID 90ffb6baee26b78a3871c38996621d5b2852d826
+Grading at Fri Dec  5 11:50:03 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -303,6 +303,25 @@ We agreed on this testcase and valgrind was clean
  This test case will run 
  ships-step3 
  With arguments 
+ inputs/ships1.txt inputs/cargo_wrong0.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed this was an error, and you printed something to stderr
+And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
+ inputs/ships1.txt inputs/cargo_wrong1.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
+-------------------------
+ This test case will run 
+ ships-step3 
+ With arguments 
  hi hi 
 -------------------------
 Running our code...
@@ -462,6 +481,15 @@ Running our code...
 Running your code
 We agreed this was an error, and you printed something to stderr
 And valgrind reported no errors
+-------------------------
+ This test case will run 
+ ships-step4 
+ With arguments 
+ inputs/ships1.txt inputs/cargo_wrong1.txt 
+-------------------------
+Running our code...
+Running your code
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  ships-step4 
