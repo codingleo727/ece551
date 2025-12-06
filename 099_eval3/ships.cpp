@@ -59,7 +59,7 @@ Ship::Ship(const std::string & name_,
            const std::string & ship_type_,
            const std::string & source_,
            const std::string & dest_,
-           unsigned total_capacity_,
+           unsigned long total_capacity_,
            unsigned used_capacity_,
            const std::vector<std::string> & capabilities_,
            const std::vector<Cargo> & cargos_carried_) :

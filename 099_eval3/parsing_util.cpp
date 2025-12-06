@@ -91,7 +91,7 @@ void parse_fleet_info(const std::string & line,
   info = split(ship_info[1], ',');
   source = ship_info[2];
   dest = ship_info[3];
-  capacity = to_number<unsigned>(ship_info[4]);
+  capacity = to_number<unsigned long>(ship_info[4]);
 }
 
 /* Adds a ship to the fleet */
