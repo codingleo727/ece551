@@ -1,6 +1,6 @@
-Grading at 12/06/2025:04:04:15.632457
-For commit ID 0b2ae7cf42adecb525ce3e137b89e68fc4f3b55e
-Grading at Fri Dec  5 11:03:22 PM EST 2025
+Grading at 12/06/2025:04:08:49.096232
+For commit ID 2edf8b3efa1c64221904b966d491bc9fe7454c9c
+Grading at Fri Dec  5 11:07:56 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -121,12 +121,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Error: One or both input files do not have the correct format
-------
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  ships-step1 
@@ -303,12 +298,33 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Error: One or both input files do not have the correct format
-------
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+No ships can carry the toy cars from Mordor to Sarth		No ships can carry the toy cars from Mordor to Sarth
+No ships can carry the fireworks from Mordor to Sarth		No ships can carry the fireworks from Mordor to Sarth
+No ships can carry the used batteries from Mordor to Luthadel	No ships can carry the used batteries from Mordor to Luthadel
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Lutha	No ships can carry the radioactive waste from Mordor to Lutha
+No ships can carry the cloth from Mordor to Luthadel		No ships can carry the cloth from Mordor to Luthadel
+No ships can carry the rat poison from Mordor to Sarth		No ships can carry the rat poison from Mordor to Sarth
+---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
+The Container Ship The Dawn Clipper(0/4294965596) is carrying |	The Container Ship The Dawn Clipper(0/18446744073709549916) i
+  (2) slots remain						  (2) slots remain
+The Animals Ship The Dawn Dolphin(0/110) is carrying : 		The Animals Ship The Dawn Dolphin(0/110) is carrying : 
+  does not have a roamer					  does not have a roamer
+The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 	The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 
+  0 / 25 tanks used						  0 / 25 tanks used
+The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :	The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :
+  0 / 10 tanks used						  0 / 10 tanks used
+The Animals Ship The Gleaming Eagle(0/140) is carrying : 	The Animals Ship The Gleaming Eagle(0/140) is carrying : 
+  does not have a roamer					  does not have a roamer
+The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 	The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 
+  0 / 50 tanks used						  0 / 50 tanks used
+The Animals Ship The Gleaming Shark(0/190) is carrying : 	The Animals Ship The Gleaming Shark(0/190) is carrying : 
+  does not have a roamer					  does not have a roamer
+Your file did not match the expected output
 -------------------------
  This test case will run 
  ships-step3 
@@ -461,12 +477,33 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-You said this was an error (exit status was 1), but we said it was valid
-Note: this may happen if your code timed out too...
-Here is what you printed to stderr:
-------
-Error: One or both input files do not have the correct format
-------
+We both agreed this was not an error, but your output is different from ours
+Your output on the left, ours on the right
+No ships can carry the radioactive waste from Mordor to Lutha	No ships can carry the radioactive waste from Mordor to Lutha
+No ships can carry the cloth from Mordor to Luthadel		No ships can carry the cloth from Mordor to Luthadel
+No ships can carry the fireworks from Mordor to Sarth		No ships can carry the fireworks from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
+No ships can carry the used batteries from Mordor to Luthadel	No ships can carry the used batteries from Mordor to Luthadel
+No ships can carry the toy cars from Mordor to Sarth		No ships can carry the toy cars from Mordor to Sarth
+No ships can carry the rat poison from Mordor to Sarth		No ships can carry the rat poison from Mordor to Sarth
+---Done Loading---Here are the ships---				---Done Loading---Here are the ships---
+The Container Ship The Dawn Clipper(0/4294965596) is carrying |	The Container Ship The Dawn Clipper(0/18446744073709549916) i
+  (2) slots remain						  (2) slots remain
+The Animals Ship The Dawn Dolphin(0/110) is carrying : 		The Animals Ship The Dawn Dolphin(0/110) is carrying : 
+  does not have a roamer					  does not have a roamer
+The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 	The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 
+  0 / 25 tanks used						  0 / 25 tanks used
+The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :	The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :
+  0 / 10 tanks used						  0 / 10 tanks used
+The Animals Ship The Gleaming Eagle(0/140) is carrying : 	The Animals Ship The Gleaming Eagle(0/140) is carrying : 
+  does not have a roamer					  does not have a roamer
+The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 	The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 
+  0 / 50 tanks used						  0 / 50 tanks used
+The Animals Ship The Gleaming Shark(0/190) is carrying : 	The Animals Ship The Gleaming Shark(0/190) is carrying : 
+  does not have a roamer					  does not have a roamer
+Your file did not match the expected output
 -------------------------
  This test case will run 
  ships-step4 
