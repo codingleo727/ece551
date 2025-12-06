@@ -1,6 +1,6 @@
-Grading at 12/06/2025:04:32:07.379606
-For commit ID 5d2a09f6386bf191740decf74be0884aa9f75415
-Grading at Fri Dec  5 11:31:14 PM EST 2025
+Grading at 12/06/2025:04:44:34.449644
+For commit ID 438c42f82fb3472a11d757aea8629953f30eff6b
+Grading at Fri Dec  5 11:43:41 PM EST 2025
 Doing make clean
 rm -rf *.o *~ ships-step1 ships-step2 ships-step3 ships-step4
 Running your test cases
@@ -298,33 +298,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-No ships can carry the toy cars from Mordor to Sarth		No ships can carry the toy cars from Mordor to Sarth
-No ships can carry the fireworks from Mordor to Sarth		No ships can carry the fireworks from Mordor to Sarth
-No ships can carry the used batteries from Mordor to Luthadel	No ships can carry the used batteries from Mordor to Luthadel
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Lutha	No ships can carry the radioactive waste from Mordor to Lutha
-No ships can carry the cloth from Mordor to Luthadel		No ships can carry the cloth from Mordor to Luthadel
-No ships can carry the rat poison from Mordor to Sarth		No ships can carry the rat poison from Mordor to Sarth
----Done Loading---Here are the ships---				---Done Loading---Here are the ships---
-The Container Ship The Dawn Clipper(0/4294965596) is carrying |	The Container Ship The Dawn Clipper(0/18446744073709549916) i
-  (2) slots remain						  (2) slots remain
-The Animals Ship The Dawn Dolphin(0/110) is carrying : 		The Animals Ship The Dawn Dolphin(0/110) is carrying : 
-  does not have a roamer					  does not have a roamer
-The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 	The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 
-  0 / 25 tanks used						  0 / 25 tanks used
-The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :	The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :
-  0 / 10 tanks used						  0 / 10 tanks used
-The Animals Ship The Gleaming Eagle(0/140) is carrying : 	The Animals Ship The Gleaming Eagle(0/140) is carrying : 
-  does not have a roamer					  does not have a roamer
-The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 	The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 
-  0 / 50 tanks used						  0 / 50 tanks used
-The Animals Ship The Gleaming Shark(0/190) is carrying : 	The Animals Ship The Gleaming Shark(0/190) is carrying : 
-  does not have a roamer					  does not have a roamer
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  ships-step3 
@@ -477,33 +451,7 @@ And valgrind reported no errors
 -------------------------
 Running our code...
 Running your code
-We both agreed this was not an error, but your output is different from ours
-Your output on the left, ours on the right
-No ships can carry the radioactive waste from Mordor to Lutha	No ships can carry the radioactive waste from Mordor to Lutha
-No ships can carry the cloth from Mordor to Luthadel		No ships can carry the cloth from Mordor to Luthadel
-No ships can carry the fireworks from Mordor to Sarth		No ships can carry the fireworks from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the radioactive waste from Mordor to Sarth	No ships can carry the radioactive waste from Mordor to Sarth
-No ships can carry the used batteries from Mordor to Luthadel	No ships can carry the used batteries from Mordor to Luthadel
-No ships can carry the toy cars from Mordor to Sarth		No ships can carry the toy cars from Mordor to Sarth
-No ships can carry the rat poison from Mordor to Sarth		No ships can carry the rat poison from Mordor to Sarth
----Done Loading---Here are the ships---				---Done Loading---Here are the ships---
-The Container Ship The Dawn Clipper(0/4294965596) is carrying |	The Container Ship The Dawn Clipper(0/18446744073709549916) i
-  (2) slots remain						  (2) slots remain
-The Animals Ship The Dawn Dolphin(0/110) is carrying : 		The Animals Ship The Dawn Dolphin(0/110) is carrying : 
-  does not have a roamer					  does not have a roamer
-The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 	The Tanker Ship The Dawn Dreadnought(0/700) is carrying : 
-  0 / 25 tanks used						  0 / 25 tanks used
-The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :	The Tanker Ship The Gleaming Dreadnought(0/600) is carrying :
-  0 / 10 tanks used						  0 / 10 tanks used
-The Animals Ship The Gleaming Eagle(0/140) is carrying : 	The Animals Ship The Gleaming Eagle(0/140) is carrying : 
-  does not have a roamer					  does not have a roamer
-The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 	The Tanker Ship The Gleaming Narwhal(0/500) is carrying : 
-  0 / 50 tanks used						  0 / 50 tanks used
-The Animals Ship The Gleaming Shark(0/190) is carrying : 	The Animals Ship The Gleaming Shark(0/190) is carrying : 
-  does not have a roamer					  does not have a roamer
-Your file did not match the expected output
+We agreed on this testcase and valgrind was clean
 -------------------------
  This test case will run 
  ships-step4 
@@ -542,7 +490,7 @@ You have already pass the basic tests for step3:
 **step3 basic tests passed for ldw59 at 1764884312** : b5ec05f75cbb9731ad7944cb5382e8284ee8923b  -
 You have already pass the basic tests for step4:
 **step4 basic tests passed for ldw59 at 1764884312** : 0ea126d769932994393291aaf075f67be1cb0345  -
-You have FAILED one or more of your test cases
-Keep debugging
+You have PASSED all of your test cases
+Keep adding test cases until you are satisfied your program is correct
 
 Overall Grade: NO GRADE YET
