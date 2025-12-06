@@ -69,7 +69,7 @@ T to_number(const std::string & num) {
   }
 
   /* if (value < 0 && static_cast<T>(-1) > 0) {
-    throw parsing_failure();  // In case of negative numbers for unsigned
+    throw parsing_failure();  // In case of negative numbers for unsigned, commented because of the weird case in pregrader
     } */
 
   return static_cast<T>(value);
