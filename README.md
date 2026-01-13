@@ -6,8 +6,8 @@ A comprehensive collection of systems programming projects focused on memory man
 
 ## Core Competencies
 * **Languages:** C, C++
-* **Concepts:** Pointer Arithmetic, RAII (Resource Acquisition Is Initialization), Inheritance & Polymorphism, Dynamic Memory Management.
-* **Data Structures:** Binary Search Trees (BST), Linked Lists, Custom Parsers.
+* **Concepts:** Pointer Arithmetic, RAII (Resource Acquisition Is Initialization), Inheritance & Polymorphism, Dynamic Memory Management, Function/Operator Overloading.
+* **Data Structures:** Binary Search Trees (BST), Custom Parsers.
 
 ## Key Projects
 
