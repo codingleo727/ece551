@@ -26,7 +26,7 @@ A comprehensive collection of systems programming projects focused on memory man
 ### 3. Dynamic Story Generator (C)
 *A "Mad Libs" style text generation engine capable of parsing and assembling complex narrative structures.*
 * **Memory Management:** Manually managed dynamic memory allocation (malloc/free) to handle arbitrary text lengths without memory leaks.
-* **Parsing:** developed a custom file parser to merge template stories with user-provided word lists.
+* **Parsing:** Developed a custom file parser to merge template stories with user-provided word lists.
 * **Technical Focus:** Low-level string manipulation and defensive programming practices.
 
 ---
